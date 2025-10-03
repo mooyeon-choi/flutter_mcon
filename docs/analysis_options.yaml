@@ -1,0 +1,17 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    prefer_final_fields: true
+    prefer_single_quotes: true
+    avoid_print: true
+    avoid_unnecessary_containers: true
+    sized_box_for_whitespace: true
+    deprecated_member_use_from_same_package: true
+
+analyzer:
+  errors:
+    deprecated_member_use: warning
+    deprecated_member_use_from_same_package: warning

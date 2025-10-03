@@ -1,11 +1,13 @@
-name: my_animated_icon
-description: "My Custom Animated Icon"
+name: flutter_mcon
+description: "Beautiful animated icons for Flutter using CustomPaint"
 version: 0.0.1
-homepage:
+homepage: https://github.com/yourusername/flutter_mcon
+repository: https://github.com/yourusername/flutter_mcon
+issue_tracker: https://github.com/yourusername/flutter_mcon/issues
 
 environment:
   sdk: ^3.6.0-334.3.beta
-  flutter: ">=1.17.0"
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:
@@ -15,6 +17,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  build_runner: ^2.4.0
+  flutter_web_plugins:
+    sdk: flutter
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

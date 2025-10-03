@@ -1,0 +1,41 @@
+import 'package:flutter/widgets.dart';
+import '../../core/mcon_base.dart';
+
+/// Animated icon: {{icon_name}}
+class Mcon{{class_name}} extends MconBase {
+  const Mcon{{class_name}}({
+    super.key,
+    super.size,
+    super.color,
+    super.duration,
+    super.curve,
+  });
+
+  @override
+  MconBaseState<Mcon{{class_name}}> createState() => _Mcon{{class_name}}State();
+}
+
+class _Mcon{{class_name}}State extends MconBaseState<Mcon{{class_name}}> {
+  @override
+  CustomPainter createPainter(Animation<double> animation) {
+    return _Mcon{{class_name}}Painter(
+      animation: animation,
+      color: widget.color ?? const Color(0xFF000000),
+    );
+  }
+}
+
+class _Mcon{{class_name}}Painter extends MconPainter {
+  _Mcon{{class_name}}Painter({
+    required super.animation,
+    required super.color,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = createPaint();
+    final progress = animation.value;
+
+    {{paint_logic}}
+  }
+}

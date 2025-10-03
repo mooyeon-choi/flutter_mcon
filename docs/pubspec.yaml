@@ -1,0 +1,24 @@
+name: flutter_mcon_docs
+description: Documentation website for flutter_mcon package
+version: 0.0.1
+publish_to: 'none'
+
+environment:
+  sdk: ^3.6.0-334.3.beta
+  flutter: ">=3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  flutter_mcon:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

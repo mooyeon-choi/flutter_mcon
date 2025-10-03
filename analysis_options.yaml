@@ -1,4 +1,37 @@
 include: package:flutter_lints/flutter.yaml
 
-# Additional information about this file can be found at
-# https://dart.dev/guides/language/analysis-options
+linter:
+  rules:
+    # Style rules
+    always_declare_return_types: true
+    always_put_required_named_parameters_first: true
+    avoid_redundant_argument_values: true
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    prefer_final_fields: true
+    prefer_final_locals: true
+    prefer_single_quotes: true
+    sort_constructors_first: true
+    sort_unnamed_constructors_first: true
+
+    # Documentation
+    public_member_api_docs: false
+
+    # Best practices
+    avoid_print: true
+    avoid_relative_lib_imports: true
+    avoid_unnecessary_containers: true
+    sized_box_for_whitespace: true
+    use_key_in_widget_constructors: true
+
+    # Deprecated API usage
+    deprecated_member_use_from_same_package: true
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+  errors:
+    invalid_annotation_target: ignore
+    deprecated_member_use: warning
+    deprecated_member_use_from_same_package: warning

@@ -1,8 +1,6 @@
-name: my_animated_icon_example
-description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+name: flutter_mcon_example
+description: "Example app for flutter_mcon package"
+publish_to: 'none'
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -30,9 +28,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  flutter_mcon:
+    path: ../
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
