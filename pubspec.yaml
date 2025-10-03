@@ -1,5 +1,5 @@
 name: flutter_mcon
-description: "Beautiful animated icons for Flutter using CustomPaint"
+description: "Beautiful motion icons for Flutter. Customizable, smooth animations built with CustomPaint. 24 motion types including fade, scale, rotate, flip, and more."
 version: 0.0.1
 homepage: https://mooyeon.com/flutter_mcon
 repository: https://github.com/mooyeon-choi/flutter_mcon

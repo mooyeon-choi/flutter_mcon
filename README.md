@@ -1,20 +1,23 @@
-# Flutter Mcon
+# Flutter Mcon - Beautiful Motion Icons
 
-Beautiful animated icons for Flutter using CustomPaint.
+A collection of beautiful, customizable motion icons built with Flutter CustomPaint.
+
+Transform your UI with smooth, elegant icon animations that bring your app to life.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Flutter](https://img.shields.io/badge/Flutter-%3E%3D3.0.0-blue.svg)](https://flutter.dev)
 [![Dart](https://img.shields.io/badge/Dart-%3E%3D3.6.0-blue.svg)](https://dart.dev)
 
-## Features
+## ✨ Features
 
-- 🎨 **Customizable** - Size, color, duration, and animation curves
-- 🎬 **14 Animation Types** - FadeIn/Out, ScaleUp/Down, SlideIn/Out, BounceIn/Out, Pulse, Shake, and more
-- 🚀 **Smooth Animations** - Built with Flutter's animation framework
-- 📦 **Simple Structure** - Clean and maintainable codebase
-- 🔍 **Searchable** - Interactive docs with search functionality
-- 📚 **Interactive Docs** - Live demo with property controls
+- 🎨 **Fully Customizable** - Size, color, duration, and animation curves
+- 🎬 **24 Motion Types** - Fade, Scale, Rotate, Flip, Slide, Bounce, Pulse, Shake, and more
+- 🚀 **Smooth Animations** - Built with Flutter's powerful animation framework
+- 📦 **Clean Architecture** - Maintainable and extensible codebase
+- 🔍 **Interactive Playground** - Live demo with real-time property controls
+- 📚 **Comprehensive Docs** - Detailed documentation with examples
 - 🎯 **Zero Dependencies** - Only uses Flutter SDK
+- ⚡ **High Performance** - CustomPaint-based rendering
 
 ## Installation
 
