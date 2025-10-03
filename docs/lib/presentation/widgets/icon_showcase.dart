@@ -87,49 +87,50 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
   Widget _buildIcon() {
     final color = Theme.of(context).colorScheme.primary;
     const size = 64.0;
+    const animationType = MconAnimationType.none;
 
     switch (widget.iconData.name) {
       // Material Icons
       case 'add':
-        return MconAdd(size: size, color: color);
+        return MconAdd(size: size, color: color, animationType: animationType);
       case 'arrow_back':
-        return MconArrowBack(size: size, color: color);
+        return MconArrowBack(size: size, color: color, animationType: animationType);
       case 'arrow_forward':
-        return MconArrowForward(size: size, color: color);
+        return MconArrowForward(size: size, color: color, animationType: animationType);
       case 'call':
-        return MconCall(size: size, color: color);
+        return MconCall(size: size, color: color, animationType: animationType);
       case 'chat':
-        return MconChat(size: size, color: color);
+        return MconChat(size: size, color: color, animationType: animationType);
       case 'close':
-        return MconClose(size: size, color: color);
+        return MconClose(size: size, color: color, animationType: animationType);
       case 'delete':
-        return MconDelete(size: size, color: color);
+        return MconDelete(size: size, color: color, animationType: animationType);
       case 'done_outline':
-        return MconDoneOutline(size: size, color: color);
+        return MconDoneOutline(size: size, color: color, animationType: animationType);
       case 'edit':
-        return MconEdit(size: size, color: color);
+        return MconEdit(size: size, color: color, animationType: animationType);
       case 'expand_content':
-        return MconExpandContent(size: size, color: color);
+        return MconExpandContent(size: size, color: color, animationType: animationType);
       case 'favorite':
-        return MconFavorite(size: size, color: color);
+        return MconFavorite(size: size, color: color, animationType: animationType);
       case 'home':
-        return MconHome(size: size, color: color);
+        return MconHome(size: size, color: color, animationType: animationType);
       case 'mail':
-        return MconMail(size: size, color: color);
+        return MconMail(size: size, color: color, animationType: animationType);
       case 'menu':
-        return MconMenu(size: size, color: color);
+        return MconMenu(size: size, color: color, animationType: animationType);
       case 'notifications':
-        return MconNotifications(size: size, color: color);
+        return MconNotifications(size: size, color: color, animationType: animationType);
       case 'person':
-        return MconPerson(size: size, color: color);
+        return MconPerson(size: size, color: color, animationType: animationType);
       case 'refresh':
-        return MconRefresh(size: size, color: color);
+        return MconRefresh(size: size, color: color, animationType: animationType);
       case 'search':
-        return MconSearch(size: size, color: color);
+        return MconSearch(size: size, color: color, animationType: animationType);
       case 'settings':
-        return MconSettings(size: size, color: color);
+        return MconSettings(size: size, color: color, animationType: animationType);
       case 'star':
-        return MconStar(size: size, color: color);
+        return MconStar(size: size, color: color, animationType: animationType);
 
       default:
         return Icon(Icons.widgets, size: size, color: color);

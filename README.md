@@ -9,6 +9,7 @@ Beautiful animated icons for Flutter using CustomPaint.
 ## Features
 
 - 🎨 **Customizable** - Size, color, duration, and animation curves
+- 🎬 **14 Animation Types** - FadeIn/Out, ScaleUp/Down, SlideIn/Out, BounceIn/Out, Pulse, Shake, and more
 - 🚀 **Smooth Animations** - Built with Flutter's animation framework
 - 📦 **Simple Structure** - Clean and maintainable codebase
 - 🔍 **Searchable** - Interactive docs with search functionality
@@ -37,19 +38,35 @@ dependencies:
 ```dart
 import 'package:flutter_mcon/flutter_mcon.dart';
 
-// Basic usage - tap to animate
+// Basic usage - tap to animate (morph animation)
 MconSearch(
   size: 32,
   color: Colors.blue,
   duration: Duration(milliseconds: 300),
 )
 
-// With custom curve
+// Fade in (hidden → visible)
 MconSearch(
   size: 48,
-  color: Theme.of(context).primaryColor,
-  duration: Duration(milliseconds: 500),
-  curve: Curves.easeInOutCubic,
+  animationType: MconAnimationType.fadeIn,
+)
+
+// Fade out (visible → hidden)
+MconSearch(
+  size: 48,
+  animationType: MconAnimationType.fadeOut,
+)
+
+// Pulse in place
+MconNotifications(
+  size: 48,
+  animationType: MconAnimationType.pulse,
+)
+
+// Shake in place
+MconDelete(
+  size: 48,
+  animationType: MconAnimationType.shake,
 )
 ```
 
@@ -79,6 +96,57 @@ All icons from Google's Material Icons collection:
 - **MconSettings** - Settings/Gear icon
 - **MconStar** - Star icon
 
+## Animation Types
+
+Flutter Mcon supports 24 different animation types:
+
+| Animation Type | Description | Behavior | Direction |
+|---------------|-------------|----------|-----------|
+| `MconAnimationType.morph` | Default morph animation | In-place | - |
+| `MconAnimationType.fadeIn` | Always fade in | Hidden → Visible | - |
+| `MconAnimationType.fadeOut` | Always fade out | Visible → Hidden | - |
+| `MconAnimationType.fadeInOut` | Toggle fade | Toggle | - |
+| `MconAnimationType.scaleUp` | Always scale up | Small → Normal | - |
+| `MconAnimationType.scaleDown` | Always scale down | Normal → Small | - |
+| `MconAnimationType.scaleUpDown` | Toggle scale | Toggle | - |
+| `MconAnimationType.rotateIn` | Fade in + rotate | Hidden → Visible | - |
+| `MconAnimationType.rotateOut` | Fade out + rotate | Visible → Hidden | - |
+| `MconAnimationType.rotateInOut` | Toggle rotate + fade | Toggle | - |
+| `MconAnimationType.rotate` | 360° rotation (stays visible) | In-place | - |
+| `MconAnimationType.slideIn` | Always slide in | Outside → Center | ✓ |
+| `MconAnimationType.slideOut` | Always slide out | Center → Outside | ✓ |
+| `MconAnimationType.slideInOut` | Toggle slide | Toggle | ✓ |
+| `MconAnimationType.bounceIn` | Always bounce in | Small → Normal | - |
+| `MconAnimationType.bounceOut` | Always bounce out | Normal → Small | - |
+| `MconAnimationType.bounceInOut` | Toggle bounce | Toggle | - |
+| `MconAnimationType.flipIn` | Fade in + flip | Hidden → Visible | - |
+| `MconAnimationType.flipOut` | Fade out + flip | Visible → Hidden | - |
+| `MconAnimationType.flipInOut` | Toggle flip + fade | Toggle | - |
+| `MconAnimationType.flip` | 180° flip (stays visible) | In-place | - |
+| `MconAnimationType.pulse` | Pulse effect | In-place | - |
+| `MconAnimationType.shake` | Shake effect | In-place | - |
+| `MconAnimationType.none` | Instant change | None | - |
+
+### Animation Direction
+
+For slide animations, you can specify direction:
+
+```dart
+// Slide in from left
+MconArrowBack(
+  animationType: MconAnimationType.slideIn,
+  animationDirection: MconAnimationDirection.left,
+)
+
+// Slide out to right
+MconArrowForward(
+  animationType: MconAnimationType.slideOut,
+  animationDirection: MconAnimationDirection.right,
+)
+```
+
+Available directions: `left`, `right`, `up`, `down`
+
 ## Usage Examples
 
 ### Basic Icon
@@ -87,6 +155,46 @@ All icons from Google's Material Icons collection:
 MconSearch(
   size: 24,
   color: Colors.black,
+)
+```
+
+### With Animation Types
+
+```dart
+// Always fade in (hidden → visible)
+MconNotifications(
+  animationType: MconAnimationType.fadeIn,
+  duration: Duration(milliseconds: 400),
+)
+
+// Toggle fade in/out
+MconNotifications(
+  animationType: MconAnimationType.fadeInOut,
+  duration: Duration(milliseconds: 400),
+)
+
+// Always bounce in
+MconFavorite(
+  animationType: MconAnimationType.bounceIn,
+  curve: Curves.elasticOut,
+)
+
+// Slide animation with direction
+MconArrowBack(
+  animationType: MconAnimationType.slide,
+  animationDirection: MconAnimationDirection.left,
+)
+
+// Pulse animation for notifications
+MconNotifications(
+  animationType: MconAnimationType.pulse,
+  duration: Duration(milliseconds: 800),
+)
+
+// Shake animation for errors
+MconDelete(
+  animationType: MconAnimationType.shake,
+  duration: Duration(milliseconds: 500),
 )
 ```
 

@@ -9,6 +9,8 @@ class MconSettings extends MconBase {
     super.color,
     super.duration,
     super.curve,
+    super.animationType,
+    super.animationDirection,
   });
 
   @override

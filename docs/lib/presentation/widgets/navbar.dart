@@ -42,6 +42,12 @@ class NavBar extends StatelessWidget {
               onTap: () => Navigator.pushNamed(context, AppRoutes.docs),
             ),
             const SizedBox(width: 24),
+            _NavItem(
+              label: 'Playground',
+              isActive: currentRoute == AppRoutes.playground,
+              onTap: () => Navigator.pushNamed(context, AppRoutes.playground),
+            ),
+            const SizedBox(width: 24),
             IconButton(
               icon: const Icon(Icons.brightness_6),
               onPressed: () {

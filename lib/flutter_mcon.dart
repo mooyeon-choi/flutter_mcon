@@ -5,6 +5,7 @@
 library;
 
 // Core
+export 'src/core/mcon_animation_type.dart';
 export 'src/core/mcon_base.dart';
 
 // Material Icons

@@ -8,12 +8,18 @@ class IconPreview extends StatelessWidget {
     this.size = 64.0,
     this.color = Colors.black,
     this.duration = const Duration(milliseconds: 300),
+    this.animationType = MconAnimationType.morph,
+    this.animationDirection = MconAnimationDirection.right,
+    this.curve = Curves.easeInOut,
   });
 
   final String iconName;
   final double size;
   final Color color;
   final Duration duration;
+  final MconAnimationType animationType;
+  final MconAnimationDirection animationDirection;
+  final Curve curve;
 
   @override
   Widget build(BuildContext context) {
@@ -51,60 +57,180 @@ class IconPreview extends StatelessWidget {
           size: size,
           color: color,
           duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
         );
-      case 'home':
-        return MconHome(
+      case 'add':
+        return MconAdd(
           size: size,
           color: color,
           duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
         );
-      case 'favorite':
-        return MconFavorite(
+      case 'arrow_back':
+        return MconArrowBack(
           size: size,
           color: color,
           duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
         );
-      case 'menu':
-        return MconMenu(
+      case 'arrow_forward':
+        return MconArrowForward(
           size: size,
           color: color,
           duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
         );
-      case 'settings':
-        return MconSettings(
+      case 'call':
+        return MconCall(
           size: size,
           color: color,
           duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
         );
-      case 'person':
-        return MconPerson(
+      case 'chat':
+        return MconChat(
           size: size,
           color: color,
           duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
         );
-      case 'notifications':
-        return MconNotifications(
+      case 'close':
+        return MconClose(
           size: size,
           color: color,
           duration: duration,
-        );
-      case 'star':
-        return MconStar(
-          size: size,
-          color: color,
-          duration: duration,
-        );
-      case 'mail':
-        return MconMail(
-          size: size,
-          color: color,
-          duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
         );
       case 'delete':
         return MconDelete(
           size: size,
           color: color,
           duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
+        );
+      case 'done_outline':
+        return MconDoneOutline(
+          size: size,
+          color: color,
+          duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
+        );
+      case 'edit':
+        return MconEdit(
+          size: size,
+          color: color,
+          duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
+        );
+      case 'expand_content':
+        return MconExpandContent(
+          size: size,
+          color: color,
+          duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
+        );
+      case 'favorite':
+        return MconFavorite(
+          size: size,
+          color: color,
+          duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
+        );
+      case 'home':
+        return MconHome(
+          size: size,
+          color: color,
+          duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
+        );
+      case 'mail':
+        return MconMail(
+          size: size,
+          color: color,
+          duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
+        );
+      case 'menu':
+        return MconMenu(
+          size: size,
+          color: color,
+          duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
+        );
+      case 'notifications':
+        return MconNotifications(
+          size: size,
+          color: color,
+          duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
+        );
+      case 'person':
+        return MconPerson(
+          size: size,
+          color: color,
+          duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
+        );
+      case 'refresh':
+        return MconRefresh(
+          size: size,
+          color: color,
+          duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
+        );
+      case 'settings':
+        return MconSettings(
+          size: size,
+          color: color,
+          duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
+        );
+      case 'star':
+        return MconStar(
+          size: size,
+          color: color,
+          duration: duration,
+          animationType: animationType,
+          animationDirection: animationDirection,
+          curve: curve,
         );
       default:
         return Icon(

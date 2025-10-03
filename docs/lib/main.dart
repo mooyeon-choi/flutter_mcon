@@ -6,6 +6,7 @@ import 'core/theme/app_theme.dart';
 import 'presentation/layouts/main_layout.dart';
 import 'presentation/pages/landing_page.dart';
 import 'presentation/pages/docs_page.dart';
+import 'presentation/pages/playground_page.dart';
 import 'presentation/pages/icon_detail_page.dart';
 
 void main() {
@@ -49,6 +50,16 @@ class MconDocsApp extends StatelessWidget {
                   child: DocsPage(key: docsPageKey),
                 );
               },
+              transitionDuration: Duration.zero,
+              reverseTransitionDuration: Duration.zero,
+            );
+          case AppRoutes.playground:
+            return PageRouteBuilder(
+              settings: settings,
+              pageBuilder: (context, animation, secondaryAnimation) =>
+                  const MainLayout(
+                child: PlaygroundPage(),
+              ),
               transitionDuration: Duration.zero,
               reverseTransitionDuration: Duration.zero,
             );

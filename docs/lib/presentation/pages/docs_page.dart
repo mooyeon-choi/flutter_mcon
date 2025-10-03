@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_mcon/flutter_mcon.dart';
 import '../../domain/icon_data.dart' as mcon;
 import '../widgets/icon_showcase.dart';
 
@@ -18,6 +19,7 @@ class DocsPageState extends State<DocsPage> {
     'installation': GlobalKey(),
     'quick-start': GlobalKey(),
     'material-icons': GlobalKey(),
+    'animation-types': GlobalKey(),
   };
   String _searchQuery = '';
 
@@ -116,6 +118,33 @@ MconSearch(
   duration: Duration(milliseconds: 300),
   curve: Curves.easeInOut,
 )''',
+                ),
+              ],
+            ),
+          ),
+
+          const SizedBox(height: 64),
+
+          // Animation Types Section
+          _Section(
+            key: _sectionKeys['animation-types'],
+            id: 'animation-types',
+            title: 'Animation Types',
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Flutter Mcon supports 24 different animation types to bring your icons to life:',
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
+                const SizedBox(height: 24),
+                const _AnimationTypeList(),
+                const SizedBox(height: 24),
+                Text(
+                  'Try them out in the Playground!',
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
                 ),
               ],
             ),
@@ -244,6 +273,103 @@ class _CodeBlock extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class _AnimationTypeList extends StatelessWidget {
+  const _AnimationTypeList();
+
+  @override
+  Widget build(BuildContext context) {
+    final animationTypes = [
+      ('Morph', 'Default morph animation', MconAnimationType.morph),
+      ('Fade In', 'Always Hidden → Visible', MconAnimationType.fadeIn),
+      ('Fade Out', 'Always Visible → Hidden', MconAnimationType.fadeOut),
+      ('Fade In/Out', 'Toggle fade animation', MconAnimationType.fadeInOut),
+      ('Scale Up', 'Always Small → Normal', MconAnimationType.scaleUp),
+      ('Scale Down', 'Always Normal → Small', MconAnimationType.scaleDown),
+      ('Scale Up/Down', 'Toggle scale animation', MconAnimationType.scaleUpDown),
+      ('Rotate In', 'Fade in + rotate', MconAnimationType.rotateIn),
+      ('Rotate Out', 'Fade out + rotate', MconAnimationType.rotateOut),
+      ('Rotate In/Out', 'Toggle rotate + fade', MconAnimationType.rotateInOut),
+      ('Rotate', '360° rotation (visible)', MconAnimationType.rotate),
+      ('Slide In', 'Always Outside → Center', MconAnimationType.slideIn),
+      ('Slide Out', 'Always Center → Outside', MconAnimationType.slideOut),
+      ('Slide In/Out', 'Toggle slide animation', MconAnimationType.slideInOut),
+      ('Bounce In', 'Always bounce in', MconAnimationType.bounceIn),
+      ('Bounce Out', 'Always bounce out', MconAnimationType.bounceOut),
+      ('Bounce In/Out', 'Toggle bounce animation', MconAnimationType.bounceInOut),
+      ('Flip In', 'Fade in + flip', MconAnimationType.flipIn),
+      ('Flip Out', 'Fade out + flip', MconAnimationType.flipOut),
+      ('Flip In/Out', 'Toggle flip + fade', MconAnimationType.flipInOut),
+      ('Flip', '180° flip (visible)', MconAnimationType.flip),
+      ('Pulse', 'Pulse in place', MconAnimationType.pulse),
+      ('Shake', 'Shake in place', MconAnimationType.shake),
+      ('None', 'Instant change', MconAnimationType.none),
+    ];
+
+    return Wrap(
+      spacing: 16,
+      runSpacing: 16,
+      children: animationTypes.map((type) {
+        return Container(
+          width: 280,
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.surface,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(
+              color:
+                  Theme.of(context).colorScheme.outline.withValues(alpha: 0.2),
+            ),
+          ),
+          child: Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Theme.of(context)
+                      .colorScheme
+                      .primaryContainer
+                      .withValues(alpha: 0.3),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Icon(
+                  Icons.animation,
+                  color: Theme.of(context).colorScheme.primary,
+                  size: 24,
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      type.$1,
+                      style:
+                          Theme.of(context).textTheme.titleSmall?.copyWith(
+                                fontWeight: FontWeight.w600,
+                              ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      type.$2,
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: Theme.of(context)
+                                .colorScheme
+                                .onSurface
+                                .withValues(alpha: 0.6),
+                          ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        );
+      }).toList(),
     );
   }
 }
