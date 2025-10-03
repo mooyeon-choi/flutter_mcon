@@ -1,9 +1,9 @@
 name: flutter_mcon
 description: "Beautiful animated icons for Flutter using CustomPaint"
 version: 0.0.1
-homepage: https://github.com/yourusername/flutter_mcon
-repository: https://github.com/yourusername/flutter_mcon
-issue_tracker: https://github.com/yourusername/flutter_mcon/issues
+homepage: https://mooyeon.com/flutter_mcon
+repository: https://github.com/mooyeon-choi/flutter_mcon
+issue_tracker: https://github.com/mooyeon-choi/flutter_mcon/issues
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
