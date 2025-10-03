@@ -40,7 +40,6 @@ class _MconNotificationsOutlinedPainter extends MconPainter {
 
     final centerX = size.width / 2;
     final bellWidth = size.width * 0.5;
-    final bellHeight = size.height * 0.5;
 
     // Bell swings side to side
     final swingAngle = progress < 0.5

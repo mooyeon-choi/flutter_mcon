@@ -34,67 +34,68 @@ class _MconSearchOutlinedPainter extends MconPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = createPaint()..strokeWidth = size.width * 0.08;
     final progress = animation.value;
 
-    final center = Offset(size.width / 2, size.height / 2);
-    final searchRadius = size.width * 0.28;
+    // Google Material Symbols SVG path (960x960 viewBox)
+    // Normalized to size
+    final scale = size.width / 960;
 
-    // Search circle (shrinks and fades)
-    final circleOpacity = 1 - progress;
-    if (circleOpacity > 0) {
-      final circlePaint = createPaint()
-        ..strokeWidth = size.width * 0.08
-        ..color = color.withValues(alpha: circleOpacity);
+    // Search icon path from Material Symbols
+    final searchPath = Path();
 
-      canvas.drawCircle(
-        center - Offset(size.width * 0.08, size.width * 0.08),
-        searchRadius * (1 - progress * 0.3),
-        circlePaint,
-      );
+    // M784-120 532-372 (move to and line)
+    searchPath.moveTo(784 * scale, (960 - 120) * scale);
+    searchPath.lineTo(532 * scale, (960 - (-372)) * scale);
+
+    // q-30 24-69 38t-83 14 (curve and smooth curve)
+    searchPath.relativeQuadraticBezierTo(
+      -30 * scale, -24 * scale,
+      -69 * scale, -38 * scale,
+    );
+    searchPath.relativeQuadraticBezierTo(
+      0, 0,
+      -83 * scale, -14 * scale,
+    );
+
+    // q-109 0-184.5-75.5T120-580
+    searchPath.relativeQuadraticBezierTo(
+      -109 * scale, 0,
+      -184.5 * scale, 75.5 * scale,
+    );
+    searchPath.relativeQuadraticBezierTo(
+      0, 0,
+      0, (960 - (-580)) * scale - searchPath.getBounds().bottom,
+    );
+
+    // Draw with opacity based on progress
+    final searchOpacity = (1 - progress).clamp(0.0, 1.0);
+    if (searchOpacity > 0) {
+      final searchPaint = Paint()
+        ..color = color.withValues(alpha: searchOpacity)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = size.width * 0.0833
+        ..strokeCap = StrokeCap.round
+        ..strokeJoin = StrokeJoin.round;
+
+      // Simplified Material Symbols search icon
+      // Circle for lens
+      final centerX = size.width * 0.4;
+      final centerY = size.height * 0.4;
+      final radius = size.width * 0.25;
+
+      canvas.drawCircle(Offset(centerX, centerY), radius, searchPaint);
 
       // Handle
-      final handleAngle = 0.785398; // 45 degrees
-      final handleStart = center +
-          Offset(
-            (searchRadius - size.width * 0.04) *
-                (1 - progress * 0.3) *
-                0.707,
-            (searchRadius - size.width * 0.04) *
-                (1 - progress * 0.3) *
-                0.707,
-          );
-      final handleEnd = handleStart +
-          Offset(
-            size.width * 0.18 * (1 - progress),
-            size.width * 0.18 * (1 - progress),
-          );
-
-      canvas.drawLine(handleStart, handleEnd, circlePaint);
-    }
-
-    // Close icon (X) - appears
-    if (progress > 0.2) {
-      final closeProgress = (progress - 0.2) / 0.8;
-      final closePaint = createPaint()
-        ..strokeWidth = size.width * 0.08
-        ..color = color.withValues(alpha: closeProgress);
-
-      final closeSize = size.width * 0.35 * closeProgress;
-
-      // First diagonal
-      canvas.drawLine(
-        center - Offset(closeSize, closeSize),
-        center + Offset(closeSize, closeSize),
-        closePaint,
+      final handleStart = Offset(
+        centerX + radius * 0.707,
+        centerY + radius * 0.707,
+      );
+      final handleEnd = Offset(
+        centerX + radius * 0.707 + size.width * 0.2,
+        centerY + radius * 0.707 + size.width * 0.2,
       );
 
-      // Second diagonal
-      canvas.drawLine(
-        center + Offset(-closeSize, closeSize),
-        center + Offset(closeSize, -closeSize),
-        closePaint,
-      );
+      canvas.drawLine(handleStart, handleEnd, searchPaint);
     }
   }
 }

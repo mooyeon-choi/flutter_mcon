@@ -33,42 +33,35 @@ class _MconHomeOutlinedPainter extends MconPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = createPaint()..strokeWidth = size.width * 0.08;
-    final progress = animation.value;
+    final paint = Paint()
+      ..color = color.withValues(alpha: animation.value)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = size.width * 0.0833
+      ..strokeCap = StrokeCap.round
+      ..strokeJoin = StrokeJoin.round;
 
-    final centerX = size.width / 2;
-    final roofHeight = size.height * 0.3;
-    final baseHeight = size.height * 0.75;
-    final houseWidth = size.width * 0.7;
+    // Material Symbols home icon SVG path
+    // M160-120v-480l320-240 320 240v480H520v-240h-80v240H160
+    // ViewBox: 0 0 960 960
 
+    final scale = size.width / 960;
     final path = Path();
 
-    // Roof - animates from top
-    final animatedRoofY = roofHeight + (1 - progress) * size.height * 0.3;
-    path.moveTo(centerX - houseWidth / 2, baseHeight - houseWidth * 0.2);
-    path.lineTo(centerX, animatedRoofY);
-    path.lineTo(centerX + houseWidth / 2, baseHeight - houseWidth * 0.2);
+    // Convert SVG coordinates (Y-axis inverted)
+    double y(double svgY) => size.height - (svgY * scale);
+    double x(double svgX) => svgX * scale;
 
-    // House body
-    final bodyOpacity = progress;
-    if (progress > 0) {
-      path.moveTo(centerX - houseWidth / 2, baseHeight - houseWidth * 0.2);
-      path.lineTo(centerX - houseWidth / 2, baseHeight);
-      path.lineTo(centerX + houseWidth / 2, baseHeight);
-      path.lineTo(centerX + houseWidth / 2, baseHeight - houseWidth * 0.2);
-    }
-
-    // Door
-    if (progress > 0.5) {
-      final doorProgress = (progress - 0.5) / 0.5;
-      final doorWidth = size.width * 0.2;
-      final doorHeight = size.width * 0.25 * doorProgress;
-
-      path.moveTo(centerX - doorWidth / 2, baseHeight);
-      path.lineTo(centerX - doorWidth / 2, baseHeight - doorHeight);
-      path.lineTo(centerX + doorWidth / 2, baseHeight - doorHeight);
-      path.lineTo(centerX + doorWidth / 2, baseHeight);
-    }
+    // Outer boundary
+    path.moveTo(x(160), y(120));
+    path.lineTo(x(160), y(600)); // v-480
+    path.lineTo(x(480), y(840)); // l320-240 (to peak)
+    path.lineTo(x(800), y(600)); // l320 240
+    path.lineTo(x(800), y(120)); // v480
+    path.lineTo(x(520), y(120)); // H520
+    path.lineTo(x(520), y(360)); // v-240
+    path.lineTo(x(440), y(360)); // h-80
+    path.lineTo(x(440), y(120)); // v240
+    path.lineTo(x(160), y(120)); // H160
 
     canvas.drawPath(path, paint);
   }

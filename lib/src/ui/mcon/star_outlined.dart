@@ -52,7 +52,6 @@ class _MconStarOutlinedPainter extends MconPainter {
     final path = Path();
     for (int i = 0; i < 5; i++) {
       final angle = (i * math.pi * 2 / 5) - math.pi / 2;
-      final nextAngle = ((i + 1) * math.pi * 2 / 5) - math.pi / 2;
 
       // Outer point
       final outerPoint = Offset(

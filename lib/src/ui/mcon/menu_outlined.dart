@@ -12,8 +12,7 @@ class MconMenuOutlined extends MconBase {
   });
 
   @override
-  MconBaseState<MconMenuOutlined> createState() =>
-      _MconMenuOutlinedState();
+  MconBaseState<MconMenuOutlined> createState() => _MconMenuOutlinedState();
 }
 
 class _MconMenuOutlinedState extends MconBaseState<MconMenuOutlined> {
@@ -34,72 +33,42 @@ class _MconMenuOutlinedPainter extends MconPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = createPaint()..strokeWidth = size.width * 0.08;
-    final progress = animation.value;
+    final paint = Paint()
+      ..color = color.withValues(alpha: animation.value)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = size.width * 0.0833
+      ..strokeCap = StrokeCap.round
+      ..strokeJoin = StrokeJoin.round;
 
-    final centerY = size.height / 2;
-    final lineWidth = size.width * 0.7;
-    final startX = (size.width - lineWidth) / 2;
-    final endX = startX + lineWidth;
+    // Material Symbols menu icon SVG path
+    // M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z
+    // ViewBox: 0 0 960 960
 
-    // Three lines transform to X
-    if (progress < 0.5) {
-      // Menu state
-      final menuProgress = 1 - (progress * 2);
+    final scale = size.width / 960;
 
-      // Top line
-      canvas.drawLine(
-        Offset(startX, centerY - size.height * 0.25),
-        Offset(endX, centerY - size.height * 0.25),
-        paint,
-      );
+    double y(double svgY) => size.height - (svgY * scale);
+    double x(double svgX) => svgX * scale;
 
-      // Middle line (fades out)
-      final middlePaint = createPaint()
-        ..strokeWidth = size.width * 0.08
-        ..color = color.withValues(alpha: menuProgress);
-      canvas.drawLine(
-        Offset(startX, centerY),
-        Offset(endX, centerY),
-        middlePaint,
-      );
+    // Three horizontal lines
+    // Top line
+    canvas.drawLine(
+      Offset(x(120), y(240)),
+      Offset(x(840), y(240)),
+      paint,
+    );
 
-      // Bottom line
-      canvas.drawLine(
-        Offset(startX, centerY + size.height * 0.25),
-        Offset(endX, centerY + size.height * 0.25),
-        paint,
-      );
-    } else {
-      // X state
-      final xProgress = (progress - 0.5) * 2;
-      final angle = xProgress * 0.785398; // 45 degrees
+    // Middle line
+    canvas.drawLine(
+      Offset(x(120), y(440)),
+      Offset(x(840), y(440)),
+      paint,
+    );
 
-      final cos45 = 0.707;
-      final sin45 = 0.707;
-      final length = lineWidth / 2;
-
-      // Top line rotates to top-right diagonal
-      final topStart = Offset(
-        size.width / 2 - length * cos45,
-        size.height / 2 - length * sin45,
-      );
-      final topEnd = Offset(
-        size.width / 2 + length * cos45,
-        size.height / 2 + length * sin45,
-      );
-      canvas.drawLine(topStart, topEnd, paint);
-
-      // Bottom line rotates to bottom-right diagonal
-      final bottomStart = Offset(
-        size.width / 2 - length * cos45,
-        size.height / 2 + length * sin45,
-      );
-      final bottomEnd = Offset(
-        size.width / 2 + length * cos45,
-        size.height / 2 - length * sin45,
-      );
-      canvas.drawLine(bottomStart, bottomEnd, paint);
-    }
+    // Bottom line
+    canvas.drawLine(
+      Offset(x(120), y(640)),
+      Offset(x(840), y(640)),
+      paint,
+    );
   }
 }

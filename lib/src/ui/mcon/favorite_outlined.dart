@@ -34,7 +34,6 @@ class _MconFavoriteOutlinedPainter extends MconPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = createPaint()..strokeWidth = size.width * 0.08;
     final progress = animation.value;
 
     final centerX = size.width / 2;

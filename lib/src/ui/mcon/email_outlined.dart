@@ -41,7 +41,6 @@ class _MconEmailOutlinedPainter extends MconPainter {
     final envelopeWidth = size.width * 0.7;
     final envelopeHeight = size.height * 0.5;
     final envelopeTop = size.height * 0.25;
-    final envelopeBottom = envelopeTop + envelopeHeight;
 
     // Envelope rectangle
     canvas.drawRect(
@@ -55,8 +54,6 @@ class _MconEmailOutlinedPainter extends MconPainter {
     );
 
     // Flap animation
-    final flapProgress = progress;
-    final flapOpenAngle = flapProgress * 0.8;
 
     final path = Path();
 
