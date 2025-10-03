@@ -12,8 +12,7 @@ class MconSearchOutlined extends MconBase {
   });
 
   @override
-  MconBaseState<MconSearchOutlined> createState() =>
-      _MconSearchOutlinedState();
+  MconBaseState<MconSearchOutlined> createState() => _MconSearchOutlinedState();
 }
 
 class _MconSearchOutlinedState extends MconBaseState<MconSearchOutlined> {
@@ -49,22 +48,30 @@ class _MconSearchOutlinedPainter extends MconPainter {
 
     // q-30 24-69 38t-83 14 (curve and smooth curve)
     searchPath.relativeQuadraticBezierTo(
-      -30 * scale, -24 * scale,
-      -69 * scale, -38 * scale,
+      -30 * scale,
+      -24 * scale,
+      -69 * scale,
+      -38 * scale,
     );
     searchPath.relativeQuadraticBezierTo(
-      0, 0,
-      -83 * scale, -14 * scale,
+      0,
+      0,
+      -83 * scale,
+      -14 * scale,
     );
 
     // q-109 0-184.5-75.5T120-580
     searchPath.relativeQuadraticBezierTo(
-      -109 * scale, 0,
-      -184.5 * scale, 75.5 * scale,
+      -109 * scale,
+      0,
+      -184.5 * scale,
+      75.5 * scale,
     );
     searchPath.relativeQuadraticBezierTo(
-      0, 0,
-      0, (960 - (-580)) * scale - searchPath.getBounds().bottom,
+      0,
+      0,
+      0,
+      (960 - (-580)) * scale - searchPath.getBounds().bottom,
     );
 
     // Draw with opacity based on progress

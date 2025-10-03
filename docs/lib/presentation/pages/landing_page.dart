@@ -96,7 +96,8 @@ class LandingPage extends StatelessWidget {
                     _FeatureCard(
                       icon: Icons.speed,
                       title: 'High Performance',
-                      description: 'Built with CustomPaint for optimal performance',
+                      description:
+                          'Built with CustomPaint for optimal performance',
                     ),
                     _FeatureCard(
                       icon: Icons.layers,

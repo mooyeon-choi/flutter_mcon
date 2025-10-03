@@ -42,9 +42,8 @@ class _MconNotificationsOutlinedPainter extends MconPainter {
     final bellWidth = size.width * 0.5;
 
     // Bell swings side to side
-    final swingAngle = progress < 0.5
-        ? (progress * 2) * 0.2
-        : ((1 - progress) * 2) * 0.2;
+    final swingAngle =
+        progress < 0.5 ? (progress * 2) * 0.2 : ((1 - progress) * 2) * 0.2;
 
     canvas.save();
     canvas.translate(centerX, size.height * 0.25);

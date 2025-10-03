@@ -13,8 +13,7 @@ class MconStarOutlined extends MconBase {
   });
 
   @override
-  MconBaseState<MconStarOutlined> createState() =>
-      _MconStarOutlinedState();
+  MconBaseState<MconStarOutlined> createState() => _MconStarOutlinedState();
 }
 
 class _MconStarOutlinedState extends MconBaseState<MconStarOutlined> {

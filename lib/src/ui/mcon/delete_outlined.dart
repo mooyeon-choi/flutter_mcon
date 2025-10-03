@@ -12,8 +12,7 @@ class MconDeleteOutlined extends MconBase {
   });
 
   @override
-  MconBaseState<MconDeleteOutlined> createState() =>
-      _MconDeleteOutlinedState();
+  MconBaseState<MconDeleteOutlined> createState() => _MconDeleteOutlinedState();
 }
 
 class _MconDeleteOutlinedState extends MconBaseState<MconDeleteOutlined> {

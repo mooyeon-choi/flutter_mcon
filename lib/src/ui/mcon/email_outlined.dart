@@ -12,8 +12,7 @@ class MconEmailOutlined extends MconBase {
   });
 
   @override
-  MconBaseState<MconEmailOutlined> createState() =>
-      _MconEmailOutlinedState();
+  MconBaseState<MconEmailOutlined> createState() => _MconEmailOutlinedState();
 }
 
 class _MconEmailOutlinedState extends MconBaseState<MconEmailOutlined> {
