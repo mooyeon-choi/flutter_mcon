@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
-import '../../../core/mcon_base.dart';
+import '../core/mcon_base.dart';
 
-/// Animated arrow forward icon from Google Material Icons
-class MconArrowForward extends MconBase {
-  const MconArrowForward({
+/// Animated arrow back icon from Google Material Icons
+class MconArrowBack extends MconBase {
+  const MconArrowBack({
     super.key,
     super.size,
     super.color,
@@ -12,21 +12,21 @@ class MconArrowForward extends MconBase {
   });
 
   @override
-  MconBaseState<MconArrowForward> createState() => _MconArrowForwardState();
+  MconBaseState<MconArrowBack> createState() => _MconArrowBackState();
 }
 
-class _MconArrowForwardState extends MconBaseState<MconArrowForward> {
+class _MconArrowBackState extends MconBaseState<MconArrowBack> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
-    return _MconArrowForwardPainter(
+    return _MconArrowBackPainter(
       animation: animation,
       color: widget.color ?? const Color(0xFF000000),
     );
   }
 }
 
-class _MconArrowForwardPainter extends MconPainter {
-  _MconArrowForwardPainter({
+class _MconArrowBackPainter extends MconPainter {
+  _MconArrowBackPainter({
     required super.animation,
     required super.color,
   });
@@ -41,16 +41,16 @@ class _MconArrowForwardPainter extends MconPainter {
     double y(double coord) => (coord + 960) * scaleY;
 
     final path = Path();
-    path.moveTo(x(647), y(-440));
-    path.lineTo(x(160), y(-440));
-    path.lineTo(x(160), y(-520));
-    path.lineTo(x(647), y(-520));
-    path.lineTo(x(423), y(-744));
-    path.lineTo(x(480), y(-800));
-    path.lineTo(x(800), y(-480));
+    path.moveTo(x(313), y(-440));
+    path.lineTo(x(537), y(-216));
     path.lineTo(x(480), y(-160));
-    path.lineTo(x(423), y(-216));
-    path.lineTo(x(647), y(-440));
+    path.lineTo(x(160), y(-480));
+    path.lineTo(x(480), y(-800));
+    path.lineTo(x(537), y(-744));
+    path.lineTo(x(313), y(-520));
+    path.lineTo(x(800), y(-520));
+    path.lineTo(x(800), y(-440));
+    path.lineTo(x(313), y(-440));
     path.close();
 
     final paint = Paint()

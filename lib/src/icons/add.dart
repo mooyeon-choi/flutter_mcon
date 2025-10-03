@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
-import '../../../core/mcon_base.dart';
+import '../core/mcon_base.dart';
 
-/// Animated close icon from Google Material Icons
-class MconClose extends MconBase {
-  const MconClose({
+/// Animated add icon from Google Material Icons
+class MconAdd extends MconBase {
+  const MconAdd({
     super.key,
     super.size,
     super.color,
@@ -12,21 +12,21 @@ class MconClose extends MconBase {
   });
 
   @override
-  MconBaseState<MconClose> createState() => _MconCloseState();
+  MconBaseState<MconAdd> createState() => _MconAddState();
 }
 
-class _MconCloseState extends MconBaseState<MconClose> {
+class _MconAddState extends MconBaseState<MconAdd> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
-    return _MconClosePainter(
+    return _MconAddPainter(
       animation: animation,
       color: widget.color ?? const Color(0xFF000000),
     );
   }
 }
 
-class _MconClosePainter extends MconPainter {
-  _MconClosePainter({
+class _MconAddPainter extends MconPainter {
+  _MconAddPainter({
     required super.animation,
     required super.color,
   });
@@ -44,19 +44,19 @@ class _MconClosePainter extends MconPainter {
     double y(double coord) => (coord + 960) * scaleY;
 
     final path = Path();
-    path.moveTo(x(256), y(-200));
-    path.lineTo(x(200), y(-256));
-    path.lineTo(x(424), y(-480));
-    path.lineTo(x(200), y(-704));
-    path.lineTo(x(256), y(-760));
-    path.lineTo(x(480), y(-536));
-    path.lineTo(x(704), y(-760));
-    path.lineTo(x(760), y(-704));
-    path.lineTo(x(536), y(-480));
-    path.lineTo(x(760), y(-256));
-    path.lineTo(x(704), y(-200));
-    path.lineTo(x(480), y(-424));
-    path.lineTo(x(256), y(-200));
+    path.moveTo(x(440), y(-440));
+    path.lineTo(x(200), y(-440));
+    path.lineTo(x(200), y(-520));
+    path.lineTo(x(440), y(-520));
+    path.lineTo(x(440), y(-760));
+    path.lineTo(x(520), y(-760));
+    path.lineTo(x(520), y(-520));
+    path.lineTo(x(760), y(-520));
+    path.lineTo(x(760), y(-440));
+    path.lineTo(x(520), y(-440));
+    path.lineTo(x(520), y(-200));
+    path.lineTo(x(440), y(-200));
+    path.lineTo(x(440), y(-440));
     path.close();
 
     final paint = Paint()

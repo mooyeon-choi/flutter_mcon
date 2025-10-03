@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import '../../../core/mcon_base.dart';
+import '../core/mcon_base.dart';
 
 /// Animated expand content icon from Google Material Icons
 class MconExpandContent extends MconBase {

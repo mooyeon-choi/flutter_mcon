@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import '../../../core/mcon_base.dart';
+import '../core/mcon_base.dart';
 
 /// Animated menu icon from Google Material Icons
 class MconMenu extends MconBase {

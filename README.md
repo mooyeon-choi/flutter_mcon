@@ -10,8 +10,8 @@ Beautiful animated icons for Flutter using CustomPaint.
 
 - 🎨 **Customizable** - Size, color, duration, and animation curves
 - 🚀 **Smooth Animations** - Built with Flutter's animation framework
-- 📦 **Clean Architecture** - Well-structured, maintainable codebase
-- 🔧 **Code Generator** - Easily create new icons from templates
+- 📦 **Simple Structure** - Clean and maintainable codebase
+- 🔍 **Searchable** - Interactive docs with search functionality
 - 📚 **Interactive Docs** - Live demo with property controls
 - 🎯 **Zero Dependencies** - Only uses Flutter SDK
 
@@ -55,10 +55,29 @@ MconSearch(
 
 ## Available Icons
 
-Currently available:
-- **MconSearch** - Search icon that transitions to close (X)
+### Material Icons (20 icons)
 
-More icons coming soon!
+All icons from Google's Material Icons collection:
+- **MconAdd** - Plus/Add icon
+- **MconArrowBack** - Back arrow
+- **MconArrowForward** - Forward arrow
+- **MconCall** - Phone/Call icon
+- **MconChat** - Chat/Message icon
+- **MconClose** - Close/X icon
+- **MconDelete** - Delete/Trash icon
+- **MconDoneOutline** - Checkmark outline
+- **MconEdit** - Edit/Pencil icon
+- **MconExpandContent** - Expand icon
+- **MconFavorite** - Heart/Favorite icon
+- **MconHome** - Home icon
+- **MconMail** - Email/Mail icon
+- **MconMenu** - Menu/Hamburger icon
+- **MconNotifications** - Bell/Notifications icon
+- **MconPerson** - Person/User icon
+- **MconRefresh** - Refresh/Reload icon
+- **MconSearch** - Search/Magnifying glass icon
+- **MconSettings** - Settings/Gear icon
+- **MconStar** - Star icon
 
 ## Usage Examples
 
@@ -116,18 +135,22 @@ flutter run -d chrome
 Features:
 - Visual preview of all icons
 - Interactive controls (size, color, duration)
-- Code generation commands
+- Search functionality for Material Icons
 - Responsive design
+- Sidebar navigation with smooth scrolling
 
 ### Architecture
 
-See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed information about the project structure and design patterns.
+The project follows a simple, clean architecture:
 
-**Clean Architecture Layers:**
-- **Core** - Base classes (`MconBase`, `MconPainter`)
-- **Domain** - Models and configuration (`MconConfig`)
-- **Presentation** - UI components (`MconWidget`)
-- **UI** - Generated icon implementations
+**Core Components:**
+- **MconBase** - Base stateful widget for all icons
+- **MconPainter** - Abstract CustomPainter with animation support
+
+**Icon Implementations:**
+- All Material Icons extend `MconBase`
+- Each icon has a custom painter extending `MconPainter`
+- Path-based rendering using CustomPaint
 
 ## Development
 
@@ -156,27 +179,61 @@ flutter analyze
 
 ### Creating New Icons
 
-Use the code generator to create new icons:
+To add a new icon:
 
-```bash
-dart run dev/generator/icon_generator.dart <icon_name>
+1. Create a new file in `lib/src/icons/<icon_name>.dart`
+2. Implement the icon following this pattern:
+
+```dart
+class MconYourIcon extends MconBase {
+  const MconYourIcon({
+    super.key,
+    super.size,
+    super.color,
+    super.duration,
+    super.curve,
+  });
+
+  @override
+  MconBaseState<MconYourIcon> createState() => _MconYourIconState();
+}
+
+class _MconYourIconState extends MconBaseState<MconYourIcon> {
+  @override
+  CustomPainter createPainter(Animation<double> animation) {
+    return _MconYourIconPainter(
+      animation: animation,
+      color: widget.color ?? const Color(0xFF000000),
+    );
+  }
+}
+
+class _MconYourIconPainter extends MconPainter {
+  _MconYourIconPainter({required super.animation, required super.color});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final progress = animation.value;
+    final scaleX = size.width / 960;
+    final scaleY = size.height / 960;
+
+    double x(double coord) => coord * scaleX;
+    double y(double coord) => (coord + 960) * scaleY;
+
+    final path = Path();
+    // Add your path commands here
+
+    final paint = Paint()
+      ..style = PaintingStyle.fill
+      ..color = color.withValues(alpha: progress);
+
+    canvas.drawPath(path, paint);
+  }
+}
 ```
 
-Example:
-```bash
-# Generate a menu icon
-dart run dev/generator/icon_generator.dart menu_to_close
-```
-
-This creates:
-1. A new file in `lib/src/ui/mcon/<icon_name>.dart`
-2. Complete icon implementation extending `MconBase`
-3. Custom painter with animation support
-
-**Next steps:**
-1. Implement the `paint()` method in the generated painter
-2. Export the icon in `lib/flutter_mcon.dart`
-3. Add to docs in `docs/lib/domain/icon_data.dart`
+3. Export the icon in `lib/flutter_mcon.dart`
+4. Add to docs in `docs/lib/domain/icon_data.dart`
 
 ### Project Structure
 
@@ -185,13 +242,8 @@ flutter_mcon/
 ├── lib/
 │   ├── src/
 │   │   ├── core/           # MconBase, MconPainter
-│   │   ├── domain/         # MconConfig
-│   │   ├── presentation/   # MconWidget
-│   │   └── ui/mcon/        # Generated icons
+│   │   └── icons/          # All Material Icons
 │   └── flutter_mcon.dart   # Public API
-├── dev/
-│   ├── generator/          # Icon generator CLI
-│   └── templates/          # Code templates
 ├── docs/                   # Flutter Web docs site
 ├── example/                # Example app
 └── test/                   # Unit & widget tests
