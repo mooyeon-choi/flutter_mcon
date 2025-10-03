@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mcon/flutter_mcon.dart';
 
 class IconPreview extends StatelessWidget {
   const IconPreview({
@@ -35,16 +36,82 @@ class IconPreview extends StatelessWidget {
               ),
             ),
             child: Center(
-              // TODO: Display actual animated icon
-              child: Icon(
-                Icons.widgets,
-                size: size * 0.8,
-                color: color,
-              ),
+              child: _buildIcon(),
             ),
           ),
         ),
       ),
     );
+  }
+
+  Widget _buildIcon() {
+    switch (iconName) {
+      case 'search_outlined':
+        return MconSearchOutlined(
+          size: size,
+          color: color,
+          duration: duration,
+        );
+      case 'home_outlined':
+        return MconHomeOutlined(
+          size: size,
+          color: color,
+          duration: duration,
+        );
+      case 'favorite_outlined':
+        return MconFavoriteOutlined(
+          size: size,
+          color: color,
+          duration: duration,
+        );
+      case 'menu_outlined':
+        return MconMenuOutlined(
+          size: size,
+          color: color,
+          duration: duration,
+        );
+      case 'settings_outlined':
+        return MconSettingsOutlined(
+          size: size,
+          color: color,
+          duration: duration,
+        );
+      case 'person_outlined':
+        return MconPersonOutlined(
+          size: size,
+          color: color,
+          duration: duration,
+        );
+      case 'notifications_outlined':
+        return MconNotificationsOutlined(
+          size: size,
+          color: color,
+          duration: duration,
+        );
+      case 'star_outlined':
+        return MconStarOutlined(
+          size: size,
+          color: color,
+          duration: duration,
+        );
+      case 'email_outlined':
+        return MconEmailOutlined(
+          size: size,
+          color: color,
+          duration: duration,
+        );
+      case 'delete_outlined':
+        return MconDeleteOutlined(
+          size: size,
+          color: color,
+          duration: duration,
+        );
+      default:
+        return Icon(
+          Icons.widgets,
+          size: size * 0.8,
+          color: color,
+        );
+    }
   }
 }

@@ -30,38 +30,146 @@ void main() {
     });
   });
 
-  group('MconSearch', () {
-    testWidgets('creates and renders', (WidgetTester tester) async {
+  group('Outlined Icons', () {
+    testWidgets('MconSearchOutlined creates and renders',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(
-            body: MconSearch(),
+            body: MconSearchOutlined(),
           ),
         ),
       );
 
-      expect(find.byType(MconSearch), findsOneWidget);
+      expect(find.byType(MconSearchOutlined), findsOneWidget);
     });
 
-    testWidgets('respects size property', (WidgetTester tester) async {
+    testWidgets('MconHomeOutlined respects size property',
+        (WidgetTester tester) async {
       const size = 48.0;
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(
-            body: MconSearch(size: size),
+            body: MconHomeOutlined(size: size),
           ),
         ),
       );
 
       final sizedBox = tester.widget<SizedBox>(
         find.descendant(
-          of: find.byType(MconSearch),
+          of: find.byType(MconHomeOutlined),
           matching: find.byType(SizedBox),
         ),
       );
 
       expect(sizedBox.width, size);
       expect(sizedBox.height, size);
+    });
+
+    testWidgets('MconFavoriteOutlined respects color property',
+        (WidgetTester tester) async {
+      const color = Colors.red;
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: Scaffold(
+            body: MconFavoriteOutlined(color: color),
+          ),
+        ),
+      );
+
+      expect(find.byType(MconFavoriteOutlined), findsOneWidget);
+    });
+
+    testWidgets('MconMenuOutlined respects duration property',
+        (WidgetTester tester) async {
+      const duration = Duration(milliseconds: 500);
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: Scaffold(
+            body: MconMenuOutlined(duration: duration),
+          ),
+        ),
+      );
+
+      expect(find.byType(MconMenuOutlined), findsOneWidget);
+    });
+
+    testWidgets('MconSettingsOutlined renders correctly',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: Scaffold(
+            body: MconSettingsOutlined(),
+          ),
+        ),
+      );
+
+      expect(find.byType(MconSettingsOutlined), findsOneWidget);
+    });
+
+    testWidgets('MconPersonOutlined renders correctly',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: Scaffold(
+            body: MconPersonOutlined(),
+          ),
+        ),
+      );
+
+      expect(find.byType(MconPersonOutlined), findsOneWidget);
+    });
+
+    testWidgets('MconNotificationsOutlined renders correctly',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: Scaffold(
+            body: MconNotificationsOutlined(),
+          ),
+        ),
+      );
+
+      expect(find.byType(MconNotificationsOutlined), findsOneWidget);
+    });
+
+    testWidgets('MconStarOutlined renders correctly',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: Scaffold(
+            body: MconStarOutlined(),
+          ),
+        ),
+      );
+
+      expect(find.byType(MconStarOutlined), findsOneWidget);
+    });
+
+    testWidgets('MconEmailOutlined renders correctly',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: Scaffold(
+            body: MconEmailOutlined(),
+          ),
+        ),
+      );
+
+      expect(find.byType(MconEmailOutlined), findsOneWidget);
+    });
+
+    testWidgets('MconDeleteOutlined renders correctly',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: Scaffold(
+            body: MconDeleteOutlined(),
+          ),
+        ),
+      );
+
+      expect(find.byType(MconDeleteOutlined), findsOneWidget);
     });
   });
 

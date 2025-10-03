@@ -13,6 +13,14 @@ export 'src/domain/mcon_config.dart';
 // Presentation
 export 'src/presentation/mcon_widget.dart';
 
-// Icons (generated)
-// Icons will be generated in src/ui/mcon/ and exported here
-export 'src/ui/mcon/search.dart';
+// Icons - Outlined variants
+export 'src/ui/mcon/search_outlined.dart';
+export 'src/ui/mcon/home_outlined.dart';
+export 'src/ui/mcon/favorite_outlined.dart';
+export 'src/ui/mcon/menu_outlined.dart';
+export 'src/ui/mcon/settings_outlined.dart';
+export 'src/ui/mcon/person_outlined.dart';
+export 'src/ui/mcon/notifications_outlined.dart';
+export 'src/ui/mcon/star_outlined.dart';
+export 'src/ui/mcon/email_outlined.dart';
+export 'src/ui/mcon/delete_outlined.dart';
