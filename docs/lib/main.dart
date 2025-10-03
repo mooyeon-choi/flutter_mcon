@@ -39,11 +39,16 @@ class MconDocsApp extends StatelessWidget {
           case AppRoutes.docs:
             return PageRouteBuilder(
               settings: settings,
-              pageBuilder: (context, animation, secondaryAnimation) =>
-                  const MainLayout(
-                showSidebar: true,
-                child: DocsPage(),
-              ),
+              pageBuilder: (context, animation, secondaryAnimation) {
+                final docsPageKey = GlobalKey<DocsPageState>();
+                return MainLayout(
+                  showSidebar: true,
+                  onSidebarItemTap: (sectionId) {
+                    docsPageKey.currentState?.scrollToSection(sectionId);
+                  },
+                  child: DocsPage(key: docsPageKey),
+                );
+              },
               transitionDuration: Duration.zero,
               reverseTransitionDuration: Duration.zero,
             );

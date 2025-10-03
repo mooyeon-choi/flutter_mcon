@@ -8,10 +8,12 @@ class MainLayout extends StatelessWidget {
     super.key,
     required this.child,
     this.showSidebar = false,
+    this.onSidebarItemTap,
   });
 
   final Widget child;
   final bool showSidebar;
+  final Function(String)? onSidebarItemTap;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,10 @@ class MainLayout extends StatelessWidget {
           Expanded(
             child: Row(
               children: [
-                if (showSidebar) const SideBar(),
+                if (showSidebar)
+                  SideBar(
+                    onItemTap: onSidebarItemTap,
+                  ),
                 Expanded(child: child),
               ],
             ),

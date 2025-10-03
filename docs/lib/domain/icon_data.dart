@@ -13,138 +13,109 @@ class IconData {
 
 /// Available icons in the library
 class AvailableIcons {
-  // Action Icons
-  static const List<IconData> actionIcons = [
+  // Material Icons
+  static const List<IconData> materialIcons = [
     IconData(
-      name: 'add_outlined',
+      name: 'add',
       displayName: 'Add',
-      description: 'Plus icon that expands',
+      description: 'Plus icon from Material Icons',
     ),
     IconData(
-      name: 'close_outlined',
-      displayName: 'Close',
-      description: 'X icon that appears',
-    ),
-    IconData(
-      name: 'delete_outlined',
-      displayName: 'Delete',
-      description: 'Trash bin with tilt animation',
-    ),
-    IconData(
-      name: 'done_outlined',
-      displayName: 'Done',
-      description: 'Checkmark that draws in',
-    ),
-    IconData(
-      name: 'edit_outlined',
-      displayName: 'Edit',
-      description: 'Pencil icon with writing animation',
-    ),
-  ];
-
-  // Navigation Icons
-  static const List<IconData> navigationIcons = [
-    IconData(
-      name: 'arrow_back_outlined',
+      name: 'arrow_back',
       displayName: 'Arrow Back',
-      description: 'Left arrow with arrowhead',
+      description: 'Left arrow from Material Icons',
     ),
     IconData(
-      name: 'arrow_forward_outlined',
+      name: 'arrow_forward',
       displayName: 'Arrow Forward',
-      description: 'Right arrow with arrowhead',
+      description: 'Right arrow from Material Icons',
     ),
     IconData(
-      name: 'expand_more_outlined',
-      displayName: 'Expand More',
-      description: 'Downward chevron',
-    ),
-    IconData(
-      name: 'home_outlined',
-      displayName: 'Home',
-      description: 'House with roof and door',
-    ),
-    IconData(
-      name: 'menu_outlined',
-      displayName: 'Menu',
-      description: 'Hamburger menu to X',
-    ),
-    IconData(
-      name: 'refresh_outlined',
-      displayName: 'Refresh',
-      description: 'Circular arrow',
-    ),
-    IconData(
-      name: 'search_outlined',
-      displayName: 'Search',
-      description: 'Magnifying glass to X',
-    ),
-  ];
-
-  // Communication Icons
-  static const List<IconData> communicationIcons = [
-    IconData(
-      name: 'call_outlined',
+      name: 'call',
       displayName: 'Call',
-      description: 'Phone handset',
+      description: 'Phone handset from Material Icons',
     ),
     IconData(
-      name: 'chat_outlined',
+      name: 'chat',
       displayName: 'Chat',
-      description: 'Speech bubble with text',
+      description: 'Speech bubble from Material Icons',
     ),
     IconData(
-      name: 'email_outlined',
-      displayName: 'Email',
-      description: 'Envelope with opening flap',
+      name: 'close',
+      displayName: 'Close',
+      description: 'X icon from Material Icons',
     ),
-  ];
-
-  // Content Icons
-  static const List<IconData> contentIcons = [
     IconData(
-      name: 'favorite_outlined',
+      name: 'delete',
+      displayName: 'Delete',
+      description: 'Trash bin from Material Icons',
+    ),
+    IconData(
+      name: 'done_outline',
+      displayName: 'Done',
+      description: 'Checkmark from Material Icons',
+    ),
+    IconData(
+      name: 'edit',
+      displayName: 'Edit',
+      description: 'Pencil icon from Material Icons',
+    ),
+    IconData(
+      name: 'expand_content',
+      displayName: 'Expand Content',
+      description: 'Expand icon from Material Icons',
+    ),
+    IconData(
+      name: 'favorite',
       displayName: 'Favorite',
-      description: 'Heart that scales in',
+      description: 'Heart from Material Icons',
     ),
     IconData(
-      name: 'star_outlined',
-      displayName: 'Star',
-      description: 'Star that rotates',
+      name: 'home',
+      displayName: 'Home',
+      description: 'House from Material Icons',
     ),
-  ];
-
-  // User & Social Icons
-  static const List<IconData> userSocialIcons = [
     IconData(
-      name: 'notifications_outlined',
+      name: 'mail',
+      displayName: 'Mail',
+      description: 'Envelope from Material Icons',
+    ),
+    IconData(
+      name: 'menu',
+      displayName: 'Menu',
+      description: 'Hamburger menu from Material Icons',
+    ),
+    IconData(
+      name: 'notifications',
       displayName: 'Notifications',
-      description: 'Bell that swings',
+      description: 'Bell from Material Icons',
     ),
     IconData(
-      name: 'person_outlined',
+      name: 'person',
       displayName: 'Person',
-      description: 'User avatar with animation',
+      description: 'User avatar from Material Icons',
     ),
-  ];
-
-  // Settings Icons
-  static const List<IconData> settingsIcons = [
     IconData(
-      name: 'settings_outlined',
+      name: 'refresh',
+      displayName: 'Refresh',
+      description: 'Circular arrow from Material Icons',
+    ),
+    IconData(
+      name: 'search',
+      displayName: 'Search',
+      description: 'Magnifying glass from Material Icons',
+    ),
+    IconData(
+      name: 'settings',
       displayName: 'Settings',
-      description: 'Gear that rotates',
+      description: 'Gear from Material Icons',
+    ),
+    IconData(
+      name: 'star',
+      displayName: 'Star',
+      description: 'Star from Material Icons',
     ),
   ];
 
-  static const List<IconData> outlined = [
-    ...actionIcons,
-    ...navigationIcons,
-    ...communicationIcons,
-    ...contentIcons,
-    ...userSocialIcons,
-    ...settingsIcons,
-  ];
-
-  static const List<IconData> all = outlined;
+  static const List<IconData> all = materialIcons;
 }

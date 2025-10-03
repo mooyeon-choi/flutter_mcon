@@ -89,57 +89,47 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
     const size = 64.0;
 
     switch (widget.iconData.name) {
-      // Action Icons
-      case 'add_outlined':
-        return MconAddOutlined(size: size, color: color);
-      case 'close_outlined':
-        return MconCloseOutlined(size: size, color: color);
-      case 'delete_outlined':
-        return MconDeleteOutlined(size: size, color: color);
-      case 'done_outlined':
-        return MconDoneOutlined(size: size, color: color);
-      case 'edit_outlined':
-        return MconEditOutlined(size: size, color: color);
-
-      // Navigation Icons
-      case 'arrow_back_outlined':
-        return MconArrowBackOutlined(size: size, color: color);
-      case 'arrow_forward_outlined':
-        return MconArrowForwardOutlined(size: size, color: color);
-      case 'expand_more_outlined':
-        return MconExpandMoreOutlined(size: size, color: color);
-      case 'home_outlined':
-        return MconHomeOutlined(size: size, color: color);
-      case 'menu_outlined':
-        return MconMenuOutlined(size: size, color: color);
-      case 'refresh_outlined':
-        return MconRefreshOutlined(size: size, color: color);
-      case 'search_outlined':
-        return MconSearchOutlined(size: size, color: color);
-
-      // Communication Icons
-      case 'call_outlined':
-        return MconCallOutlined(size: size, color: color);
-      case 'chat_outlined':
-        return MconChatOutlined(size: size, color: color);
-      case 'email_outlined':
-        return MconEmailOutlined(size: size, color: color);
-
-      // Content Icons
-      case 'favorite_outlined':
-        return MconFavoriteOutlined(size: size, color: color);
-      case 'star_outlined':
-        return MconStarOutlined(size: size, color: color);
-
-      // User & Social Icons
-      case 'notifications_outlined':
-        return MconNotificationsOutlined(size: size, color: color);
-      case 'person_outlined':
-        return MconPersonOutlined(size: size, color: color);
-
-      // Settings Icons
-      case 'settings_outlined':
-        return MconSettingsOutlined(size: size, color: color);
+      // Material Icons
+      case 'add':
+        return MconAdd(size: size, color: color);
+      case 'arrow_back':
+        return MconArrowBack(size: size, color: color);
+      case 'arrow_forward':
+        return MconArrowForward(size: size, color: color);
+      case 'call':
+        return MconCall(size: size, color: color);
+      case 'chat':
+        return MconChat(size: size, color: color);
+      case 'close':
+        return MconClose(size: size, color: color);
+      case 'delete':
+        return MconDelete(size: size, color: color);
+      case 'done_outline':
+        return MconDoneOutline(size: size, color: color);
+      case 'edit':
+        return MconEdit(size: size, color: color);
+      case 'expand_content':
+        return MconExpandContent(size: size, color: color);
+      case 'favorite':
+        return MconFavorite(size: size, color: color);
+      case 'home':
+        return MconHome(size: size, color: color);
+      case 'mail':
+        return MconMail(size: size, color: color);
+      case 'menu':
+        return MconMenu(size: size, color: color);
+      case 'notifications':
+        return MconNotifications(size: size, color: color);
+      case 'person':
+        return MconPerson(size: size, color: color);
+      case 'refresh':
+        return MconRefresh(size: size, color: color);
+      case 'search':
+        return MconSearch(size: size, color: color);
+      case 'settings':
+        return MconSettings(size: size, color: color);
+      case 'star':
+        return MconStar(size: size, color: color);
 
       default:
         return Icon(Icons.widgets, size: size, color: color);

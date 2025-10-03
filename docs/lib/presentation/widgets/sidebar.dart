@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 
 /// Sidebar navigation for docs
 class SideBar extends StatelessWidget {
-  const SideBar({super.key});
+  const SideBar({
+    super.key,
+    this.onItemTap,
+  });
+
+  final Function(String)? onItemTap;
 
   @override
   Widget build(BuildContext context) {
@@ -19,20 +24,21 @@ class SideBar extends StatelessWidget {
       child: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          const _SidebarSection(
+          _SidebarSection(
             title: 'Getting Started',
-            items: [
+            onItemTap: onItemTap,
+            items: const [
               _SidebarItem(label: 'Introduction', id: 'introduction'),
               _SidebarItem(label: 'Installation', id: 'installation'),
               _SidebarItem(label: 'Quick Start', id: 'quick-start'),
             ],
           ),
           const SizedBox(height: 24),
-          const _SidebarSection(
+          _SidebarSection(
             title: 'Icons',
-            items: [
-              _SidebarItem(label: 'Outlined Icons', id: 'outlined-icons'),
-              _SidebarItem(label: 'Filled Icons', id: 'filled-icons'),
+            onItemTap: onItemTap,
+            items: const [
+              _SidebarItem(label: 'Material Icons', id: 'material-icons'),
             ],
           ),
         ],
@@ -45,10 +51,12 @@ class _SidebarSection extends StatelessWidget {
   const _SidebarSection({
     required this.title,
     required this.items,
+    this.onItemTap,
   });
 
   final String title;
   final List<_SidebarItem> items;
+  final Function(String)? onItemTap;
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +74,11 @@ class _SidebarSection extends StatelessWidget {
               ),
         ),
         const SizedBox(height: 8),
-        ...items,
+        ...items.map((item) => _SidebarItem(
+              label: item.label,
+              id: item.id,
+              onTap: () => onItemTap?.call(item.id),
+            )),
       ],
     );
   }
@@ -76,18 +88,17 @@ class _SidebarItem extends StatelessWidget {
   const _SidebarItem({
     required this.label,
     required this.id,
+    this.onTap,
   });
 
   final String label;
   final String id;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        // Scroll to section
-        // TODO: Implement scroll to section
-      },
+      onTap: onTap,
       borderRadius: BorderRadius.circular(8),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),

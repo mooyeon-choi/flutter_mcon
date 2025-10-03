@@ -46,62 +46,62 @@ class IconPreview extends StatelessWidget {
 
   Widget _buildIcon() {
     switch (iconName) {
-      case 'search_outlined':
-        return MconSearchOutlined(
+      case 'search':
+        return MconSearch(
           size: size,
           color: color,
           duration: duration,
         );
-      case 'home_outlined':
-        return MconHomeOutlined(
+      case 'home':
+        return MconHome(
           size: size,
           color: color,
           duration: duration,
         );
-      case 'favorite_outlined':
-        return MconFavoriteOutlined(
+      case 'favorite':
+        return MconFavorite(
           size: size,
           color: color,
           duration: duration,
         );
-      case 'menu_outlined':
-        return MconMenuOutlined(
+      case 'menu':
+        return MconMenu(
           size: size,
           color: color,
           duration: duration,
         );
-      case 'settings_outlined':
-        return MconSettingsOutlined(
+      case 'settings':
+        return MconSettings(
           size: size,
           color: color,
           duration: duration,
         );
-      case 'person_outlined':
-        return MconPersonOutlined(
+      case 'person':
+        return MconPerson(
           size: size,
           color: color,
           duration: duration,
         );
-      case 'notifications_outlined':
-        return MconNotificationsOutlined(
+      case 'notifications':
+        return MconNotifications(
           size: size,
           color: color,
           duration: duration,
         );
-      case 'star_outlined':
-        return MconStarOutlined(
+      case 'star':
+        return MconStar(
           size: size,
           color: color,
           duration: duration,
         );
-      case 'email_outlined':
-        return MconEmailOutlined(
+      case 'mail':
+        return MconMail(
           size: size,
           color: color,
           duration: duration,
         );
-      case 'delete_outlined':
-        return MconDeleteOutlined(
+      case 'delete':
+        return MconDelete(
           size: size,
           color: color,
           duration: duration,

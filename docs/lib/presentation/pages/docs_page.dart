@@ -4,18 +4,51 @@ import '../../domain/icon_data.dart' as mcon;
 import '../widgets/icon_showcase.dart';
 
 /// Documentation page with Get Started and icon examples
-class DocsPage extends StatelessWidget {
+class DocsPage extends StatefulWidget {
   const DocsPage({super.key});
+
+  @override
+  State<DocsPage> createState() => DocsPageState();
+}
+
+class DocsPageState extends State<DocsPage> {
+  final ScrollController _scrollController = ScrollController();
+  final Map<String, GlobalKey> _sectionKeys = {
+    'introduction': GlobalKey(),
+    'installation': GlobalKey(),
+    'quick-start': GlobalKey(),
+    'material-icons': GlobalKey(),
+  };
+  String _searchQuery = '';
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  void scrollToSection(String sectionId) {
+    final key = _sectionKeys[sectionId];
+    if (key?.currentContext != null) {
+      Scrollable.ensureVisible(
+        key!.currentContext!,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.easeInOut,
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      controller: _scrollController,
       padding: const EdgeInsets.all(48),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Get Started Section
           _Section(
+            key: _sectionKeys['introduction'],
             id: 'introduction',
             title: 'Introduction',
             child: Text(
@@ -30,6 +63,7 @@ class DocsPage extends StatelessWidget {
 
           // Installation Section
           _Section(
+            key: _sectionKeys['installation'],
             id: 'installation',
             title: 'Installation',
             child: Column(
@@ -61,6 +95,7 @@ class DocsPage extends StatelessWidget {
 
           // Quick Start Section
           _Section(
+            key: _sectionKeys['quick-start'],
             id: 'quick-start',
             title: 'Quick Start',
             child: Column(
@@ -75,7 +110,7 @@ class DocsPage extends StatelessWidget {
                   code: '''import 'package:flutter_mcon/flutter_mcon.dart';
 
 // Use in your widget
-MconSearchOutlined(
+MconSearch(
   size: 48,
   color: Colors.blue,
   duration: Duration(milliseconds: 300),
@@ -88,47 +123,49 @@ MconSearchOutlined(
 
           const SizedBox(height: 64),
 
-          // Outlined Icons Section
+          // Material Icons Section
           _Section(
-            id: 'outlined-icons',
-            title: 'Outlined Icons',
+            key: _sectionKeys['material-icons'],
+            id: 'material-icons',
+            title: 'Material Icons',
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Outlined variants with stroke-based design:',
+                  'Google Material Icons with CustomPaint implementation:',
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 const SizedBox(height: 24),
-                const IconShowcase(
-                  icons: mcon.AvailableIcons.outlined,
-                ),
-              ],
-            ),
-          ),
-
-          const SizedBox(height: 64),
-
-          // Filled Icons Section
-          _Section(
-            id: 'filled-icons',
-            title: 'Filled Icons',
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Filled variants with solid design:',
-                  style: Theme.of(context).textTheme.bodyLarge,
+                // Search bar
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Search icons...',
+                    prefixIcon: const Icon(Icons.search),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 12,
+                    ),
+                  ),
+                  onChanged: (value) {
+                    setState(() {
+                      _searchQuery = value.toLowerCase();
+                    });
+                  },
                 ),
                 const SizedBox(height: 24),
-                Text(
-                  'Coming soon...',
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: Theme.of(context)
-                            .colorScheme
-                            .onSurface
-                            .withValues(alpha: 0.6),
-                      ),
+                IconShowcase(
+                  icons: _searchQuery.isEmpty
+                      ? mcon.AvailableIcons.all
+                      : mcon.AvailableIcons.all
+                          .where((icon) =>
+                              icon.name.toLowerCase().contains(_searchQuery) ||
+                              icon.displayName
+                                  .toLowerCase()
+                                  .contains(_searchQuery))
+                          .toList(),
                 ),
               ],
             ),
@@ -141,6 +178,7 @@ MconSearchOutlined(
 
 class _Section extends StatelessWidget {
   const _Section({
+    super.key,
     required this.id,
     required this.title,
     required this.child,
