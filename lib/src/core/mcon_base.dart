@@ -529,8 +529,8 @@ abstract class MconPainter extends CustomPainter {
 
 /// Animation behavior types
 enum _AnimationBehavior {
-  alwaysIn,  // Always animate in (0 → 1)
+  alwaysIn, // Always animate in (0 → 1)
   alwaysOut, // Always animate out (1 → 0)
-  toggle,    // Toggle between in and out
-  inPlace,   // In-place animation
+  toggle, // Toggle between in and out
+  inPlace, // In-place animation
 }

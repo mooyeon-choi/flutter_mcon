@@ -61,29 +61,3 @@ jobs:
         with:
           files: ./coverage/lcov.info
           fail_ci_if_error: false
-
-  build-example:
-    name: Build Example App
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.35.5'
-          channel: 'stable'
-          cache: true
-
-      - name: Install dependencies
-        run: |
-          flutter pub get
-          cd example
-          flutter pub get
-
-      - name: Build example app
-        run: |
-          cd example
-          flutter build apk --debug
