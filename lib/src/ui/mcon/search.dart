@@ -50,14 +50,16 @@ class _MconSearchPainter extends MconPainter {
     }
 
     // Draw handle that transitions to diagonal line
-    final handleStart = center + Offset(
-      radius * 0.5 * (1 - progress),
-      radius * 0.5 * (1 - progress),
-    );
-    final handleEnd = center + Offset(
-      radius * (1 - progress * 0.5),
-      radius * (1 - progress * 0.5),
-    );
+    final handleStart = center +
+        Offset(
+          radius * 0.5 * (1 - progress),
+          radius * 0.5 * (1 - progress),
+        );
+    final handleEnd = center +
+        Offset(
+          radius * (1 - progress * 0.5),
+          radius * (1 - progress * 0.5),
+        );
 
     // Draw first line (handle -> first diagonal)
     canvas.drawLine(handleStart, handleEnd, paint);
