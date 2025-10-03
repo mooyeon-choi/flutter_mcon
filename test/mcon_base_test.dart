@@ -128,8 +128,7 @@ void main() {
   });
 
   group('Multiple Icons', () {
-    testWidgets('Multiple icons render correctly',
-        (WidgetTester tester) async {
+    testWidgets('Multiple icons render correctly', (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(
