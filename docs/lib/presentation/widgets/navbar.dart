@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import '../../core/constants/routes.dart';
+import '../providers/theme_provider.dart';
 
 /// Top navigation bar
 class NavBar extends StatelessWidget {
-  const NavBar({super.key});
+  const NavBar({
+    super.key,
+    required this.themeProvider,
+  });
+
+  final ThemeProvider themeProvider;
 
   @override
   Widget build(BuildContext context) {
@@ -48,10 +54,22 @@ class NavBar extends StatelessWidget {
               onTap: () => Navigator.pushNamed(context, AppRoutes.playground),
             ),
             const SizedBox(width: 24),
-            IconButton(
-              icon: const Icon(Icons.brightness_6),
-              onPressed: () {
-                // TODO: Implement theme toggle
+            ListenableBuilder(
+              listenable: themeProvider,
+              builder: (context, child) {
+                return IconButton(
+                  icon: Icon(
+                    themeProvider.isDarkMode
+                        ? Icons.light_mode
+                        : Icons.dark_mode,
+                  ),
+                  tooltip: themeProvider.isDarkMode
+                      ? 'Switch to Light Mode'
+                      : 'Switch to Dark Mode',
+                  onPressed: () {
+                    themeProvider.toggleTheme();
+                  },
+                );
               },
             ),
           ],
