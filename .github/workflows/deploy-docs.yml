@@ -46,6 +46,11 @@ jobs:
           cd docs
           flutter build web --release --base-href /flutter_mcon/
 
+      - name: Create 404.html for SPA routing
+        run: |
+          cp docs/build/web/index.html docs/build/web/404.html
+          touch docs/build/web/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
