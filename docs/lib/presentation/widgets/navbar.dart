@@ -29,6 +29,12 @@ class NavBar extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Row(
           children: [
+            Image.asset(
+              'assets/images/logo.png',
+              width: 32,
+              height: 32,
+            ),
+            const SizedBox(width: 12),
             Text(
               'Flutter Mcon',
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
