@@ -35,18 +35,18 @@ class SideBar extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           _SidebarSection(
-            title: 'Icons',
-            onItemTap: onItemTap,
-            items: const [
-              _SidebarItem(label: 'Material Icons', id: 'material-icons'),
-            ],
-          ),
-          const SizedBox(height: 24),
-          _SidebarSection(
             title: 'Animation',
             onItemTap: onItemTap,
             items: const [
               _SidebarItem(label: 'Animation Types', id: 'animation-types'),
+            ],
+          ),
+          const SizedBox(height: 24),
+          _SidebarSection(
+            title: 'Icons',
+            onItemTap: onItemTap,
+            items: const [
+              _SidebarItem(label: 'Material Icons', id: 'material-icons'),
             ],
           ),
         ],

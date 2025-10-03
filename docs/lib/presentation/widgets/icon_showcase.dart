@@ -94,25 +94,32 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
       case 'add':
         return MconAdd(size: size, color: color, animationType: animationType);
       case 'arrow_back':
-        return MconArrowBack(size: size, color: color, animationType: animationType);
+        return MconArrowBack(
+            size: size, color: color, animationType: animationType);
       case 'arrow_forward':
-        return MconArrowForward(size: size, color: color, animationType: animationType);
+        return MconArrowForward(
+            size: size, color: color, animationType: animationType);
       case 'call':
         return MconCall(size: size, color: color, animationType: animationType);
       case 'chat':
         return MconChat(size: size, color: color, animationType: animationType);
       case 'close':
-        return MconClose(size: size, color: color, animationType: animationType);
+        return MconClose(
+            size: size, color: color, animationType: animationType);
       case 'delete':
-        return MconDelete(size: size, color: color, animationType: animationType);
+        return MconDelete(
+            size: size, color: color, animationType: animationType);
       case 'done_outline':
-        return MconDoneOutline(size: size, color: color, animationType: animationType);
+        return MconDoneOutline(
+            size: size, color: color, animationType: animationType);
       case 'edit':
         return MconEdit(size: size, color: color, animationType: animationType);
       case 'expand_content':
-        return MconExpandContent(size: size, color: color, animationType: animationType);
+        return MconExpandContent(
+            size: size, color: color, animationType: animationType);
       case 'favorite':
-        return MconFavorite(size: size, color: color, animationType: animationType);
+        return MconFavorite(
+            size: size, color: color, animationType: animationType);
       case 'home':
         return MconHome(size: size, color: color, animationType: animationType);
       case 'mail':
@@ -120,15 +127,20 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
       case 'menu':
         return MconMenu(size: size, color: color, animationType: animationType);
       case 'notifications':
-        return MconNotifications(size: size, color: color, animationType: animationType);
+        return MconNotifications(
+            size: size, color: color, animationType: animationType);
       case 'person':
-        return MconPerson(size: size, color: color, animationType: animationType);
+        return MconPerson(
+            size: size, color: color, animationType: animationType);
       case 'refresh':
-        return MconRefresh(size: size, color: color, animationType: animationType);
+        return MconRefresh(
+            size: size, color: color, animationType: animationType);
       case 'search':
-        return MconSearch(size: size, color: color, animationType: animationType);
+        return MconSearch(
+            size: size, color: color, animationType: animationType);
       case 'settings':
-        return MconSettings(size: size, color: color, animationType: animationType);
+        return MconSettings(
+            size: size, color: color, animationType: animationType);
       case 'star':
         return MconStar(size: size, color: color, animationType: animationType);
 

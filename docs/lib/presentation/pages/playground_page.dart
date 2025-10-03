@@ -125,7 +125,8 @@ class _IconGrid extends StatelessWidget {
                 isSelected: isSelected,
                 size: iconSize,
                 color: iconColor,
-                animationType: isSelected ? animationType : MconAnimationType.none,
+                animationType:
+                    isSelected ? animationType : MconAnimationType.none,
                 animationDirection: animationDirection,
                 duration: duration,
                 curve: curve,
@@ -889,7 +890,10 @@ class _ColorPicker extends StatelessWidget {
       spacing: 12,
       runSpacing: 12,
       children: colors.map((c) {
-        final isSelected = c.r == color.r && c.g == color.g && c.b == color.b && c.a == color.a;
+        final isSelected = c.r == color.r &&
+            c.g == color.g &&
+            c.b == color.b &&
+            c.a == color.a;
         return GestureDetector(
           onTap: () => onColorChanged(c),
           child: Container(
@@ -937,7 +941,9 @@ class _CodePreview extends StatelessWidget {
         .map((word) => word[0].toUpperCase() + word.substring(1))
         .join('');
 
-    final colorHex = '0x${(state.color.a * 255).round().toRadixString(16).padLeft(2, '0')}${(state.color.r * 255).round().toRadixString(16).padLeft(2, '0')}${(state.color.g * 255).round().toRadixString(16).padLeft(2, '0')}${(state.color.b * 255).round().toRadixString(16).padLeft(2, '0')}'.toUpperCase();
+    final colorHex =
+        '0x${(state.color.a * 255).round().toRadixString(16).padLeft(2, '0')}${(state.color.r * 255).round().toRadixString(16).padLeft(2, '0')}${(state.color.g * 255).round().toRadixString(16).padLeft(2, '0')}${(state.color.b * 255).round().toRadixString(16).padLeft(2, '0')}'
+            .toUpperCase();
 
     final code = '''Mcon$iconName(
   size: ${state.size.round()},
