@@ -36,29 +36,26 @@ class _MconClosePainter extends MconPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final progress = animation.value;
-
-    // Scale from 960x960 viewBox to actual size
     final scaleX = size.width / 960;
     final scaleY = size.height / 960;
 
-    // Helper function to convert coordinates
     double x(double coord) => coord * scaleX;
     double y(double coord) => (coord + 960) * scaleY;
 
     final path = Path();
-    path.moveTo(x(256), y(-200));
-    path.lineTo(x(200), y(-256));
-    path.lineTo(x(424), y(-480));
-    path.lineTo(x(200), y(-704));
-    path.lineTo(x(256), y(-760));
-    path.lineTo(x(480), y(-536));
-    path.lineTo(x(704), y(-760));
-    path.lineTo(x(760), y(-704));
-    path.lineTo(x(536), y(-480));
-    path.lineTo(x(760), y(-256));
-    path.lineTo(x(704), y(-200));
-    path.lineTo(x(480), y(-424));
-    path.lineTo(x(256), y(-200));
+    path.moveTo(x(256.0), y(-200.0));
+    path.lineTo(x(200.0), y(-256.0));
+    path.lineTo(x(424.0), y(-480.0));
+    path.lineTo(x(200.0), y(-704.0));
+    path.lineTo(x(256.0), y(-760.0));
+    path.lineTo(x(480.0), y(-536.0));
+    path.lineTo(x(704.0), y(-760.0));
+    path.lineTo(x(760.0), y(-704.0));
+    path.lineTo(x(536.0), y(-480.0));
+    path.lineTo(x(760.0), y(-256.0));
+    path.lineTo(x(704.0), y(-200.0));
+    path.lineTo(x(480.0), y(-424.0));
+    path.lineTo(x(256.0), y(-200.0));
     path.close();
 
     final paint = Paint()

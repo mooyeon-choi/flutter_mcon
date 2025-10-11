@@ -11,6 +11,8 @@ import time
 import requests
 from pathlib import Path
 from xml.etree import ElementTree as ET
+from svg.path import parse_path
+from svg.path.path import Move, Line, CubicBezier, QuadraticBezier, Arc, Close
 
 
 class IconConverter:
@@ -106,57 +108,47 @@ class IconConverter:
             return None
 
     def convert_path_to_flutter(self, path_data: str) -> str:
-        """Convert SVG path to Flutter Path commands"""
+        """Convert SVG path to Flutter Path commands using svg.path"""
         commands = []
 
-        # Parse SVG path commands
-        # This is a simplified parser - may need enhancement for complex paths
-        tokens = re.findall(r'[MmLlHhVvCcSsQqTtAaZz]|[-+]?[0-9]*\.?[0-9]+', path_data)
+        try:
+            path = parse_path(path_data)
 
-        i = 0
-        current_command = None
+            for segment in path:
+                if isinstance(segment, Move):
+                    commands.append(f"path.moveTo(x({segment.end.real}), y({segment.end.imag}));")
 
-        while i < len(tokens):
-            token = tokens[i]
+                elif isinstance(segment, Line):
+                    commands.append(f"path.lineTo(x({segment.end.real}), y({segment.end.imag}));")
 
-            # Check if it's a command letter
-            if token in 'MmLlHhVvCcSsQqTtAaZz':
-                current_command = token
-                i += 1
-                continue
+                elif isinstance(segment, CubicBezier):
+                    commands.append(
+                        f"path.cubicTo("
+                        f"x({segment.control1.real}), y({segment.control1.imag}), "
+                        f"x({segment.control2.real}), y({segment.control2.imag}), "
+                        f"x({segment.end.real}), y({segment.end.imag}));"
+                    )
 
-            # Process based on current command
-            if current_command == 'M':
-                x, y = float(tokens[i]), float(tokens[i+1])
-                commands.append(f"path.moveTo(x({x}), y({y}));")
-                i += 2
-            elif current_command == 'L':
-                x, y = float(tokens[i]), float(tokens[i+1])
-                commands.append(f"path.lineTo(x({x}), y({y}));")
-                i += 2
-            elif current_command == 'Q':
-                cx, cy = float(tokens[i]), float(tokens[i+1])
-                x, y = float(tokens[i+2]), float(tokens[i+3])
-                commands.append(
-                    f"path.quadraticBezierTo(x({cx}), y({cy}), x({x}), y({y}));"
-                )
-                i += 4
-            elif current_command == 'C':
-                x1, y1 = float(tokens[i]), float(tokens[i+1])
-                x2, y2 = float(tokens[i+2]), float(tokens[i+3])
-                x, y = float(tokens[i+4]), float(tokens[i+5])
-                commands.append(
-                    f"path.cubicTo(x({x1}), y({y1}), x({x2}), y({y2}), x({x}), y({y}));"
-                )
-                i += 6
-            elif current_command in ['Z', 'z']:
-                commands.append("path.close();")
-                i += 1
-            else:
-                # Skip unsupported commands for now
-                i += 1
+                elif isinstance(segment, QuadraticBezier):
+                    commands.append(
+                        f"path.quadraticBezierTo("
+                        f"x({segment.control.real}), y({segment.control.imag}), "
+                        f"x({segment.end.real}), y({segment.end.imag}));"
+                    )
 
-        return "\n    ".join(commands)
+                elif isinstance(segment, Arc):
+                    # Approximate arc with lineTo for now
+                    # TODO: Implement proper arc to bezier conversion
+                    commands.append(f"path.lineTo(x({segment.end.real}), y({segment.end.imag}));")
+
+                elif isinstance(segment, Close):
+                    commands.append("path.close();")
+
+        except Exception as e:
+            print(f"  Warning: Path parsing error: {e}")
+            return "// Failed to parse SVG path"
+
+        return "\n    ".join(commands) if commands else "// Empty path"
 
     def snake_to_pascal(self, name: str) -> str:
         """Convert snake_case to PascalCase"""

@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import '../core/mcon_base.dart';
 
-/// Animated arrow back icon from Google Material Icons
+/// Animated arrow_back icon from Google Material Icons
 class MconArrowBack extends MconBase {
   const MconArrowBack({
     super.key,
@@ -43,16 +43,16 @@ class _MconArrowBackPainter extends MconPainter {
     double y(double coord) => (coord + 960) * scaleY;
 
     final path = Path();
-    path.moveTo(x(313), y(-440));
-    path.lineTo(x(537), y(-216));
-    path.lineTo(x(480), y(-160));
-    path.lineTo(x(160), y(-480));
-    path.lineTo(x(480), y(-800));
-    path.lineTo(x(537), y(-744));
-    path.lineTo(x(313), y(-520));
-    path.lineTo(x(800), y(-520));
-    path.lineTo(x(800), y(-440));
-    path.lineTo(x(313), y(-440));
+    path.moveTo(x(313.0), y(-440.0));
+    path.lineTo(x(537.0), y(-216.0));
+    path.lineTo(x(480.0), y(-160.0));
+    path.lineTo(x(160.0), y(-480.0));
+    path.lineTo(x(480.0), y(-800.0));
+    path.lineTo(x(537.0), y(-744.0));
+    path.lineTo(x(313.0), y(-520.0));
+    path.lineTo(x(800.0), y(-520.0));
+    path.lineTo(x(800.0), y(-440.0));
+    path.lineTo(x(313.0), y(-440.0));
     path.close();
 
     final paint = Paint()

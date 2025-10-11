@@ -4,70 +4,70 @@ import 'package:flutter_mcon/flutter_mcon.dart';
 
 void main() {
   group('MconBase', () {
-    testWidgets('MconSearch renders with default properties',
+    testWidgets('MconAdd renders with default properties',
         (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(
-            body: MconSearch(),
+            body: MconAdd(),
           ),
         ),
       );
 
-      expect(find.byType(MconSearch), findsOneWidget);
+      expect(find.byType(MconAdd), findsOneWidget);
     });
 
-    testWidgets('MconSearch renders with custom size',
+    testWidgets('MconAdd renders with custom size',
         (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(
-            body: MconSearch(size: 48),
+            body: MconAdd(size: 48),
           ),
         ),
       );
 
-      expect(find.byType(MconSearch), findsOneWidget);
+      expect(find.byType(MconAdd), findsOneWidget);
     });
 
-    testWidgets('MconSearch renders with custom color',
+    testWidgets('MconAdd renders with custom color',
         (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(
-            body: MconSearch(color: Colors.blue),
+            body: MconAdd(color: Colors.blue),
           ),
         ),
       );
 
-      expect(find.byType(MconSearch), findsOneWidget);
+      expect(find.byType(MconAdd), findsOneWidget);
     });
 
-    testWidgets('MconSearch renders with animation type',
+    testWidgets('MconAdd renders with animation type',
         (WidgetTester tester) async {
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(
-            body: MconSearch(
+            body: MconAdd(
               animationType: MconAnimationType.fadeIn,
             ),
           ),
         ),
       );
 
-      expect(find.byType(MconSearch), findsOneWidget);
+      expect(find.byType(MconAdd), findsOneWidget);
     });
   });
 
   group('Animation Types', () {
-    testWidgets('MconSearch with fadeIn animation',
+    testWidgets('MconAdd with fadeIn animation',
         (WidgetTester tester) async {
       final key = GlobalKey<MconBaseState>();
 
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: MconSearch(
+            body: MconAdd(
               key: key,
               animationType: MconAnimationType.fadeIn,
             ),
@@ -75,21 +75,21 @@ void main() {
         ),
       );
 
-      expect(find.byType(MconSearch), findsOneWidget);
+      expect(find.byType(MconAdd), findsOneWidget);
 
       // Trigger animation
       key.currentState?.forward();
       await tester.pump();
     });
 
-    testWidgets('MconSearch with scaleUp animation',
+    testWidgets('MconAdd with scaleUp animation',
         (WidgetTester tester) async {
       final key = GlobalKey<MconBaseState>();
 
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: MconSearch(
+            body: MconAdd(
               key: key,
               animationType: MconAnimationType.scaleUp,
             ),
@@ -97,21 +97,21 @@ void main() {
         ),
       );
 
-      expect(find.byType(MconSearch), findsOneWidget);
+      expect(find.byType(MconAdd), findsOneWidget);
 
       // Trigger animation
       key.currentState?.forward();
       await tester.pump();
     });
 
-    testWidgets('MconSearch with rotate animation',
+    testWidgets('MconAdd with rotate animation',
         (WidgetTester tester) async {
       final key = GlobalKey<MconBaseState>();
 
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: MconSearch(
+            body: MconAdd(
               key: key,
               animationType: MconAnimationType.rotate,
             ),
@@ -119,7 +119,7 @@ void main() {
         ),
       );
 
-      expect(find.byType(MconSearch), findsOneWidget);
+      expect(find.byType(MconAdd), findsOneWidget);
 
       // Trigger animation
       key.currentState?.forward();
@@ -134,20 +134,20 @@ void main() {
           home: Scaffold(
             body: Column(
               children: [
-                MconSearch(),
-                MconStar(),
-                MconHome(),
-                MconFavorite(),
+                MconAdd(),
+                MconAccessibility(),
+                MconAccountBalance(),
+                MconAccountBox(),
               ],
             ),
           ),
         ),
       );
 
-      expect(find.byType(MconSearch), findsOneWidget);
-      expect(find.byType(MconStar), findsOneWidget);
-      expect(find.byType(MconHome), findsOneWidget);
-      expect(find.byType(MconFavorite), findsOneWidget);
+      expect(find.byType(MconAdd), findsOneWidget);
+      expect(find.byType(MconAccessibility), findsOneWidget);
+      expect(find.byType(MconAccountBalance), findsOneWidget);
+      expect(find.byType(MconAccountBox), findsOneWidget);
     });
   });
 }

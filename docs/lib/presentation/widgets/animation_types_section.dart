@@ -226,7 +226,7 @@ class _AnimationTypesSectionState extends State<AnimationTypesSection> {
                 ),
               ),
               child: Center(
-                child: MconStar(
+                child: MconAdd(
                   key: _iconKey,
                   size: 80,
                   color: theme.colorScheme.primary,

@@ -1,0 +1,91 @@
+import 'package:flutter/widgets.dart';
+import '../core/mcon_base.dart';
+
+/// Animated cancel_presentation icon from Google Material Icons
+class MconCancelPresentation extends MconBase {
+  const MconCancelPresentation({
+    super.key,
+    super.size,
+    super.color,
+    super.duration,
+    super.curve,
+    super.animationType,
+    super.animationDirection,
+  });
+
+  @override
+  MconBaseState<MconCancelPresentation> createState() => _MconCancelPresentationState();
+}
+
+class _MconCancelPresentationState extends MconBaseState<MconCancelPresentation> {
+  @override
+  CustomPainter createPainter(Animation<double> animation) {
+    return _MconCancelPresentationPainter(
+      animation: animation,
+      color: widget.color ?? const Color(0xFF000000),
+    );
+  }
+}
+
+class _MconCancelPresentationPainter extends MconPainter {
+  _MconCancelPresentationPainter({
+    required super.animation,
+    required super.color,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final progress = animation.value;
+    final scaleX = size.width / 960;
+    final scaleY = size.height / 960;
+
+    double x(double coord) => coord * scaleX;
+    double y(double coord) => (coord + 960) * scaleY;
+
+    final path = Path();
+    path.moveTo(x(376.0), y(-320.0));
+    path.lineTo(x(480.0), y(-424.0));
+    path.lineTo(x(584.0), y(-320.0));
+    path.lineTo(x(640.0), y(-376.0));
+    path.lineTo(x(536.0), y(-480.0));
+    path.lineTo(x(640.0), y(-584.0));
+    path.lineTo(x(584.0), y(-640.0));
+    path.lineTo(x(480.0), y(-536.0));
+    path.lineTo(x(376.0), y(-640.0));
+    path.lineTo(x(320.0), y(-584.0));
+    path.lineTo(x(424.0), y(-480.0));
+    path.lineTo(x(320.0), y(-376.0));
+    path.lineTo(x(376.0), y(-320.0));
+    path.close();
+    path.moveTo(x(160.0), y(-160.0));
+    path.quadraticBezierTo(x(127.0), y(-160.0), x(103.5), y(-183.5));
+    path.quadraticBezierTo(x(80.0), y(-207.0), x(80.0), y(-240.0));
+    path.lineTo(x(80.0), y(-720.0));
+    path.quadraticBezierTo(x(80.0), y(-753.0), x(103.5), y(-776.5));
+    path.quadraticBezierTo(x(127.0), y(-800.0), x(160.0), y(-800.0));
+    path.lineTo(x(800.0), y(-800.0));
+    path.quadraticBezierTo(x(833.0), y(-800.0), x(856.5), y(-776.5));
+    path.quadraticBezierTo(x(880.0), y(-753.0), x(880.0), y(-720.0));
+    path.lineTo(x(880.0), y(-240.0));
+    path.quadraticBezierTo(x(880.0), y(-207.0), x(856.5), y(-183.5));
+    path.quadraticBezierTo(x(833.0), y(-160.0), x(800.0), y(-160.0));
+    path.lineTo(x(160.0), y(-160.0));
+    path.close();
+    path.moveTo(x(160.0), y(-240.0));
+    path.lineTo(x(800.0), y(-240.0));
+    path.lineTo(x(800.0), y(-720.0));
+    path.lineTo(x(160.0), y(-720.0));
+    path.lineTo(x(160.0), y(-240.0));
+    path.close();
+    path.moveTo(x(160.0), y(-240.0));
+    path.lineTo(x(160.0), y(-720.0));
+    path.lineTo(x(160.0), y(-240.0));
+    path.close();
+
+    final paint = Paint()
+      ..style = PaintingStyle.fill
+      ..color = color.withValues(alpha: progress);
+
+    canvas.drawPath(path, paint);
+  }
+}

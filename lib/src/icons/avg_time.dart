@@ -1,0 +1,136 @@
+import 'package:flutter/widgets.dart';
+import '../core/mcon_base.dart';
+
+/// Animated avg_time icon from Google Material Icons
+class MconAvgTime extends MconBase {
+  const MconAvgTime({
+    super.key,
+    super.size,
+    super.color,
+    super.duration,
+    super.curve,
+    super.animationType,
+    super.animationDirection,
+  });
+
+  @override
+  MconBaseState<MconAvgTime> createState() => _MconAvgTimeState();
+}
+
+class _MconAvgTimeState extends MconBaseState<MconAvgTime> {
+  @override
+  CustomPainter createPainter(Animation<double> animation) {
+    return _MconAvgTimePainter(
+      animation: animation,
+      color: widget.color ?? const Color(0xFF000000),
+    );
+  }
+}
+
+class _MconAvgTimePainter extends MconPainter {
+  _MconAvgTimePainter({
+    required super.animation,
+    required super.color,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final progress = animation.value;
+    final scaleX = size.width / 960;
+    final scaleY = size.height / 960;
+
+    double x(double coord) => coord * scaleX;
+    double y(double coord) => (coord + 960) * scaleY;
+
+    final path = Path();
+    path.moveTo(x(203.0), y(-480.0));
+    path.lineTo(x(320.0), y(-480.0));
+    path.quadraticBezierTo(x(331.0), y(-480.0), x(341.0), y(-474.5));
+    path.quadraticBezierTo(x(351.0), y(-469.0), x(356.0), y(-458.0));
+    path.lineTo(x(400.0), y(-370.0));
+    path.lineTo(x(524.0), y(-618.0));
+    path.quadraticBezierTo(x(535.0), y(-641.0), x(560.0), y(-641.0));
+    path.quadraticBezierTo(x(585.0), y(-641.0), x(596.0), y(-618.0));
+    path.lineTo(x(665.0), y(-480.0));
+    path.lineTo(x(757.0), y(-480.0));
+    path.quadraticBezierTo(x(742.0), y(-582.0), x(664.0), y(-651.0));
+    path.quadraticBezierTo(x(586.0), y(-720.0), x(480.0), y(-720.0));
+    path.quadraticBezierTo(x(374.0), y(-720.0), x(296.0), y(-651.0));
+    path.quadraticBezierTo(x(218.0), y(-582.0), x(203.0), y(-480.0));
+    path.close();
+    path.moveTo(x(480.0), y(-160.0));
+    path.quadraticBezierTo(x(586.0), y(-160.0), x(664.0), y(-229.0));
+    path.quadraticBezierTo(x(742.0), y(-298.0), x(757.0), y(-400.0));
+    path.lineTo(x(640.0), y(-400.0));
+    path.quadraticBezierTo(x(629.0), y(-400.0), x(619.0), y(-405.5));
+    path.quadraticBezierTo(x(609.0), y(-411.0), x(604.0), y(-422.0));
+    path.lineTo(x(560.0), y(-510.0));
+    path.lineTo(x(436.0), y(-262.0));
+    path.quadraticBezierTo(x(425.0), y(-239.0), x(400.0), y(-239.0));
+    path.quadraticBezierTo(x(375.0), y(-239.0), x(364.0), y(-262.0));
+    path.lineTo(x(295.0), y(-400.0));
+    path.lineTo(x(203.0), y(-400.0));
+    path.quadraticBezierTo(x(218.0), y(-298.0), x(296.0), y(-229.0));
+    path.quadraticBezierTo(x(374.0), y(-160.0), x(480.0), y(-160.0));
+    path.close();
+    path.moveTo(x(480.0), y(-80.0));
+    path.quadraticBezierTo(x(406.0), y(-80.0), x(340.5), y(-108.5));
+    path.quadraticBezierTo(x(275.0), y(-137.0), x(226.0), y(-186.0));
+    path.quadraticBezierTo(x(177.0), y(-235.0), x(148.5), y(-300.5));
+    path.quadraticBezierTo(x(120.0), y(-366.0), x(120.0), y(-440.0));
+    path.lineTo(x(200.0), y(-440.0));
+    path.quadraticBezierTo(x(200.0), y(-324.0), x(282.0), y(-242.0));
+    path.quadraticBezierTo(x(364.0), y(-160.0), x(480.0), y(-160.0));
+    path.quadraticBezierTo(x(596.0), y(-160.0), x(678.0), y(-242.0));
+    path.quadraticBezierTo(x(760.0), y(-324.0), x(760.0), y(-440.0));
+    path.lineTo(x(840.0), y(-440.0));
+    path.quadraticBezierTo(x(840.0), y(-366.0), x(811.5), y(-300.5));
+    path.quadraticBezierTo(x(783.0), y(-235.0), x(734.0), y(-186.0));
+    path.quadraticBezierTo(x(685.0), y(-137.0), x(619.5), y(-108.5));
+    path.quadraticBezierTo(x(554.0), y(-80.0), x(480.0), y(-80.0));
+    path.close();
+    path.moveTo(x(120.0), y(-440.0));
+    path.quadraticBezierTo(x(120.0), y(-514.0), x(148.5), y(-579.5));
+    path.quadraticBezierTo(x(177.0), y(-645.0), x(226.0), y(-694.0));
+    path.quadraticBezierTo(x(275.0), y(-743.0), x(340.5), y(-771.5));
+    path.quadraticBezierTo(x(406.0), y(-800.0), x(480.0), y(-800.0));
+    path.quadraticBezierTo(x(542.0), y(-800.0), x(599.0), y(-780.0));
+    path.quadraticBezierTo(x(656.0), y(-760.0), x(706.0), y(-722.0));
+    path.lineTo(x(762.0), y(-778.0));
+    path.lineTo(x(818.0), y(-722.0));
+    path.lineTo(x(762.0), y(-666.0));
+    path.quadraticBezierTo(x(800.0), y(-616.0), x(820.0), y(-559.0));
+    path.quadraticBezierTo(x(840.0), y(-502.0), x(840.0), y(-440.0));
+    path.lineTo(x(760.0), y(-440.0));
+    path.quadraticBezierTo(x(760.0), y(-556.0), x(678.0), y(-638.0));
+    path.quadraticBezierTo(x(596.0), y(-720.0), x(480.0), y(-720.0));
+    path.quadraticBezierTo(x(364.0), y(-720.0), x(282.0), y(-638.0));
+    path.quadraticBezierTo(x(200.0), y(-556.0), x(200.0), y(-440.0));
+    path.lineTo(x(120.0), y(-440.0));
+    path.close();
+    path.moveTo(x(360.0), y(-840.0));
+    path.lineTo(x(360.0), y(-920.0));
+    path.lineTo(x(600.0), y(-920.0));
+    path.lineTo(x(600.0), y(-840.0));
+    path.lineTo(x(360.0), y(-840.0));
+    path.close();
+    path.moveTo(x(480.0), y(-160.0));
+    path.quadraticBezierTo(x(364.0), y(-160.0), x(282.0), y(-242.0));
+    path.quadraticBezierTo(x(200.0), y(-324.0), x(200.0), y(-440.0));
+    path.quadraticBezierTo(x(200.0), y(-556.0), x(282.0), y(-638.0));
+    path.quadraticBezierTo(x(364.0), y(-720.0), x(480.0), y(-720.0));
+    path.quadraticBezierTo(x(596.0), y(-720.0), x(678.0), y(-638.0));
+    path.quadraticBezierTo(x(760.0), y(-556.0), x(760.0), y(-440.0));
+    path.quadraticBezierTo(x(760.0), y(-324.0), x(678.0), y(-242.0));
+    path.quadraticBezierTo(x(596.0), y(-160.0), x(480.0), y(-160.0));
+    path.close();
+    path.moveTo(x(480.0), y(-440.0));
+    path.close();
+
+    final paint = Paint()
+      ..style = PaintingStyle.fill
+      ..color = color.withValues(alpha: progress);
+
+    canvas.drawPath(path, paint);
+  }
+}
