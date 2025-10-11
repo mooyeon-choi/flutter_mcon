@@ -68,8 +68,8 @@ class _PlaygroundPageState extends State<PlaygroundPage> {
   }
 }
 
-/// Icon grid widget displaying all available icons
-class _IconGrid extends StatelessWidget {
+/// Icon grid widget displaying all available icons with search and lazy loading
+class _IconGrid extends StatefulWidget {
   const _IconGrid({
     required this.selectedIcon,
     required this.iconSize,
@@ -91,51 +91,152 @@ class _IconGrid extends StatelessWidget {
   final Function(String) onIconSelected;
 
   @override
+  State<_IconGrid> createState() => _IconGridState();
+}
+
+class _IconGridState extends State<_IconGrid> {
+  String _searchQuery = '';
+  final TextEditingController _searchController = TextEditingController();
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  List<mcon.IconData> get _filteredIcons {
+    if (_searchQuery.isEmpty) {
+      return mcon.AvailableIcons.all;
+    }
+    return mcon.AvailableIcons.all.where((icon) {
+      return icon.name.toLowerCase().contains(_searchQuery.toLowerCase()) ||
+          icon.displayName.toLowerCase().contains(_searchQuery.toLowerCase());
+    }).toList();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(32),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Icon Playground',
-            style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: -0.5,
+    final filteredIcons = _filteredIcons;
+
+    // Calculate grid dimensions based on icon size
+    const padding = 32.0; // Icon item internal padding
+    const spacing = 16.0; // Grid spacing
+    final itemWidth = widget.iconSize + padding * 2;
+    final itemHeight = widget.iconSize + padding * 2 + 24; // +24 for icon name
+
+    // Calculate how many columns fit in the available width
+    final availableWidth = MediaQuery.of(context).size.width - 64; // Container padding
+    final crossAxisCount = (availableWidth / (itemWidth + spacing))
+        .floor()
+        .clamp(2, 12);
+
+    final childAspectRatio = itemWidth / itemHeight;
+
+    return Column(
+      children: [
+        // Header and Search
+        Container(
+          padding: const EdgeInsets.all(32),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Icon Playground',
+                style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: -0.5,
+                    ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Click any icon to apply animations and customize its appearance',
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      color: Theme.of(context)
+                          .colorScheme
+                          .onSurface
+                          .withValues(alpha: 0.6),
+                    ),
+              ),
+              const SizedBox(height: 24),
+              // Search bar
+              TextField(
+                controller: _searchController,
+                decoration: InputDecoration(
+                  hintText: 'Search icons...',
+                  prefixIcon: const Icon(Icons.search),
+                  suffixIcon: _searchQuery.isNotEmpty
+                      ? IconButton(
+                          icon: const Icon(Icons.clear),
+                          onPressed: () {
+                            _searchController.clear();
+                            setState(() => _searchQuery = '');
+                          },
+                        )
+                      : null,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
+                onChanged: (value) {
+                  setState(() => _searchQuery = value);
+                },
+              ),
+              const SizedBox(height: 16),
+              Text(
+                '${filteredIcons.length} icon${filteredIcons.length == 1 ? '' : 's'}',
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Theme.of(context)
+                          .colorScheme
+                          .onSurface
+                          .withValues(alpha: 0.6),
+                    ),
+              ),
+            ],
           ),
-          const SizedBox(height: 8),
-          Text(
-            'Click any icon to apply animations and customize its appearance',
-            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                  color: Theme.of(context)
-                      .colorScheme
-                      .onSurface
-                      .withValues(alpha: 0.6),
+        ),
+        // Grid with lazy loading
+        Expanded(
+          child: filteredIcons.isEmpty
+              ? Center(
+                  child: Text(
+                    'No icons found',
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: Theme.of(context)
+                              .colorScheme
+                              .onSurface
+                              .withValues(alpha: 0.6),
+                        ),
+                  ),
+                )
+              : GridView.builder(
+                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: crossAxisCount,
+                    mainAxisSpacing: spacing,
+                    crossAxisSpacing: spacing,
+                    childAspectRatio: childAspectRatio,
+                  ),
+                  itemCount: filteredIcons.length,
+                  itemBuilder: (context, index) {
+                    final icon = filteredIcons[index];
+                    final isSelected = widget.selectedIcon == icon.name;
+                    return _IconGridItem(
+                      icon: icon,
+                      isSelected: isSelected,
+                      size: widget.iconSize,
+                      color: widget.iconColor,
+                      animationType: isSelected
+                          ? widget.animationType
+                          : MconAnimationType.none,
+                      animationDirection: widget.animationDirection,
+                      duration: widget.duration,
+                      curve: widget.curve,
+                      onTap: () => widget.onIconSelected(icon.name),
+                    );
+                  },
                 ),
-          ),
-          const SizedBox(height: 32),
-          Wrap(
-            spacing: 16,
-            runSpacing: 16,
-            children: mcon.AvailableIcons.all.map((icon) {
-              final isSelected = selectedIcon == icon.name;
-              return _IconGridItem(
-                icon: icon,
-                isSelected: isSelected,
-                size: iconSize,
-                color: iconColor,
-                animationType:
-                    isSelected ? animationType : MconAnimationType.none,
-                animationDirection: animationDirection,
-                duration: duration,
-                curve: curve,
-                onTap: () => onIconSelected(icon.name),
-              );
-            }).toList(),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
@@ -202,8 +303,6 @@ class _IconGridItemState extends State<_IconGridItem> {
         onTap: _handleTap,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
-          width: widget.size + 48,
-          height: widget.size + 64,
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: widget.isSelected
@@ -240,30 +339,35 @@ class _IconGridItemState extends State<_IconGridItem> {
                 : null,
           ),
           child: Column(
-            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              MouseRegion(
-                cursor: widget.isSelected
-                    ? SystemMouseCursors.click
-                    : SystemMouseCursors.basic,
-                onEnter: (_) => setState(() => _isIconHovered = true),
-                onExit: (_) => setState(() => _isIconHovered = false),
-                child: widget.isSelected
-                    ? GestureDetector(
-                        onTap: _handleIconTap,
-                        child: SizedBox(
-                          width: widget.size,
-                          height: widget.size,
-                          child: _buildIcon(),
-                        ),
-                      )
-                    : IgnorePointer(
-                        child: SizedBox(
-                          width: widget.size,
-                          height: widget.size,
-                          child: _buildIcon(),
-                        ),
-                      ),
+              // Icon container - takes available space
+              Expanded(
+                child: Center(
+                  child: MouseRegion(
+                    cursor: widget.isSelected
+                        ? SystemMouseCursors.click
+                        : SystemMouseCursors.basic,
+                    onEnter: (_) => setState(() => _isIconHovered = true),
+                    onExit: (_) => setState(() => _isIconHovered = false),
+                    child: widget.isSelected
+                        ? GestureDetector(
+                            onTap: _handleIconTap,
+                            child: SizedBox(
+                              width: widget.size,
+                              height: widget.size,
+                              child: _buildIcon(),
+                            ),
+                          )
+                        : IgnorePointer(
+                            child: SizedBox(
+                              width: widget.size,
+                              height: widget.size,
+                              child: _buildIcon(),
+                            ),
+                          ),
+                  ),
+                ),
               ),
               const SizedBox(height: 8),
               Text(
