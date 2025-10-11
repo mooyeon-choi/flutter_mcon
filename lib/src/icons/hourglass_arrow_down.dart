@@ -1,0 +1,112 @@
+import 'package:flutter/widgets.dart';
+import '../core/mcon_base.dart';
+
+/// Animated hourglass_arrow_down icon from Google Material Icons
+class MconHourglassArrowDown extends MconBase {
+  const MconHourglassArrowDown({
+    super.key,
+    super.size,
+    super.color,
+    super.duration,
+    super.curve,
+    super.animationType,
+    super.animationDirection,
+  });
+
+  @override
+  MconBaseState<MconHourglassArrowDown> createState() =>
+      _MconHourglassArrowDownState();
+}
+
+class _MconHourglassArrowDownState
+    extends MconBaseState<MconHourglassArrowDown> {
+  @override
+  CustomPainter createPainter(Animation<double> animation) {
+    return _MconHourglassArrowDownPainter(
+      animation: animation,
+      color: widget.color ?? const Color(0xFF000000),
+    );
+  }
+}
+
+class _MconHourglassArrowDownPainter extends MconPainter {
+  _MconHourglassArrowDownPainter({
+    required super.animation,
+    required super.color,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final progress = animation.value;
+    final scaleX = size.width / 960;
+    final scaleY = size.height / 960;
+
+    double x(double coord) => coord * scaleX;
+    double y(double coord) => (coord + 960) * scaleY;
+
+    final path = Path();
+    path.moveTo(x(340.0), y(-520.0));
+    path.quadraticBezierTo(x(382.0), y(-520.0), x(411.0), y(-549.0));
+    path.quadraticBezierTo(x(440.0), y(-578.0), x(440.0), y(-620.0));
+    path.lineTo(x(440.0), y(-720.0));
+    path.lineTo(x(240.0), y(-720.0));
+    path.lineTo(x(240.0), y(-620.0));
+    path.quadraticBezierTo(x(240.0), y(-578.0), x(269.0), y(-549.0));
+    path.quadraticBezierTo(x(298.0), y(-520.0), x(340.0), y(-520.0));
+    path.close();
+    path.moveTo(x(240.0), y(-240.0));
+    path.lineTo(x(440.0), y(-240.0));
+    path.lineTo(x(440.0), y(-340.0));
+    path.quadraticBezierTo(x(440.0), y(-382.0), x(411.0), y(-411.0));
+    path.quadraticBezierTo(x(382.0), y(-440.0), x(340.0), y(-440.0));
+    path.quadraticBezierTo(x(298.0), y(-440.0), x(269.0), y(-411.0));
+    path.quadraticBezierTo(x(240.0), y(-382.0), x(240.0), y(-340.0));
+    path.lineTo(x(240.0), y(-240.0));
+    path.close();
+    path.moveTo(x(100.0), y(-160.0));
+    path.lineTo(x(100.0), y(-240.0));
+    path.lineTo(x(160.0), y(-240.0));
+    path.lineTo(x(160.0), y(-340.0));
+    path.quadraticBezierTo(x(160.0), y(-382.0), x(178.0), y(-418.0));
+    path.quadraticBezierTo(x(196.0), y(-454.0), x(228.0), y(-480.0));
+    path.quadraticBezierTo(x(196.0), y(-506.0), x(178.0), y(-542.0));
+    path.quadraticBezierTo(x(160.0), y(-578.0), x(160.0), y(-620.0));
+    path.lineTo(x(160.0), y(-720.0));
+    path.lineTo(x(100.0), y(-720.0));
+    path.lineTo(x(100.0), y(-800.0));
+    path.lineTo(x(580.0), y(-800.0));
+    path.lineTo(x(580.0), y(-720.0));
+    path.lineTo(x(520.0), y(-720.0));
+    path.lineTo(x(520.0), y(-620.0));
+    path.quadraticBezierTo(x(520.0), y(-578.0), x(502.0), y(-542.0));
+    path.quadraticBezierTo(x(484.0), y(-506.0), x(452.0), y(-480.0));
+    path.quadraticBezierTo(x(484.0), y(-454.0), x(502.0), y(-418.0));
+    path.quadraticBezierTo(x(520.0), y(-382.0), x(520.0), y(-340.0));
+    path.lineTo(x(520.0), y(-240.0));
+    path.lineTo(x(580.0), y(-240.0));
+    path.lineTo(x(580.0), y(-160.0));
+    path.lineTo(x(100.0), y(-160.0));
+    path.close();
+    path.moveTo(x(780.0), y(-160.0));
+    path.lineTo(x(640.0), y(-300.0));
+    path.lineTo(x(697.0), y(-356.0));
+    path.lineTo(x(740.0), y(-313.0));
+    path.lineTo(x(740.0), y(-800.0));
+    path.lineTo(x(820.0), y(-800.0));
+    path.lineTo(x(820.0), y(-312.0));
+    path.lineTo(x(864.0), y(-356.0));
+    path.lineTo(x(920.0), y(-300.0));
+    path.lineTo(x(780.0), y(-160.0));
+    path.close();
+    path.moveTo(x(340.0), y(-720.0));
+    path.close();
+    path.moveTo(x(340.0), y(-240.0));
+    path.close();
+
+    final paint = Paint()
+      ..style = PaintingStyle.fill
+      ..color = color.withValues(alpha: progress);
+
+    canvas.drawPath(path, paint);
+  }
+}

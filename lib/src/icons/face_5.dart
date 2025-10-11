@@ -1,0 +1,401 @@
+import 'package:flutter/widgets.dart';
+import '../core/mcon_base.dart';
+
+/// Animated face_5 icon from Google Material Icons
+class MconFace5 extends MconBase {
+  const MconFace5({
+    super.key,
+    super.size,
+    super.color,
+    super.duration,
+    super.curve,
+    super.animationType,
+    super.animationDirection,
+  });
+
+  @override
+  MconBaseState<MconFace5> createState() => _MconFace5State();
+}
+
+class _MconFace5State extends MconBaseState<MconFace5> {
+  @override
+  CustomPainter createPainter(Animation<double> animation) {
+    return _MconFace5Painter(
+      animation: animation,
+      color: widget.color ?? const Color(0xFF000000),
+    );
+  }
+}
+
+class _MconFace5Painter extends MconPainter {
+  _MconFace5Painter({
+    required super.animation,
+    required super.color,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final progress = animation.value;
+    final scaleX = size.width / 960;
+    final scaleY = size.height / 960;
+
+    double x(double coord) => coord * scaleX;
+    double y(double coord) => (coord + 960) * scaleY;
+
+    final path = Path();
+    path.moveTo(x(480.0), y(-720.0));
+    path.quadraticBezierTo(x(472.0), y(-720.0), x(466.0), y(-726.0));
+    path.quadraticBezierTo(x(460.0), y(-732.0), x(460.0), y(-740.0));
+    path.quadraticBezierTo(x(460.0), y(-748.0), x(466.0), y(-754.0));
+    path.quadraticBezierTo(x(472.0), y(-760.0), x(480.0), y(-760.0));
+    path.quadraticBezierTo(x(488.0), y(-760.0), x(494.0), y(-754.0));
+    path.quadraticBezierTo(x(500.0), y(-748.0), x(500.0), y(-740.0));
+    path.quadraticBezierTo(x(500.0), y(-732.0), x(494.0), y(-726.0));
+    path.quadraticBezierTo(x(488.0), y(-720.0), x(480.0), y(-720.0));
+    path.close();
+    path.moveTo(x(560.0), y(-720.0));
+    path.quadraticBezierTo(x(552.0), y(-720.0), x(546.0), y(-726.0));
+    path.quadraticBezierTo(x(540.0), y(-732.0), x(540.0), y(-740.0));
+    path.quadraticBezierTo(x(540.0), y(-748.0), x(546.0), y(-754.0));
+    path.quadraticBezierTo(x(552.0), y(-760.0), x(560.0), y(-760.0));
+    path.quadraticBezierTo(x(568.0), y(-760.0), x(574.0), y(-754.0));
+    path.quadraticBezierTo(x(580.0), y(-748.0), x(580.0), y(-740.0));
+    path.quadraticBezierTo(x(580.0), y(-732.0), x(574.0), y(-726.0));
+    path.quadraticBezierTo(x(568.0), y(-720.0), x(560.0), y(-720.0));
+    path.close();
+    path.moveTo(x(400.0), y(-720.0));
+    path.quadraticBezierTo(x(392.0), y(-720.0), x(386.0), y(-726.0));
+    path.quadraticBezierTo(x(380.0), y(-732.0), x(380.0), y(-740.0));
+    path.quadraticBezierTo(x(380.0), y(-748.0), x(386.0), y(-754.0));
+    path.quadraticBezierTo(x(392.0), y(-760.0), x(400.0), y(-760.0));
+    path.quadraticBezierTo(x(408.0), y(-760.0), x(414.0), y(-754.0));
+    path.quadraticBezierTo(x(420.0), y(-748.0), x(420.0), y(-740.0));
+    path.quadraticBezierTo(x(420.0), y(-732.0), x(414.0), y(-726.0));
+    path.quadraticBezierTo(x(408.0), y(-720.0), x(400.0), y(-720.0));
+    path.close();
+    path.moveTo(x(680.0), y(-680.0));
+    path.quadraticBezierTo(x(672.0), y(-680.0), x(666.0), y(-686.0));
+    path.quadraticBezierTo(x(660.0), y(-692.0), x(660.0), y(-700.0));
+    path.quadraticBezierTo(x(660.0), y(-708.0), x(666.0), y(-714.0));
+    path.quadraticBezierTo(x(672.0), y(-720.0), x(680.0), y(-720.0));
+    path.quadraticBezierTo(x(688.0), y(-720.0), x(694.0), y(-714.0));
+    path.quadraticBezierTo(x(700.0), y(-708.0), x(700.0), y(-700.0));
+    path.quadraticBezierTo(x(700.0), y(-692.0), x(694.0), y(-686.0));
+    path.quadraticBezierTo(x(688.0), y(-680.0), x(680.0), y(-680.0));
+    path.close();
+    path.moveTo(x(360.0), y(-680.0));
+    path.quadraticBezierTo(x(352.0), y(-680.0), x(346.0), y(-686.0));
+    path.quadraticBezierTo(x(340.0), y(-692.0), x(340.0), y(-700.0));
+    path.quadraticBezierTo(x(340.0), y(-708.0), x(346.0), y(-714.0));
+    path.quadraticBezierTo(x(352.0), y(-720.0), x(360.0), y(-720.0));
+    path.quadraticBezierTo(x(368.0), y(-720.0), x(374.0), y(-714.0));
+    path.quadraticBezierTo(x(380.0), y(-708.0), x(380.0), y(-700.0));
+    path.quadraticBezierTo(x(380.0), y(-692.0), x(374.0), y(-686.0));
+    path.quadraticBezierTo(x(368.0), y(-680.0), x(360.0), y(-680.0));
+    path.close();
+    path.moveTo(x(280.0), y(-680.0));
+    path.quadraticBezierTo(x(272.0), y(-680.0), x(266.0), y(-686.0));
+    path.quadraticBezierTo(x(260.0), y(-692.0), x(260.0), y(-700.0));
+    path.quadraticBezierTo(x(260.0), y(-708.0), x(266.0), y(-714.0));
+    path.quadraticBezierTo(x(272.0), y(-720.0), x(280.0), y(-720.0));
+    path.quadraticBezierTo(x(288.0), y(-720.0), x(294.0), y(-714.0));
+    path.quadraticBezierTo(x(300.0), y(-708.0), x(300.0), y(-700.0));
+    path.quadraticBezierTo(x(300.0), y(-692.0), x(294.0), y(-686.0));
+    path.quadraticBezierTo(x(288.0), y(-680.0), x(280.0), y(-680.0));
+    path.close();
+    path.moveTo(x(440.0), y(-680.0));
+    path.quadraticBezierTo(x(432.0), y(-680.0), x(426.0), y(-686.0));
+    path.quadraticBezierTo(x(420.0), y(-692.0), x(420.0), y(-700.0));
+    path.quadraticBezierTo(x(420.0), y(-708.0), x(426.0), y(-714.0));
+    path.quadraticBezierTo(x(432.0), y(-720.0), x(440.0), y(-720.0));
+    path.quadraticBezierTo(x(448.0), y(-720.0), x(454.0), y(-714.0));
+    path.quadraticBezierTo(x(460.0), y(-708.0), x(460.0), y(-700.0));
+    path.quadraticBezierTo(x(460.0), y(-692.0), x(454.0), y(-686.0));
+    path.quadraticBezierTo(x(448.0), y(-680.0), x(440.0), y(-680.0));
+    path.close();
+    path.moveTo(x(520.0), y(-680.0));
+    path.quadraticBezierTo(x(512.0), y(-680.0), x(506.0), y(-686.0));
+    path.quadraticBezierTo(x(500.0), y(-692.0), x(500.0), y(-700.0));
+    path.quadraticBezierTo(x(500.0), y(-708.0), x(506.0), y(-714.0));
+    path.quadraticBezierTo(x(512.0), y(-720.0), x(520.0), y(-720.0));
+    path.quadraticBezierTo(x(528.0), y(-720.0), x(534.0), y(-714.0));
+    path.quadraticBezierTo(x(540.0), y(-708.0), x(540.0), y(-700.0));
+    path.quadraticBezierTo(x(540.0), y(-692.0), x(534.0), y(-686.0));
+    path.quadraticBezierTo(x(528.0), y(-680.0), x(520.0), y(-680.0));
+    path.close();
+    path.moveTo(x(600.0), y(-680.0));
+    path.quadraticBezierTo(x(592.0), y(-680.0), x(586.0), y(-686.0));
+    path.quadraticBezierTo(x(580.0), y(-692.0), x(580.0), y(-700.0));
+    path.quadraticBezierTo(x(580.0), y(-708.0), x(586.0), y(-714.0));
+    path.quadraticBezierTo(x(592.0), y(-720.0), x(600.0), y(-720.0));
+    path.quadraticBezierTo(x(608.0), y(-720.0), x(614.0), y(-714.0));
+    path.quadraticBezierTo(x(620.0), y(-708.0), x(620.0), y(-700.0));
+    path.quadraticBezierTo(x(620.0), y(-692.0), x(614.0), y(-686.0));
+    path.quadraticBezierTo(x(608.0), y(-680.0), x(600.0), y(-680.0));
+    path.close();
+    path.moveTo(x(480.0), y(-640.0));
+    path.quadraticBezierTo(x(472.0), y(-640.0), x(466.0), y(-646.0));
+    path.quadraticBezierTo(x(460.0), y(-652.0), x(460.0), y(-660.0));
+    path.quadraticBezierTo(x(460.0), y(-668.0), x(466.0), y(-674.0));
+    path.quadraticBezierTo(x(472.0), y(-680.0), x(480.0), y(-680.0));
+    path.quadraticBezierTo(x(488.0), y(-680.0), x(494.0), y(-674.0));
+    path.quadraticBezierTo(x(500.0), y(-668.0), x(500.0), y(-660.0));
+    path.quadraticBezierTo(x(500.0), y(-652.0), x(494.0), y(-646.0));
+    path.quadraticBezierTo(x(488.0), y(-640.0), x(480.0), y(-640.0));
+    path.close();
+    path.moveTo(x(560.0), y(-640.0));
+    path.quadraticBezierTo(x(552.0), y(-640.0), x(546.0), y(-646.0));
+    path.quadraticBezierTo(x(540.0), y(-652.0), x(540.0), y(-660.0));
+    path.quadraticBezierTo(x(540.0), y(-668.0), x(546.0), y(-674.0));
+    path.quadraticBezierTo(x(552.0), y(-680.0), x(560.0), y(-680.0));
+    path.quadraticBezierTo(x(568.0), y(-680.0), x(574.0), y(-674.0));
+    path.quadraticBezierTo(x(580.0), y(-668.0), x(580.0), y(-660.0));
+    path.quadraticBezierTo(x(580.0), y(-652.0), x(574.0), y(-646.0));
+    path.quadraticBezierTo(x(568.0), y(-640.0), x(560.0), y(-640.0));
+    path.close();
+    path.moveTo(x(640.0), y(-640.0));
+    path.quadraticBezierTo(x(632.0), y(-640.0), x(626.0), y(-646.0));
+    path.quadraticBezierTo(x(620.0), y(-652.0), x(620.0), y(-660.0));
+    path.quadraticBezierTo(x(620.0), y(-668.0), x(626.0), y(-674.0));
+    path.quadraticBezierTo(x(632.0), y(-680.0), x(640.0), y(-680.0));
+    path.quadraticBezierTo(x(648.0), y(-680.0), x(654.0), y(-674.0));
+    path.quadraticBezierTo(x(660.0), y(-668.0), x(660.0), y(-660.0));
+    path.quadraticBezierTo(x(660.0), y(-652.0), x(654.0), y(-646.0));
+    path.quadraticBezierTo(x(648.0), y(-640.0), x(640.0), y(-640.0));
+    path.close();
+    path.moveTo(x(400.0), y(-640.0));
+    path.quadraticBezierTo(x(392.0), y(-640.0), x(386.0), y(-646.0));
+    path.quadraticBezierTo(x(380.0), y(-652.0), x(380.0), y(-660.0));
+    path.quadraticBezierTo(x(380.0), y(-668.0), x(386.0), y(-674.0));
+    path.quadraticBezierTo(x(392.0), y(-680.0), x(400.0), y(-680.0));
+    path.quadraticBezierTo(x(408.0), y(-680.0), x(414.0), y(-674.0));
+    path.quadraticBezierTo(x(420.0), y(-668.0), x(420.0), y(-660.0));
+    path.quadraticBezierTo(x(420.0), y(-652.0), x(414.0), y(-646.0));
+    path.quadraticBezierTo(x(408.0), y(-640.0), x(400.0), y(-640.0));
+    path.close();
+    path.moveTo(x(320.0), y(-640.0));
+    path.quadraticBezierTo(x(312.0), y(-640.0), x(306.0), y(-646.0));
+    path.quadraticBezierTo(x(300.0), y(-652.0), x(300.0), y(-660.0));
+    path.quadraticBezierTo(x(300.0), y(-668.0), x(306.0), y(-674.0));
+    path.quadraticBezierTo(x(312.0), y(-680.0), x(320.0), y(-680.0));
+    path.quadraticBezierTo(x(328.0), y(-680.0), x(334.0), y(-674.0));
+    path.quadraticBezierTo(x(340.0), y(-668.0), x(340.0), y(-660.0));
+    path.quadraticBezierTo(x(340.0), y(-652.0), x(334.0), y(-646.0));
+    path.quadraticBezierTo(x(328.0), y(-640.0), x(320.0), y(-640.0));
+    path.close();
+    path.moveTo(x(360.0), y(-600.0));
+    path.quadraticBezierTo(x(352.0), y(-600.0), x(346.0), y(-606.0));
+    path.quadraticBezierTo(x(340.0), y(-612.0), x(340.0), y(-620.0));
+    path.quadraticBezierTo(x(340.0), y(-628.0), x(346.0), y(-634.0));
+    path.quadraticBezierTo(x(352.0), y(-640.0), x(360.0), y(-640.0));
+    path.quadraticBezierTo(x(368.0), y(-640.0), x(374.0), y(-634.0));
+    path.quadraticBezierTo(x(380.0), y(-628.0), x(380.0), y(-620.0));
+    path.quadraticBezierTo(x(380.0), y(-612.0), x(374.0), y(-606.0));
+    path.quadraticBezierTo(x(368.0), y(-600.0), x(360.0), y(-600.0));
+    path.close();
+    path.moveTo(x(280.0), y(-600.0));
+    path.quadraticBezierTo(x(272.0), y(-600.0), x(266.0), y(-606.0));
+    path.quadraticBezierTo(x(260.0), y(-612.0), x(260.0), y(-620.0));
+    path.quadraticBezierTo(x(260.0), y(-628.0), x(266.0), y(-634.0));
+    path.quadraticBezierTo(x(272.0), y(-640.0), x(280.0), y(-640.0));
+    path.quadraticBezierTo(x(288.0), y(-640.0), x(294.0), y(-634.0));
+    path.quadraticBezierTo(x(300.0), y(-628.0), x(300.0), y(-620.0));
+    path.quadraticBezierTo(x(300.0), y(-612.0), x(294.0), y(-606.0));
+    path.quadraticBezierTo(x(288.0), y(-600.0), x(280.0), y(-600.0));
+    path.close();
+    path.moveTo(x(440.0), y(-600.0));
+    path.quadraticBezierTo(x(432.0), y(-600.0), x(426.0), y(-606.0));
+    path.quadraticBezierTo(x(420.0), y(-612.0), x(420.0), y(-620.0));
+    path.quadraticBezierTo(x(420.0), y(-628.0), x(426.0), y(-634.0));
+    path.quadraticBezierTo(x(432.0), y(-640.0), x(440.0), y(-640.0));
+    path.quadraticBezierTo(x(448.0), y(-640.0), x(454.0), y(-634.0));
+    path.quadraticBezierTo(x(460.0), y(-628.0), x(460.0), y(-620.0));
+    path.quadraticBezierTo(x(460.0), y(-612.0), x(454.0), y(-606.0));
+    path.quadraticBezierTo(x(448.0), y(-600.0), x(440.0), y(-600.0));
+    path.close();
+    path.moveTo(x(520.0), y(-600.0));
+    path.quadraticBezierTo(x(512.0), y(-600.0), x(506.0), y(-606.0));
+    path.quadraticBezierTo(x(500.0), y(-612.0), x(500.0), y(-620.0));
+    path.quadraticBezierTo(x(500.0), y(-628.0), x(506.0), y(-634.0));
+    path.quadraticBezierTo(x(512.0), y(-640.0), x(520.0), y(-640.0));
+    path.quadraticBezierTo(x(528.0), y(-640.0), x(534.0), y(-634.0));
+    path.quadraticBezierTo(x(540.0), y(-628.0), x(540.0), y(-620.0));
+    path.quadraticBezierTo(x(540.0), y(-612.0), x(534.0), y(-606.0));
+    path.quadraticBezierTo(x(528.0), y(-600.0), x(520.0), y(-600.0));
+    path.close();
+    path.moveTo(x(600.0), y(-600.0));
+    path.quadraticBezierTo(x(592.0), y(-600.0), x(586.0), y(-606.0));
+    path.quadraticBezierTo(x(580.0), y(-612.0), x(580.0), y(-620.0));
+    path.quadraticBezierTo(x(580.0), y(-628.0), x(586.0), y(-634.0));
+    path.quadraticBezierTo(x(592.0), y(-640.0), x(600.0), y(-640.0));
+    path.quadraticBezierTo(x(608.0), y(-640.0), x(614.0), y(-634.0));
+    path.quadraticBezierTo(x(620.0), y(-628.0), x(620.0), y(-620.0));
+    path.quadraticBezierTo(x(620.0), y(-612.0), x(614.0), y(-606.0));
+    path.quadraticBezierTo(x(608.0), y(-600.0), x(600.0), y(-600.0));
+    path.close();
+    path.moveTo(x(680.0), y(-600.0));
+    path.quadraticBezierTo(x(672.0), y(-600.0), x(666.0), y(-606.0));
+    path.quadraticBezierTo(x(660.0), y(-612.0), x(660.0), y(-620.0));
+    path.quadraticBezierTo(x(660.0), y(-628.0), x(666.0), y(-634.0));
+    path.quadraticBezierTo(x(672.0), y(-640.0), x(680.0), y(-640.0));
+    path.quadraticBezierTo(x(688.0), y(-640.0), x(694.0), y(-634.0));
+    path.quadraticBezierTo(x(700.0), y(-628.0), x(700.0), y(-620.0));
+    path.quadraticBezierTo(x(700.0), y(-612.0), x(694.0), y(-606.0));
+    path.quadraticBezierTo(x(688.0), y(-600.0), x(680.0), y(-600.0));
+    path.close();
+    path.moveTo(x(200.0), y(-600.0));
+    path.quadraticBezierTo(x(192.0), y(-600.0), x(186.0), y(-606.0));
+    path.quadraticBezierTo(x(180.0), y(-612.0), x(180.0), y(-620.0));
+    path.quadraticBezierTo(x(180.0), y(-628.0), x(186.0), y(-634.0));
+    path.quadraticBezierTo(x(192.0), y(-640.0), x(200.0), y(-640.0));
+    path.quadraticBezierTo(x(208.0), y(-640.0), x(214.0), y(-634.0));
+    path.quadraticBezierTo(x(220.0), y(-628.0), x(220.0), y(-620.0));
+    path.quadraticBezierTo(x(220.0), y(-612.0), x(214.0), y(-606.0));
+    path.quadraticBezierTo(x(208.0), y(-600.0), x(200.0), y(-600.0));
+    path.close();
+    path.moveTo(x(240.0), y(-640.0));
+    path.quadraticBezierTo(x(232.0), y(-640.0), x(226.0), y(-646.0));
+    path.quadraticBezierTo(x(220.0), y(-652.0), x(220.0), y(-660.0));
+    path.quadraticBezierTo(x(220.0), y(-668.0), x(226.0), y(-674.0));
+    path.quadraticBezierTo(x(232.0), y(-680.0), x(240.0), y(-680.0));
+    path.quadraticBezierTo(x(248.0), y(-680.0), x(254.0), y(-674.0));
+    path.quadraticBezierTo(x(260.0), y(-668.0), x(260.0), y(-660.0));
+    path.quadraticBezierTo(x(260.0), y(-652.0), x(254.0), y(-646.0));
+    path.quadraticBezierTo(x(248.0), y(-640.0), x(240.0), y(-640.0));
+    path.close();
+    path.moveTo(x(320.0), y(-720.0));
+    path.quadraticBezierTo(x(312.0), y(-720.0), x(306.0), y(-726.0));
+    path.quadraticBezierTo(x(300.0), y(-732.0), x(300.0), y(-740.0));
+    path.quadraticBezierTo(x(300.0), y(-748.0), x(306.0), y(-754.0));
+    path.quadraticBezierTo(x(312.0), y(-760.0), x(320.0), y(-760.0));
+    path.quadraticBezierTo(x(328.0), y(-760.0), x(334.0), y(-754.0));
+    path.quadraticBezierTo(x(340.0), y(-748.0), x(340.0), y(-740.0));
+    path.quadraticBezierTo(x(340.0), y(-732.0), x(334.0), y(-726.0));
+    path.quadraticBezierTo(x(328.0), y(-720.0), x(320.0), y(-720.0));
+    path.close();
+    path.moveTo(x(360.0), y(-760.0));
+    path.quadraticBezierTo(x(352.0), y(-760.0), x(346.0), y(-766.0));
+    path.quadraticBezierTo(x(340.0), y(-772.0), x(340.0), y(-780.0));
+    path.quadraticBezierTo(x(340.0), y(-788.0), x(346.0), y(-794.0));
+    path.quadraticBezierTo(x(352.0), y(-800.0), x(360.0), y(-800.0));
+    path.quadraticBezierTo(x(368.0), y(-800.0), x(374.0), y(-794.0));
+    path.quadraticBezierTo(x(380.0), y(-788.0), x(380.0), y(-780.0));
+    path.quadraticBezierTo(x(380.0), y(-772.0), x(374.0), y(-766.0));
+    path.quadraticBezierTo(x(368.0), y(-760.0), x(360.0), y(-760.0));
+    path.close();
+    path.moveTo(x(440.0), y(-760.0));
+    path.quadraticBezierTo(x(432.0), y(-760.0), x(426.0), y(-766.0));
+    path.quadraticBezierTo(x(420.0), y(-772.0), x(420.0), y(-780.0));
+    path.quadraticBezierTo(x(420.0), y(-788.0), x(426.0), y(-794.0));
+    path.quadraticBezierTo(x(432.0), y(-800.0), x(440.0), y(-800.0));
+    path.quadraticBezierTo(x(448.0), y(-800.0), x(454.0), y(-794.0));
+    path.quadraticBezierTo(x(460.0), y(-788.0), x(460.0), y(-780.0));
+    path.quadraticBezierTo(x(460.0), y(-772.0), x(454.0), y(-766.0));
+    path.quadraticBezierTo(x(448.0), y(-760.0), x(440.0), y(-760.0));
+    path.close();
+    path.moveTo(x(520.0), y(-760.0));
+    path.quadraticBezierTo(x(512.0), y(-760.0), x(506.0), y(-766.0));
+    path.quadraticBezierTo(x(500.0), y(-772.0), x(500.0), y(-780.0));
+    path.quadraticBezierTo(x(500.0), y(-788.0), x(506.0), y(-794.0));
+    path.quadraticBezierTo(x(512.0), y(-800.0), x(520.0), y(-800.0));
+    path.quadraticBezierTo(x(528.0), y(-800.0), x(534.0), y(-794.0));
+    path.quadraticBezierTo(x(540.0), y(-788.0), x(540.0), y(-780.0));
+    path.quadraticBezierTo(x(540.0), y(-772.0), x(534.0), y(-766.0));
+    path.quadraticBezierTo(x(528.0), y(-760.0), x(520.0), y(-760.0));
+    path.close();
+    path.moveTo(x(600.0), y(-760.0));
+    path.quadraticBezierTo(x(592.0), y(-760.0), x(586.0), y(-766.0));
+    path.quadraticBezierTo(x(580.0), y(-772.0), x(580.0), y(-780.0));
+    path.quadraticBezierTo(x(580.0), y(-788.0), x(586.0), y(-794.0));
+    path.quadraticBezierTo(x(592.0), y(-800.0), x(600.0), y(-800.0));
+    path.quadraticBezierTo(x(608.0), y(-800.0), x(614.0), y(-794.0));
+    path.quadraticBezierTo(x(620.0), y(-788.0), x(620.0), y(-780.0));
+    path.quadraticBezierTo(x(620.0), y(-772.0), x(614.0), y(-766.0));
+    path.quadraticBezierTo(x(608.0), y(-760.0), x(600.0), y(-760.0));
+    path.close();
+    path.moveTo(x(640.0), y(-720.0));
+    path.quadraticBezierTo(x(632.0), y(-720.0), x(626.0), y(-726.0));
+    path.quadraticBezierTo(x(620.0), y(-732.0), x(620.0), y(-740.0));
+    path.quadraticBezierTo(x(620.0), y(-748.0), x(626.0), y(-754.0));
+    path.quadraticBezierTo(x(632.0), y(-760.0), x(640.0), y(-760.0));
+    path.quadraticBezierTo(x(648.0), y(-760.0), x(654.0), y(-754.0));
+    path.quadraticBezierTo(x(660.0), y(-748.0), x(660.0), y(-740.0));
+    path.quadraticBezierTo(x(660.0), y(-732.0), x(654.0), y(-726.0));
+    path.quadraticBezierTo(x(648.0), y(-720.0), x(640.0), y(-720.0));
+    path.close();
+    path.moveTo(x(720.0), y(-640.0));
+    path.quadraticBezierTo(x(712.0), y(-640.0), x(706.0), y(-646.0));
+    path.quadraticBezierTo(x(700.0), y(-652.0), x(700.0), y(-660.0));
+    path.quadraticBezierTo(x(700.0), y(-668.0), x(706.0), y(-674.0));
+    path.quadraticBezierTo(x(712.0), y(-680.0), x(720.0), y(-680.0));
+    path.quadraticBezierTo(x(728.0), y(-680.0), x(734.0), y(-674.0));
+    path.quadraticBezierTo(x(740.0), y(-668.0), x(740.0), y(-660.0));
+    path.quadraticBezierTo(x(740.0), y(-652.0), x(734.0), y(-646.0));
+    path.quadraticBezierTo(x(728.0), y(-640.0), x(720.0), y(-640.0));
+    path.close();
+    path.moveTo(x(760.0), y(-600.0));
+    path.quadraticBezierTo(x(752.0), y(-600.0), x(746.0), y(-606.0));
+    path.quadraticBezierTo(x(740.0), y(-612.0), x(740.0), y(-620.0));
+    path.quadraticBezierTo(x(740.0), y(-628.0), x(746.0), y(-634.0));
+    path.quadraticBezierTo(x(752.0), y(-640.0), x(760.0), y(-640.0));
+    path.quadraticBezierTo(x(768.0), y(-640.0), x(774.0), y(-634.0));
+    path.quadraticBezierTo(x(780.0), y(-628.0), x(780.0), y(-620.0));
+    path.quadraticBezierTo(x(780.0), y(-612.0), x(774.0), y(-606.0));
+    path.quadraticBezierTo(x(768.0), y(-600.0), x(760.0), y(-600.0));
+    path.close();
+    path.moveTo(x(360.0), y(-390.0));
+    path.quadraticBezierTo(x(339.0), y(-390.0), x(324.5), y(-404.5));
+    path.quadraticBezierTo(x(310.0), y(-419.0), x(310.0), y(-440.0));
+    path.quadraticBezierTo(x(310.0), y(-461.0), x(324.5), y(-475.5));
+    path.quadraticBezierTo(x(339.0), y(-490.0), x(360.0), y(-490.0));
+    path.quadraticBezierTo(x(381.0), y(-490.0), x(395.5), y(-475.5));
+    path.quadraticBezierTo(x(410.0), y(-461.0), x(410.0), y(-440.0));
+    path.quadraticBezierTo(x(410.0), y(-419.0), x(395.5), y(-404.5));
+    path.quadraticBezierTo(x(381.0), y(-390.0), x(360.0), y(-390.0));
+    path.close();
+    path.moveTo(x(600.0), y(-390.0));
+    path.quadraticBezierTo(x(579.0), y(-390.0), x(564.5), y(-404.5));
+    path.quadraticBezierTo(x(550.0), y(-419.0), x(550.0), y(-440.0));
+    path.quadraticBezierTo(x(550.0), y(-461.0), x(564.5), y(-475.5));
+    path.quadraticBezierTo(x(579.0), y(-490.0), x(600.0), y(-490.0));
+    path.quadraticBezierTo(x(621.0), y(-490.0), x(635.5), y(-475.5));
+    path.quadraticBezierTo(x(650.0), y(-461.0), x(650.0), y(-440.0));
+    path.quadraticBezierTo(x(650.0), y(-419.0), x(635.5), y(-404.5));
+    path.quadraticBezierTo(x(621.0), y(-390.0), x(600.0), y(-390.0));
+    path.close();
+    path.moveTo(x(480.0), y(-80.0));
+    path.quadraticBezierTo(x(398.0), y(-80.0), x(325.0), y(-111.5));
+    path.quadraticBezierTo(x(252.0), y(-143.0), x(197.5), y(-197.5));
+    path.quadraticBezierTo(x(143.0), y(-252.0), x(111.5), y(-325.0));
+    path.quadraticBezierTo(x(80.0), y(-398.0), x(80.0), y(-480.0));
+    path.quadraticBezierTo(x(80.0), y(-563.0), x(111.5), y(-636.0));
+    path.quadraticBezierTo(x(143.0), y(-709.0), x(197.5), y(-763.0));
+    path.quadraticBezierTo(x(252.0), y(-817.0), x(325.0), y(-848.5));
+    path.quadraticBezierTo(x(398.0), y(-880.0), x(480.0), y(-880.0));
+    path.quadraticBezierTo(x(563.0), y(-880.0), x(636.0), y(-848.5));
+    path.quadraticBezierTo(x(709.0), y(-817.0), x(763.0), y(-763.0));
+    path.quadraticBezierTo(x(817.0), y(-709.0), x(848.5), y(-636.0));
+    path.quadraticBezierTo(x(880.0), y(-563.0), x(880.0), y(-480.0));
+    path.quadraticBezierTo(x(880.0), y(-398.0), x(848.5), y(-325.0));
+    path.quadraticBezierTo(x(817.0), y(-252.0), x(763.0), y(-197.5));
+    path.quadraticBezierTo(x(709.0), y(-143.0), x(636.0), y(-111.5));
+    path.quadraticBezierTo(x(563.0), y(-80.0), x(480.0), y(-80.0));
+    path.close();
+    path.moveTo(x(480.0), y(-160.0));
+    path.quadraticBezierTo(x(614.0), y(-160.0), x(707.0), y(-253.5));
+    path.quadraticBezierTo(x(800.0), y(-347.0), x(800.0), y(-480.0));
+    path.quadraticBezierTo(x(800.0), y(-614.0), x(707.0), y(-707.0));
+    path.quadraticBezierTo(x(614.0), y(-800.0), x(480.0), y(-800.0));
+    path.quadraticBezierTo(x(347.0), y(-800.0), x(253.5), y(-707.0));
+    path.quadraticBezierTo(x(160.0), y(-614.0), x(160.0), y(-480.0));
+    path.quadraticBezierTo(x(160.0), y(-347.0), x(253.5), y(-253.5));
+    path.quadraticBezierTo(x(347.0), y(-160.0), x(480.0), y(-160.0));
+    path.close();
+
+    final paint = Paint()
+      ..style = PaintingStyle.fill
+      ..color = color.withValues(alpha: progress);
+
+    canvas.drawPath(path, paint);
+  }
+}

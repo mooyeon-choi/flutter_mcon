@@ -1,0 +1,103 @@
+import 'package:flutter/widgets.dart';
+import '../core/mcon_base.dart';
+
+/// Animated tablet_mac icon from Google Material Icons
+class MconTabletMac extends MconBase {
+  const MconTabletMac({
+    super.key,
+    super.size,
+    super.color,
+    super.duration,
+    super.curve,
+    super.animationType,
+    super.animationDirection,
+  });
+
+  @override
+  MconBaseState<MconTabletMac> createState() => _MconTabletMacState();
+}
+
+class _MconTabletMacState extends MconBaseState<MconTabletMac> {
+  @override
+  CustomPainter createPainter(Animation<double> animation) {
+    return _MconTabletMacPainter(
+      animation: animation,
+      color: widget.color ?? const Color(0xFF000000),
+    );
+  }
+}
+
+class _MconTabletMacPainter extends MconPainter {
+  _MconTabletMacPainter({
+    required super.animation,
+    required super.color,
+  });
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final progress = animation.value;
+    final scaleX = size.width / 960;
+    final scaleY = size.height / 960;
+
+    double x(double coord) => coord * scaleX;
+    double y(double coord) => (coord + 960) * scaleY;
+
+    final path = Path();
+    path.moveTo(x(480.0), y(-140.0));
+    path.quadraticBezierTo(x(497.0), y(-140.0), x(508.5), y(-151.5));
+    path.quadraticBezierTo(x(520.0), y(-163.0), x(520.0), y(-180.0));
+    path.quadraticBezierTo(x(520.0), y(-197.0), x(508.5), y(-208.5));
+    path.quadraticBezierTo(x(497.0), y(-220.0), x(480.0), y(-220.0));
+    path.quadraticBezierTo(x(463.0), y(-220.0), x(451.5), y(-208.5));
+    path.quadraticBezierTo(x(440.0), y(-197.0), x(440.0), y(-180.0));
+    path.quadraticBezierTo(x(440.0), y(-163.0), x(451.5), y(-151.5));
+    path.quadraticBezierTo(x(463.0), y(-140.0), x(480.0), y(-140.0));
+    path.close();
+    path.moveTo(x(200.0), y(-40.0));
+    path.quadraticBezierTo(x(167.0), y(-40.0), x(143.5), y(-63.5));
+    path.quadraticBezierTo(x(120.0), y(-87.0), x(120.0), y(-120.0));
+    path.lineTo(x(120.0), y(-840.0));
+    path.quadraticBezierTo(x(120.0), y(-873.0), x(143.5), y(-896.5));
+    path.quadraticBezierTo(x(167.0), y(-920.0), x(200.0), y(-920.0));
+    path.lineTo(x(760.0), y(-920.0));
+    path.quadraticBezierTo(x(793.0), y(-920.0), x(816.5), y(-896.5));
+    path.quadraticBezierTo(x(840.0), y(-873.0), x(840.0), y(-840.0));
+    path.lineTo(x(840.0), y(-120.0));
+    path.quadraticBezierTo(x(840.0), y(-87.0), x(816.5), y(-63.5));
+    path.quadraticBezierTo(x(793.0), y(-40.0), x(760.0), y(-40.0));
+    path.lineTo(x(200.0), y(-40.0));
+    path.close();
+    path.moveTo(x(200.0), y(-240.0));
+    path.lineTo(x(200.0), y(-120.0));
+    path.lineTo(x(760.0), y(-120.0));
+    path.lineTo(x(760.0), y(-240.0));
+    path.lineTo(x(200.0), y(-240.0));
+    path.close();
+    path.moveTo(x(200.0), y(-320.0));
+    path.lineTo(x(760.0), y(-320.0));
+    path.lineTo(x(760.0), y(-720.0));
+    path.lineTo(x(200.0), y(-720.0));
+    path.lineTo(x(200.0), y(-320.0));
+    path.close();
+    path.moveTo(x(200.0), y(-800.0));
+    path.lineTo(x(760.0), y(-800.0));
+    path.lineTo(x(760.0), y(-840.0));
+    path.lineTo(x(200.0), y(-840.0));
+    path.lineTo(x(200.0), y(-800.0));
+    path.close();
+    path.moveTo(x(200.0), y(-800.0));
+    path.lineTo(x(200.0), y(-840.0));
+    path.lineTo(x(200.0), y(-800.0));
+    path.close();
+    path.moveTo(x(200.0), y(-240.0));
+    path.lineTo(x(200.0), y(-120.0));
+    path.lineTo(x(200.0), y(-240.0));
+    path.close();
+
+    final paint = Paint()
+      ..style = PaintingStyle.fill
+      ..color = color.withValues(alpha: progress);
+
+    canvas.drawPath(path, paint);
+  }
+}
