@@ -14,7 +14,8 @@ class MconContentPasteOff extends MconBase {
   });
 
   @override
-  MconBaseState<MconContentPasteOff> createState() => _MconContentPasteOffState();
+  MconBaseState<MconContentPasteOff> createState() =>
+      _MconContentPasteOffState();
 }
 
 class _MconContentPasteOffState extends MconBaseState<MconContentPasteOff> {

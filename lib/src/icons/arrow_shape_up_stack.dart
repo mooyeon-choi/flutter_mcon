@@ -14,7 +14,8 @@ class MconArrowShapeUpStack extends MconBase {
   });
 
   @override
-  MconBaseState<MconArrowShapeUpStack> createState() => _MconArrowShapeUpStackState();
+  MconBaseState<MconArrowShapeUpStack> createState() =>
+      _MconArrowShapeUpStackState();
 }
 
 class _MconArrowShapeUpStackState extends MconBaseState<MconArrowShapeUpStack> {

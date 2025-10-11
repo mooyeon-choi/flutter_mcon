@@ -14,7 +14,8 @@ class MconChromecastDevice extends MconBase {
   });
 
   @override
-  MconBaseState<MconChromecastDevice> createState() => _MconChromecastDeviceState();
+  MconBaseState<MconChromecastDevice> createState() =>
+      _MconChromecastDeviceState();
 }
 
 class _MconChromecastDeviceState extends MconBaseState<MconChromecastDevice> {

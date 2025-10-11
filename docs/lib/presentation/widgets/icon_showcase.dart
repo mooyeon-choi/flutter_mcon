@@ -91,47 +91,34 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
 
     switch (widget.iconData.name) {
       case '10k':
-        return Mcon10k(
-            size: size, color: color, animationType: animationType);
+        return Mcon10k(size: size, color: color, animationType: animationType);
       case '10mp':
-        return Mcon10mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon10mp(size: size, color: color, animationType: animationType);
       case '11mp':
-        return Mcon11mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon11mp(size: size, color: color, animationType: animationType);
       case '123':
-        return Mcon123(
-            size: size, color: color, animationType: animationType);
+        return Mcon123(size: size, color: color, animationType: animationType);
       case '12mp':
-        return Mcon12mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon12mp(size: size, color: color, animationType: animationType);
       case '13mp':
-        return Mcon13mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon13mp(size: size, color: color, animationType: animationType);
       case '14mp':
-        return Mcon14mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon14mp(size: size, color: color, animationType: animationType);
       case '15mp':
-        return Mcon15mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon15mp(size: size, color: color, animationType: animationType);
       case '16mp':
-        return Mcon16mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon16mp(size: size, color: color, animationType: animationType);
       case '17mp':
-        return Mcon17mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon17mp(size: size, color: color, animationType: animationType);
       case '18_up_rating':
         return Mcon18UpRating(
             size: size, color: color, animationType: animationType);
       case '18mp':
-        return Mcon18mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon18mp(size: size, color: color, animationType: animationType);
       case '19mp':
-        return Mcon19mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon19mp(size: size, color: color, animationType: animationType);
       case '1k':
-        return Mcon1k(
-            size: size, color: color, animationType: animationType);
+        return Mcon1k(size: size, color: color, animationType: animationType);
       case '1k_plus':
         return Mcon1kPlus(
             size: size, color: color, animationType: animationType);
@@ -142,35 +129,27 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return Mcon1xMobiledataBadge(
             size: size, color: color, animationType: animationType);
       case '20mp':
-        return Mcon20mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon20mp(size: size, color: color, animationType: animationType);
       case '21mp':
-        return Mcon21mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon21mp(size: size, color: color, animationType: animationType);
       case '22mp':
-        return Mcon22mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon22mp(size: size, color: color, animationType: animationType);
       case '23mp':
-        return Mcon23mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon23mp(size: size, color: color, animationType: animationType);
       case '24fps_select':
         return Mcon24fpsSelect(
             size: size, color: color, animationType: animationType);
       case '24mp':
-        return Mcon24mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon24mp(size: size, color: color, animationType: animationType);
       case '2d':
-        return Mcon2d(
-            size: size, color: color, animationType: animationType);
+        return Mcon2d(size: size, color: color, animationType: animationType);
       case '2k':
-        return Mcon2k(
-            size: size, color: color, animationType: animationType);
+        return Mcon2k(size: size, color: color, animationType: animationType);
       case '2k_plus':
         return Mcon2kPlus(
             size: size, color: color, animationType: animationType);
       case '2mp':
-        return Mcon2mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon2mp(size: size, color: color, animationType: animationType);
       case '30fps':
         return Mcon30fps(
             size: size, color: color, animationType: animationType);
@@ -178,11 +157,9 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return Mcon30fpsSelect(
             size: size, color: color, animationType: animationType);
       case '360':
-        return Mcon360(
-            size: size, color: color, animationType: animationType);
+        return Mcon360(size: size, color: color, animationType: animationType);
       case '3d':
-        return Mcon3d(
-            size: size, color: color, animationType: animationType);
+        return Mcon3d(size: size, color: color, animationType: animationType);
       case '3d_rotation':
         return Mcon3dRotation(
             size: size, color: color, animationType: animationType);
@@ -193,17 +170,14 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return Mcon3gMobiledataBadge(
             size: size, color: color, animationType: animationType);
       case '3k':
-        return Mcon3k(
-            size: size, color: color, animationType: animationType);
+        return Mcon3k(size: size, color: color, animationType: animationType);
       case '3k_plus':
         return Mcon3kPlus(
             size: size, color: color, animationType: animationType);
       case '3mp':
-        return Mcon3mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon3mp(size: size, color: color, animationType: animationType);
       case '3p':
-        return Mcon3p(
-            size: size, color: color, animationType: animationType);
+        return Mcon3p(size: size, color: color, animationType: animationType);
       case '4g_mobiledata':
         return Mcon4gMobiledata(
             size: size, color: color, animationType: animationType);
@@ -214,32 +188,26 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return Mcon4gPlusMobiledata(
             size: size, color: color, animationType: animationType);
       case '4k':
-        return Mcon4k(
-            size: size, color: color, animationType: animationType);
+        return Mcon4k(size: size, color: color, animationType: animationType);
       case '4k_plus':
         return Mcon4kPlus(
             size: size, color: color, animationType: animationType);
       case '4mp':
-        return Mcon4mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon4mp(size: size, color: color, animationType: animationType);
       case '50mp':
-        return Mcon50mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon50mp(size: size, color: color, animationType: animationType);
       case '5g':
-        return Mcon5g(
-            size: size, color: color, animationType: animationType);
+        return Mcon5g(size: size, color: color, animationType: animationType);
       case '5g_mobiledata_badge':
         return Mcon5gMobiledataBadge(
             size: size, color: color, animationType: animationType);
       case '5k':
-        return Mcon5k(
-            size: size, color: color, animationType: animationType);
+        return Mcon5k(size: size, color: color, animationType: animationType);
       case '5k_plus':
         return Mcon5kPlus(
             size: size, color: color, animationType: animationType);
       case '5mp':
-        return Mcon5mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon5mp(size: size, color: color, animationType: animationType);
       case '60fps':
         return Mcon60fps(
             size: size, color: color, animationType: animationType);
@@ -250,44 +218,35 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return Mcon6FtApart(
             size: size, color: color, animationType: animationType);
       case '6k':
-        return Mcon6k(
-            size: size, color: color, animationType: animationType);
+        return Mcon6k(size: size, color: color, animationType: animationType);
       case '6k_plus':
         return Mcon6kPlus(
             size: size, color: color, animationType: animationType);
       case '6mp':
-        return Mcon6mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon6mp(size: size, color: color, animationType: animationType);
       case '7k':
-        return Mcon7k(
-            size: size, color: color, animationType: animationType);
+        return Mcon7k(size: size, color: color, animationType: animationType);
       case '7k_plus':
         return Mcon7kPlus(
             size: size, color: color, animationType: animationType);
       case '7mp':
-        return Mcon7mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon7mp(size: size, color: color, animationType: animationType);
       case '8k':
-        return Mcon8k(
-            size: size, color: color, animationType: animationType);
+        return Mcon8k(size: size, color: color, animationType: animationType);
       case '8k_plus':
         return Mcon8kPlus(
             size: size, color: color, animationType: animationType);
       case '8mp':
-        return Mcon8mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon8mp(size: size, color: color, animationType: animationType);
       case '9k':
-        return Mcon9k(
-            size: size, color: color, animationType: animationType);
+        return Mcon9k(size: size, color: color, animationType: animationType);
       case '9k_plus':
         return Mcon9kPlus(
             size: size, color: color, animationType: animationType);
       case '9mp':
-        return Mcon9mp(
-            size: size, color: color, animationType: animationType);
+        return Mcon9mp(size: size, color: color, animationType: animationType);
       case 'abc':
-        return MconAbc(
-            size: size, color: color, animationType: animationType);
+        return MconAbc(size: size, color: color, animationType: animationType);
       case 'ac_unit':
         return MconAcUnit(
             size: size, color: color, animationType: animationType);
@@ -343,8 +302,7 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconAcute(
             size: size, color: color, animationType: animationType);
       case 'ad':
-        return MconAd(
-            size: size, color: color, animationType: animationType);
+        return MconAd(size: size, color: color, animationType: animationType);
       case 'ad_group':
         return MconAdGroup(
             size: size, color: color, animationType: animationType);
@@ -361,14 +319,11 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconAdaptiveAudioMicOff(
             size: size, color: color, animationType: animationType);
       case 'adb':
-        return MconAdb(
-            size: size, color: color, animationType: animationType);
+        return MconAdb(size: size, color: color, animationType: animationType);
       case 'add':
-        return MconAdd(
-            size: size, color: color, animationType: animationType);
+        return MconAdd(size: size, color: color, animationType: animationType);
       case 'add_2':
-        return MconAdd2(
-            size: size, color: color, animationType: animationType);
+        return MconAdd2(size: size, color: color, animationType: animationType);
       case 'add_a_photo':
         return MconAddAPhoto(
             size: size, color: color, animationType: animationType);
@@ -481,8 +436,7 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconAgriculture(
             size: size, color: color, animationType: animationType);
       case 'air':
-        return MconAir(
-            size: size, color: color, animationType: animationType);
+        return MconAir(size: size, color: color, animationType: animationType);
       case 'air_freshener':
         return MconAirFreshener(
             size: size, color: color, animationType: animationType);
@@ -772,8 +726,7 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconApartment(
             size: size, color: color, animationType: animationType);
       case 'api':
-        return MconApi(
-            size: size, color: color, animationType: animationType);
+        return MconApi(size: size, color: color, animationType: animationType);
       case 'apk_document':
         return MconApkDocument(
             size: size, color: color, animationType: animationType);
@@ -799,14 +752,12 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconApprovalDelegationOff(
             size: size, color: color, animationType: animationType);
       case 'apps':
-        return MconApps(
-            size: size, color: color, animationType: animationType);
+        return MconApps(size: size, color: color, animationType: animationType);
       case 'apps_outage':
         return MconAppsOutage(
             size: size, color: color, animationType: animationType);
       case 'aq':
-        return MconAq(
-            size: size, color: color, animationType: animationType);
+        return MconAq(size: size, color: color, animationType: animationType);
       case 'aq_indoor':
         return MconAqIndoor(
             size: size, color: color, animationType: animationType);
@@ -1024,11 +975,9 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconAsterisk(
             size: size, color: color, animationType: animationType);
       case 'atm':
-        return MconAtm(
-            size: size, color: color, animationType: animationType);
+        return MconAtm(size: size, color: color, animationType: animationType);
       case 'atr':
-        return MconAtr(
-            size: size, color: color, animationType: animationType);
+        return MconAtr(size: size, color: color, animationType: animationType);
       case 'attach_email':
         return MconAttachEmail(
             size: size, color: color, animationType: animationType);
@@ -1108,14 +1057,12 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconAutostop(
             size: size, color: color, animationType: animationType);
       case 'av1':
-        return MconAv1(
-            size: size, color: color, animationType: animationType);
+        return MconAv1(size: size, color: color, animationType: animationType);
       case 'av_timer':
         return MconAvTimer(
             size: size, color: color, animationType: animationType);
       case 'avc':
-        return MconAvc(
-            size: size, color: color, animationType: animationType);
+        return MconAvc(size: size, color: color, animationType: animationType);
       case 'avg_pace':
         return MconAvgPace(
             size: size, color: color, animationType: animationType);
@@ -1129,8 +1076,7 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconAwardStar(
             size: size, color: color, animationType: animationType);
       case 'azm':
-        return MconAzm(
-            size: size, color: color, animationType: animationType);
+        return MconAzm(size: size, color: color, animationType: animationType);
       case 'baby_changing_station':
         return MconBabyChangingStation(
             size: size, color: color, animationType: animationType);
@@ -1414,8 +1360,7 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconBeachAccess(
             size: size, color: color, animationType: animationType);
       case 'bed':
-        return MconBed(
-            size: size, color: color, animationType: animationType);
+        return MconBed(size: size, color: color, animationType: animationType);
       case 'bedroom_baby':
         return MconBedroomBaby(
             size: size, color: color, animationType: animationType);
@@ -1441,8 +1386,7 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconBento(
             size: size, color: color, animationType: animationType);
       case 'bia':
-        return MconBia(
-            size: size, color: color, animationType: animationType);
+        return MconBia(size: size, color: color, animationType: animationType);
       case 'bid_landscape':
         return MconBidLandscape(
             size: size, color: color, animationType: animationType);
@@ -1534,14 +1478,11 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconBodySystem(
             size: size, color: color, animationType: animationType);
       case 'bolt':
-        return MconBolt(
-            size: size, color: color, animationType: animationType);
+        return MconBolt(size: size, color: color, animationType: animationType);
       case 'bomb':
-        return MconBomb(
-            size: size, color: color, animationType: animationType);
+        return MconBomb(size: size, color: color, animationType: animationType);
       case 'book':
-        return MconBook(
-            size: size, color: color, animationType: animationType);
+        return MconBook(size: size, color: color, animationType: animationType);
       case 'book_2':
         return MconBook2(
             size: size, color: color, animationType: animationType);
@@ -1636,8 +1577,7 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconBorderVertical(
             size: size, color: color, animationType: animationType);
       case 'borg':
-        return MconBorg(
-            size: size, color: color, animationType: animationType);
+        return MconBorg(size: size, color: color, animationType: animationType);
       case 'bottom_app_bar':
         return MconBottomAppBar(
             size: size, color: color, animationType: animationType);
@@ -1660,8 +1600,7 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconBottomSheets(
             size: size, color: color, animationType: animationType);
       case 'box':
-        return MconBox(
-            size: size, color: color, animationType: animationType);
+        return MconBox(size: size, color: color, animationType: animationType);
       case 'box_add':
         return MconBoxAdd(
             size: size, color: color, animationType: animationType);
@@ -1669,8 +1608,7 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconBoxEdit(
             size: size, color: color, animationType: animationType);
       case 'boy':
-        return MconBoy(
-            size: size, color: color, animationType: animationType);
+        return MconBoy(size: size, color: color, animationType: animationType);
       case 'brand_awareness':
         return MconBrandAwareness(
             size: size, color: color, animationType: animationType);
@@ -1822,8 +1760,7 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconCadence(
             size: size, color: color, animationType: animationType);
       case 'cake':
-        return MconCake(
-            size: size, color: color, animationType: animationType);
+        return MconCake(size: size, color: color, animationType: animationType);
       case 'cake_add':
         return MconCakeAdd(
             size: size, color: color, animationType: animationType);
@@ -1867,8 +1804,7 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconCalendarViewWeek(
             size: size, color: color, animationType: animationType);
       case 'call':
-        return MconCall(
-            size: size, color: color, animationType: animationType);
+        return MconCall(size: size, color: color, animationType: animationType);
       case 'call_end':
         return MconCallEnd(
             size: size, color: color, animationType: animationType);
@@ -2053,8 +1989,7 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconCasino(
             size: size, color: color, animationType: animationType);
       case 'cast':
-        return MconCast(
-            size: size, color: color, animationType: animationType);
+        return MconCast(size: size, color: color, animationType: animationType);
       case 'cast_connected':
         return MconCastConnected(
             size: size, color: color, animationType: animationType);
@@ -2125,8 +2060,7 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconChartData(
             size: size, color: color, animationType: animationType);
       case 'chat':
-        return MconChat(
-            size: size, color: color, animationType: animationType);
+        return MconChat(size: size, color: color, animationType: animationType);
       case 'chat_add_on':
         return MconChatAddOn(
             size: size, color: color, animationType: animationType);
@@ -2386,14 +2320,12 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconCloudUpload(
             size: size, color: color, animationType: animationType);
       case 'co2':
-        return MconCo2(
-            size: size, color: color, animationType: animationType);
+        return MconCo2(size: size, color: color, animationType: animationType);
       case 'co_present':
         return MconCoPresent(
             size: size, color: color, animationType: animationType);
       case 'code':
-        return MconCode(
-            size: size, color: color, animationType: animationType);
+        return MconCode(size: size, color: color, animationType: animationType);
       case 'code_blocks':
         return MconCodeBlocks(
             size: size, color: color, animationType: animationType);
@@ -2686,14 +2618,12 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconCreditScore(
             size: size, color: color, animationType: animationType);
       case 'crib':
-        return MconCrib(
-            size: size, color: color, animationType: animationType);
+        return MconCrib(size: size, color: color, animationType: animationType);
       case 'crisis_alert':
         return MconCrisisAlert(
             size: size, color: color, animationType: animationType);
       case 'crop':
-        return MconCrop(
-            size: size, color: color, animationType: animationType);
+        return MconCrop(size: size, color: color, animationType: animationType);
       case 'crop_16_9':
         return MconCrop169(
             size: size, color: color, animationType: animationType);
@@ -2737,11 +2667,9 @@ class _IconShowcaseItemState extends State<_IconShowcaseItem> {
         return MconCrueltyFree(
             size: size, color: color, animationType: animationType);
       case 'css':
-        return MconCss(
-            size: size, color: color, animationType: animationType);
+        return MconCss(size: size, color: color, animationType: animationType);
       case 'csv':
-        return MconCsv(
-            size: size, color: color, animationType: animationType);
+        return MconCsv(size: size, color: color, animationType: animationType);
       case 'currency_bitcoin':
         return MconCurrencyBitcoin(
             size: size, color: color, animationType: animationType);

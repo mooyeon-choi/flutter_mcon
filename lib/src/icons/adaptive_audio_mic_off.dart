@@ -14,10 +14,12 @@ class MconAdaptiveAudioMicOff extends MconBase {
   });
 
   @override
-  MconBaseState<MconAdaptiveAudioMicOff> createState() => _MconAdaptiveAudioMicOffState();
+  MconBaseState<MconAdaptiveAudioMicOff> createState() =>
+      _MconAdaptiveAudioMicOffState();
 }
 
-class _MconAdaptiveAudioMicOffState extends MconBaseState<MconAdaptiveAudioMicOff> {
+class _MconAdaptiveAudioMicOffState
+    extends MconBaseState<MconAdaptiveAudioMicOff> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAdaptiveAudioMicOffPainter(

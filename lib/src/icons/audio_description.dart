@@ -14,7 +14,8 @@ class MconAudioDescription extends MconBase {
   });
 
   @override
-  MconBaseState<MconAudioDescription> createState() => _MconAudioDescriptionState();
+  MconBaseState<MconAudioDescription> createState() =>
+      _MconAudioDescriptionState();
 }
 
 class _MconAudioDescriptionState extends MconBaseState<MconAudioDescription> {

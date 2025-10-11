@@ -14,10 +14,12 @@ class MconAirlineSeatFlatAngled extends MconBase {
   });
 
   @override
-  MconBaseState<MconAirlineSeatFlatAngled> createState() => _MconAirlineSeatFlatAngledState();
+  MconBaseState<MconAirlineSeatFlatAngled> createState() =>
+      _MconAirlineSeatFlatAngledState();
 }
 
-class _MconAirlineSeatFlatAngledState extends MconBaseState<MconAirlineSeatFlatAngled> {
+class _MconAirlineSeatFlatAngledState
+    extends MconBaseState<MconAirlineSeatFlatAngled> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAirlineSeatFlatAngledPainter(

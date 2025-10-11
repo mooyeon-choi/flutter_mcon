@@ -14,10 +14,12 @@ class MconBroadcastOnPersonal extends MconBase {
   });
 
   @override
-  MconBaseState<MconBroadcastOnPersonal> createState() => _MconBroadcastOnPersonalState();
+  MconBaseState<MconBroadcastOnPersonal> createState() =>
+      _MconBroadcastOnPersonalState();
 }
 
-class _MconBroadcastOnPersonalState extends MconBaseState<MconBroadcastOnPersonal> {
+class _MconBroadcastOnPersonalState
+    extends MconBaseState<MconBroadcastOnPersonal> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBroadcastOnPersonalPainter(

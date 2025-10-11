@@ -14,10 +14,12 @@ class MconAndroidCell4BarAlert extends MconBase {
   });
 
   @override
-  MconBaseState<MconAndroidCell4BarAlert> createState() => _MconAndroidCell4BarAlertState();
+  MconBaseState<MconAndroidCell4BarAlert> createState() =>
+      _MconAndroidCell4BarAlertState();
 }
 
-class _MconAndroidCell4BarAlertState extends MconBaseState<MconAndroidCell4BarAlert> {
+class _MconAndroidCell4BarAlertState
+    extends MconBaseState<MconAndroidCell4BarAlert> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAndroidCell4BarAlertPainter(

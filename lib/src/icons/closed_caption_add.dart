@@ -14,7 +14,8 @@ class MconClosedCaptionAdd extends MconBase {
   });
 
   @override
-  MconBaseState<MconClosedCaptionAdd> createState() => _MconClosedCaptionAddState();
+  MconBaseState<MconClosedCaptionAdd> createState() =>
+      _MconClosedCaptionAddState();
 }
 
 class _MconClosedCaptionAddState extends MconBaseState<MconClosedCaptionAdd> {

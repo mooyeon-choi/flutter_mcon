@@ -14,7 +14,8 @@ class MconBatchPrediction extends MconBase {
   });
 
   @override
-  MconBaseState<MconBatchPrediction> createState() => _MconBatchPredictionState();
+  MconBaseState<MconBatchPrediction> createState() =>
+      _MconBatchPredictionState();
 }
 
 class _MconBatchPredictionState extends MconBaseState<MconBatchPrediction> {

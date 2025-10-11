@@ -14,10 +14,12 @@ class MconCancelPresentation extends MconBase {
   });
 
   @override
-  MconBaseState<MconCancelPresentation> createState() => _MconCancelPresentationState();
+  MconBaseState<MconCancelPresentation> createState() =>
+      _MconCancelPresentationState();
 }
 
-class _MconCancelPresentationState extends MconBaseState<MconCancelPresentation> {
+class _MconCancelPresentationState
+    extends MconBaseState<MconCancelPresentation> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconCancelPresentationPainter(

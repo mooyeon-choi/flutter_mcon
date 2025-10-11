@@ -14,10 +14,12 @@ class MconBidLandscapeDisabled extends MconBase {
   });
 
   @override
-  MconBaseState<MconBidLandscapeDisabled> createState() => _MconBidLandscapeDisabledState();
+  MconBaseState<MconBidLandscapeDisabled> createState() =>
+      _MconBidLandscapeDisabledState();
 }
 
-class _MconBidLandscapeDisabledState extends MconBaseState<MconBidLandscapeDisabled> {
+class _MconBidLandscapeDisabledState
+    extends MconBaseState<MconBidLandscapeDisabled> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBidLandscapeDisabledPainter(

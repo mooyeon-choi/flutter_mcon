@@ -14,10 +14,12 @@ class MconAirplanemodeInactive extends MconBase {
   });
 
   @override
-  MconBaseState<MconAirplanemodeInactive> createState() => _MconAirplanemodeInactiveState();
+  MconBaseState<MconAirplanemodeInactive> createState() =>
+      _MconAirplanemodeInactiveState();
 }
 
-class _MconAirplanemodeInactiveState extends MconBaseState<MconAirplanemodeInactive> {
+class _MconAirplanemodeInactiveState
+    extends MconBaseState<MconAirplanemodeInactive> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAirplanemodeInactivePainter(

@@ -14,10 +14,12 @@ class MconConfirmationNumber extends MconBase {
   });
 
   @override
-  MconBaseState<MconConfirmationNumber> createState() => _MconConfirmationNumberState();
+  MconBaseState<MconConfirmationNumber> createState() =>
+      _MconConfirmationNumberState();
 }
 
-class _MconConfirmationNumberState extends MconBaseState<MconConfirmationNumber> {
+class _MconConfirmationNumberState
+    extends MconBaseState<MconConfirmationNumber> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconConfirmationNumberPainter(

@@ -14,7 +14,8 @@ class MconBottomPanelClose extends MconBase {
   });
 
   @override
-  MconBaseState<MconBottomPanelClose> createState() => _MconBottomPanelCloseState();
+  MconBaseState<MconBottomPanelClose> createState() =>
+      _MconBottomPanelCloseState();
 }
 
 class _MconBottomPanelCloseState extends MconBaseState<MconBottomPanelClose> {

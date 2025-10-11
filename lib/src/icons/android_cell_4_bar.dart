@@ -14,7 +14,8 @@ class MconAndroidCell4Bar extends MconBase {
   });
 
   @override
-  MconBaseState<MconAndroidCell4Bar> createState() => _MconAndroidCell4BarState();
+  MconBaseState<MconAndroidCell4Bar> createState() =>
+      _MconAndroidCell4BarState();
 }
 
 class _MconAndroidCell4BarState extends MconBaseState<MconAndroidCell4Bar> {

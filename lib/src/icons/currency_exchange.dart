@@ -14,7 +14,8 @@ class MconCurrencyExchange extends MconBase {
   });
 
   @override
-  MconBaseState<MconCurrencyExchange> createState() => _MconCurrencyExchangeState();
+  MconBaseState<MconCurrencyExchange> createState() =>
+      _MconCurrencyExchangeState();
 }
 
 class _MconCurrencyExchangeState extends MconBaseState<MconCurrencyExchange> {

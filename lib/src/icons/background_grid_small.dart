@@ -14,10 +14,12 @@ class MconBackgroundGridSmall extends MconBase {
   });
 
   @override
-  MconBaseState<MconBackgroundGridSmall> createState() => _MconBackgroundGridSmallState();
+  MconBaseState<MconBackgroundGridSmall> createState() =>
+      _MconBackgroundGridSmallState();
 }
 
-class _MconBackgroundGridSmallState extends MconBaseState<MconBackgroundGridSmall> {
+class _MconBackgroundGridSmallState
+    extends MconBaseState<MconBackgroundGridSmall> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBackgroundGridSmallPainter(

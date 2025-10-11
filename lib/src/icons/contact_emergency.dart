@@ -14,7 +14,8 @@ class MconContactEmergency extends MconBase {
   });
 
   @override
-  MconBaseState<MconContactEmergency> createState() => _MconContactEmergencyState();
+  MconBaseState<MconContactEmergency> createState() =>
+      _MconContactEmergencyState();
 }
 
 class _MconContactEmergencyState extends MconBaseState<MconContactEmergency> {

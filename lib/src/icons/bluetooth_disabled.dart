@@ -14,7 +14,8 @@ class MconBluetoothDisabled extends MconBase {
   });
 
   @override
-  MconBaseState<MconBluetoothDisabled> createState() => _MconBluetoothDisabledState();
+  MconBaseState<MconBluetoothDisabled> createState() =>
+      _MconBluetoothDisabledState();
 }
 
 class _MconBluetoothDisabledState extends MconBaseState<MconBluetoothDisabled> {

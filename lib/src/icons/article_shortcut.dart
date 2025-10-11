@@ -14,7 +14,8 @@ class MconArticleShortcut extends MconBase {
   });
 
   @override
-  MconBaseState<MconArticleShortcut> createState() => _MconArticleShortcutState();
+  MconBaseState<MconArticleShortcut> createState() =>
+      _MconArticleShortcutState();
 }
 
 class _MconArticleShortcutState extends MconBaseState<MconArticleShortcut> {

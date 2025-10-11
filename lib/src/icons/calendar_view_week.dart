@@ -14,7 +14,8 @@ class MconCalendarViewWeek extends MconBase {
   });
 
   @override
-  MconBaseState<MconCalendarViewWeek> createState() => _MconCalendarViewWeekState();
+  MconBaseState<MconCalendarViewWeek> createState() =>
+      _MconCalendarViewWeekState();
 }
 
 class _MconCalendarViewWeekState extends MconBaseState<MconCalendarViewWeek> {

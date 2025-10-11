@@ -14,7 +14,8 @@ class MconCurrencyBitcoin extends MconBase {
   });
 
   @override
-  MconBaseState<MconCurrencyBitcoin> createState() => _MconCurrencyBitcoinState();
+  MconBaseState<MconCurrencyBitcoin> createState() =>
+      _MconCurrencyBitcoinState();
 }
 
 class _MconCurrencyBitcoinState extends MconBaseState<MconCurrencyBitcoin> {

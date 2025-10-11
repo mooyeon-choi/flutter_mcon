@@ -14,7 +14,8 @@ class MconCloseFullscreen extends MconBase {
   });
 
   @override
-  MconBaseState<MconCloseFullscreen> createState() => _MconCloseFullscreenState();
+  MconBaseState<MconCloseFullscreen> createState() =>
+      _MconCloseFullscreenState();
 }
 
 class _MconCloseFullscreenState extends MconBaseState<MconCloseFullscreen> {

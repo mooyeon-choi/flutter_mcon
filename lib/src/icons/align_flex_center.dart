@@ -14,7 +14,8 @@ class MconAlignFlexCenter extends MconBase {
   });
 
   @override
-  MconBaseState<MconAlignFlexCenter> createState() => _MconAlignFlexCenterState();
+  MconBaseState<MconAlignFlexCenter> createState() =>
+      _MconAlignFlexCenterState();
 }
 
 class _MconAlignFlexCenterState extends MconBaseState<MconAlignFlexCenter> {

@@ -14,7 +14,8 @@ class MconContextualToken extends MconBase {
   });
 
   @override
-  MconBaseState<MconContextualToken> createState() => _MconContextualTokenState();
+  MconBaseState<MconContextualToken> createState() =>
+      _MconContextualTokenState();
 }
 
 class _MconContextualTokenState extends MconBaseState<MconContextualToken> {

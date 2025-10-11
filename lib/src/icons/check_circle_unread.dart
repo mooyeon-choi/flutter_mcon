@@ -14,7 +14,8 @@ class MconCheckCircleUnread extends MconBase {
   });
 
   @override
-  MconBaseState<MconCheckCircleUnread> createState() => _MconCheckCircleUnreadState();
+  MconBaseState<MconCheckCircleUnread> createState() =>
+      _MconCheckCircleUnreadState();
 }
 
 class _MconCheckCircleUnreadState extends MconBaseState<MconCheckCircleUnread> {

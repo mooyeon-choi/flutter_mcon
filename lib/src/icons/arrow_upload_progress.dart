@@ -14,10 +14,12 @@ class MconArrowUploadProgress extends MconBase {
   });
 
   @override
-  MconBaseState<MconArrowUploadProgress> createState() => _MconArrowUploadProgressState();
+  MconBaseState<MconArrowUploadProgress> createState() =>
+      _MconArrowUploadProgressState();
 }
 
-class _MconArrowUploadProgressState extends MconBaseState<MconArrowUploadProgress> {
+class _MconArrowUploadProgressState
+    extends MconBaseState<MconArrowUploadProgress> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconArrowUploadProgressPainter(

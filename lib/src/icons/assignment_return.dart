@@ -14,7 +14,8 @@ class MconAssignmentReturn extends MconBase {
   });
 
   @override
-  MconBaseState<MconAssignmentReturn> createState() => _MconAssignmentReturnState();
+  MconBaseState<MconAssignmentReturn> createState() =>
+      _MconAssignmentReturnState();
 }
 
 class _MconAssignmentReturnState extends MconBaseState<MconAssignmentReturn> {

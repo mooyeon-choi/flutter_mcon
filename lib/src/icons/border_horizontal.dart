@@ -14,7 +14,8 @@ class MconBorderHorizontal extends MconBase {
   });
 
   @override
-  MconBaseState<MconBorderHorizontal> createState() => _MconBorderHorizontalState();
+  MconBaseState<MconBorderHorizontal> createState() =>
+      _MconBorderHorizontalState();
 }
 
 class _MconBorderHorizontalState extends MconBaseState<MconBorderHorizontal> {

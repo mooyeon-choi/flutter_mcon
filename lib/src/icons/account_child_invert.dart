@@ -14,10 +14,12 @@ class MconAccountChildInvert extends MconBase {
   });
 
   @override
-  MconBaseState<MconAccountChildInvert> createState() => _MconAccountChildInvertState();
+  MconBaseState<MconAccountChildInvert> createState() =>
+      _MconAccountChildInvertState();
 }
 
-class _MconAccountChildInvertState extends MconBaseState<MconAccountChildInvert> {
+class _MconAccountChildInvertState
+    extends MconBaseState<MconAccountChildInvert> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAccountChildInvertPainter(

@@ -14,10 +14,12 @@ class MconContextualTokenAdd extends MconBase {
   });
 
   @override
-  MconBaseState<MconContextualTokenAdd> createState() => _MconContextualTokenAddState();
+  MconBaseState<MconContextualTokenAdd> createState() =>
+      _MconContextualTokenAddState();
 }
 
-class _MconContextualTokenAddState extends MconBaseState<MconContextualTokenAdd> {
+class _MconContextualTokenAddState
+    extends MconBaseState<MconContextualTokenAdd> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconContextualTokenAddPainter(

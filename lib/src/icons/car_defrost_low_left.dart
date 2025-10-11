@@ -14,7 +14,8 @@ class MconCarDefrostLowLeft extends MconBase {
   });
 
   @override
-  MconBaseState<MconCarDefrostLowLeft> createState() => _MconCarDefrostLowLeftState();
+  MconBaseState<MconCarDefrostLowLeft> createState() =>
+      _MconCarDefrostLowLeftState();
 }
 
 class _MconCarDefrostLowLeftState extends MconBaseState<MconCarDefrostLowLeft> {

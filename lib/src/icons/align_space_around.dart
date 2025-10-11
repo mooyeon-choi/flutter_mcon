@@ -14,7 +14,8 @@ class MconAlignSpaceAround extends MconBase {
   });
 
   @override
-  MconBaseState<MconAlignSpaceAround> createState() => _MconAlignSpaceAroundState();
+  MconBaseState<MconAlignSpaceAround> createState() =>
+      _MconAlignSpaceAroundState();
 }
 
 class _MconAlignSpaceAroundState extends MconBaseState<MconAlignSpaceAround> {

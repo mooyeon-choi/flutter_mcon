@@ -14,7 +14,8 @@ class MconArrowSelectorTool extends MconBase {
   });
 
   @override
-  MconBaseState<MconArrowSelectorTool> createState() => _MconArrowSelectorToolState();
+  MconBaseState<MconArrowSelectorTool> createState() =>
+      _MconArrowSelectorToolState();
 }
 
 class _MconArrowSelectorToolState extends MconBaseState<MconArrowSelectorTool> {

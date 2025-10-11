@@ -14,10 +14,12 @@ class MconCarDefrostLowRight extends MconBase {
   });
 
   @override
-  MconBaseState<MconCarDefrostLowRight> createState() => _MconCarDefrostLowRightState();
+  MconBaseState<MconCarDefrostLowRight> createState() =>
+      _MconCarDefrostLowRightState();
 }
 
-class _MconCarDefrostLowRightState extends MconBaseState<MconCarDefrostLowRight> {
+class _MconCarDefrostLowRightState
+    extends MconBaseState<MconCarDefrostLowRight> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconCarDefrostLowRightPainter(

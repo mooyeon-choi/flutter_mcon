@@ -14,10 +14,12 @@ class MconCircleNotifications extends MconBase {
   });
 
   @override
-  MconBaseState<MconCircleNotifications> createState() => _MconCircleNotificationsState();
+  MconBaseState<MconCircleNotifications> createState() =>
+      _MconCircleNotificationsState();
 }
 
-class _MconCircleNotificationsState extends MconBaseState<MconCircleNotifications> {
+class _MconCircleNotificationsState
+    extends MconBaseState<MconCircleNotifications> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconCircleNotificationsPainter(

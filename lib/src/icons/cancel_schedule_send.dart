@@ -14,10 +14,12 @@ class MconCancelScheduleSend extends MconBase {
   });
 
   @override
-  MconBaseState<MconCancelScheduleSend> createState() => _MconCancelScheduleSendState();
+  MconBaseState<MconCancelScheduleSend> createState() =>
+      _MconCancelScheduleSendState();
 }
 
-class _MconCancelScheduleSendState extends MconBaseState<MconCancelScheduleSend> {
+class _MconCancelScheduleSendState
+    extends MconBaseState<MconCancelScheduleSend> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconCancelScheduleSendPainter(

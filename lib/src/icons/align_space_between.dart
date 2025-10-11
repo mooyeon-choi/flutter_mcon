@@ -14,7 +14,8 @@ class MconAlignSpaceBetween extends MconBase {
   });
 
   @override
-  MconBaseState<MconAlignSpaceBetween> createState() => _MconAlignSpaceBetweenState();
+  MconBaseState<MconAlignSpaceBetween> createState() =>
+      _MconAlignSpaceBetweenState();
 }
 
 class _MconAlignSpaceBetweenState extends MconBaseState<MconAlignSpaceBetween> {

@@ -14,7 +14,8 @@ class MconCommentsDisabled extends MconBase {
   });
 
   @override
-  MconBaseState<MconCommentsDisabled> createState() => _MconCommentsDisabledState();
+  MconBaseState<MconCommentsDisabled> createState() =>
+      _MconCommentsDisabledState();
 }
 
 class _MconCommentsDisabledState extends MconBaseState<MconCommentsDisabled> {

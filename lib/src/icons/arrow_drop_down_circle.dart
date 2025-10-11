@@ -14,10 +14,12 @@ class MconArrowDropDownCircle extends MconBase {
   });
 
   @override
-  MconBaseState<MconArrowDropDownCircle> createState() => _MconArrowDropDownCircleState();
+  MconBaseState<MconArrowDropDownCircle> createState() =>
+      _MconArrowDropDownCircleState();
 }
 
-class _MconArrowDropDownCircleState extends MconBaseState<MconArrowDropDownCircle> {
+class _MconArrowDropDownCircleState
+    extends MconBaseState<MconArrowDropDownCircle> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconArrowDropDownCirclePainter(

@@ -14,7 +14,8 @@ class MconArrowCircleRight extends MconBase {
   });
 
   @override
-  MconBaseState<MconArrowCircleRight> createState() => _MconArrowCircleRightState();
+  MconBaseState<MconArrowCircleRight> createState() =>
+      _MconArrowCircleRightState();
 }
 
 class _MconArrowCircleRightState extends MconBaseState<MconArrowCircleRight> {

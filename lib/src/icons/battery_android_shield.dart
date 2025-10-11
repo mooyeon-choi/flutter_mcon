@@ -14,10 +14,12 @@ class MconBatteryAndroidShield extends MconBase {
   });
 
   @override
-  MconBaseState<MconBatteryAndroidShield> createState() => _MconBatteryAndroidShieldState();
+  MconBaseState<MconBatteryAndroidShield> createState() =>
+      _MconBatteryAndroidShieldState();
 }
 
-class _MconBatteryAndroidShieldState extends MconBaseState<MconBatteryAndroidShield> {
+class _MconBatteryAndroidShieldState
+    extends MconBaseState<MconBatteryAndroidShield> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBatteryAndroidShieldPainter(

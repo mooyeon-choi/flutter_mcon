@@ -14,10 +14,12 @@ class MconAirlineSeatLegroomNormal extends MconBase {
   });
 
   @override
-  MconBaseState<MconAirlineSeatLegroomNormal> createState() => _MconAirlineSeatLegroomNormalState();
+  MconBaseState<MconAirlineSeatLegroomNormal> createState() =>
+      _MconAirlineSeatLegroomNormalState();
 }
 
-class _MconAirlineSeatLegroomNormalState extends MconBaseState<MconAirlineSeatLegroomNormal> {
+class _MconAirlineSeatLegroomNormalState
+    extends MconBaseState<MconAirlineSeatLegroomNormal> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAirlineSeatLegroomNormalPainter(

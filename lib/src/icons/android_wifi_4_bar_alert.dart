@@ -14,10 +14,12 @@ class MconAndroidWifi4BarAlert extends MconBase {
   });
 
   @override
-  MconBaseState<MconAndroidWifi4BarAlert> createState() => _MconAndroidWifi4BarAlertState();
+  MconBaseState<MconAndroidWifi4BarAlert> createState() =>
+      _MconAndroidWifi4BarAlertState();
 }
 
-class _MconAndroidWifi4BarAlertState extends MconBaseState<MconAndroidWifi4BarAlert> {
+class _MconAndroidWifi4BarAlertState
+    extends MconBaseState<MconAndroidWifi4BarAlert> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAndroidWifi4BarAlertPainter(

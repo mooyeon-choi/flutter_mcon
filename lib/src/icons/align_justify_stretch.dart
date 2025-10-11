@@ -14,10 +14,12 @@ class MconAlignJustifyStretch extends MconBase {
   });
 
   @override
-  MconBaseState<MconAlignJustifyStretch> createState() => _MconAlignJustifyStretchState();
+  MconBaseState<MconAlignJustifyStretch> createState() =>
+      _MconAlignJustifyStretchState();
 }
 
-class _MconAlignJustifyStretchState extends MconBaseState<MconAlignJustifyStretch> {
+class _MconAlignJustifyStretchState
+    extends MconBaseState<MconAlignJustifyStretch> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAlignJustifyStretchPainter(

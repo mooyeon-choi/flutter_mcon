@@ -14,10 +14,12 @@ class MconDashboardCustomize extends MconBase {
   });
 
   @override
-  MconBaseState<MconDashboardCustomize> createState() => _MconDashboardCustomizeState();
+  MconBaseState<MconDashboardCustomize> createState() =>
+      _MconDashboardCustomizeState();
 }
 
-class _MconDashboardCustomizeState extends MconBaseState<MconDashboardCustomize> {
+class _MconDashboardCustomizeState
+    extends MconBaseState<MconDashboardCustomize> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconDashboardCustomizePainter(

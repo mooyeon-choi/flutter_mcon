@@ -14,7 +14,8 @@ class MconBatteryStatusGood extends MconBase {
   });
 
   @override
-  MconBaseState<MconBatteryStatusGood> createState() => _MconBatteryStatusGoodState();
+  MconBaseState<MconBatteryStatusGood> createState() =>
+      _MconBatteryStatusGoodState();
 }
 
 class _MconBatteryStatusGoodState extends MconBaseState<MconBatteryStatusGood> {

@@ -14,7 +14,8 @@ class MconBatteryHoriz050 extends MconBase {
   });
 
   @override
-  MconBaseState<MconBatteryHoriz050> createState() => _MconBatteryHoriz050State();
+  MconBaseState<MconBatteryHoriz050> createState() =>
+      _MconBatteryHoriz050State();
 }
 
 class _MconBatteryHoriz050State extends MconBaseState<MconBatteryHoriz050> {

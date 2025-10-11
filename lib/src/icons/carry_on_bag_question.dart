@@ -14,10 +14,12 @@ class MconCarryOnBagQuestion extends MconBase {
   });
 
   @override
-  MconBaseState<MconCarryOnBagQuestion> createState() => _MconCarryOnBagQuestionState();
+  MconBaseState<MconCarryOnBagQuestion> createState() =>
+      _MconCarryOnBagQuestionState();
 }
 
-class _MconCarryOnBagQuestionState extends MconBaseState<MconCarryOnBagQuestion> {
+class _MconCarryOnBagQuestionState
+    extends MconBaseState<MconCarryOnBagQuestion> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconCarryOnBagQuestionPainter(

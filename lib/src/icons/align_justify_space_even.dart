@@ -14,10 +14,12 @@ class MconAlignJustifySpaceEven extends MconBase {
   });
 
   @override
-  MconBaseState<MconAlignJustifySpaceEven> createState() => _MconAlignJustifySpaceEvenState();
+  MconBaseState<MconAlignJustifySpaceEven> createState() =>
+      _MconAlignJustifySpaceEvenState();
 }
 
-class _MconAlignJustifySpaceEvenState extends MconBaseState<MconAlignJustifySpaceEven> {
+class _MconAlignJustifySpaceEvenState
+    extends MconBaseState<MconAlignJustifySpaceEven> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAlignJustifySpaceEvenPainter(

@@ -14,7 +14,8 @@ class MconBrightnessEmpty extends MconBase {
   });
 
   @override
-  MconBaseState<MconBrightnessEmpty> createState() => _MconBrightnessEmptyState();
+  MconBaseState<MconBrightnessEmpty> createState() =>
+      _MconBrightnessEmptyState();
 }
 
 class _MconBrightnessEmptyState extends MconBaseState<MconBrightnessEmpty> {

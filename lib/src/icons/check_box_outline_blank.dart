@@ -14,10 +14,12 @@ class MconCheckBoxOutlineBlank extends MconBase {
   });
 
   @override
-  MconBaseState<MconCheckBoxOutlineBlank> createState() => _MconCheckBoxOutlineBlankState();
+  MconBaseState<MconCheckBoxOutlineBlank> createState() =>
+      _MconCheckBoxOutlineBlankState();
 }
 
-class _MconCheckBoxOutlineBlankState extends MconBaseState<MconCheckBoxOutlineBlank> {
+class _MconCheckBoxOutlineBlankState
+    extends MconBaseState<MconCheckBoxOutlineBlank> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconCheckBoxOutlineBlankPainter(

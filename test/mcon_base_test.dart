@@ -60,8 +60,7 @@ void main() {
   });
 
   group('Animation Types', () {
-    testWidgets('MconAdd with fadeIn animation',
-        (WidgetTester tester) async {
+    testWidgets('MconAdd with fadeIn animation', (WidgetTester tester) async {
       final key = GlobalKey<MconBaseState>();
 
       await tester.pumpWidget(
@@ -82,8 +81,7 @@ void main() {
       await tester.pump();
     });
 
-    testWidgets('MconAdd with scaleUp animation',
-        (WidgetTester tester) async {
+    testWidgets('MconAdd with scaleUp animation', (WidgetTester tester) async {
       final key = GlobalKey<MconBaseState>();
 
       await tester.pumpWidget(
@@ -104,8 +102,7 @@ void main() {
       await tester.pump();
     });
 
-    testWidgets('MconAdd with rotate animation',
-        (WidgetTester tester) async {
+    testWidgets('MconAdd with rotate animation', (WidgetTester tester) async {
       final key = GlobalKey<MconBaseState>();
 
       await tester.pumpWidget(

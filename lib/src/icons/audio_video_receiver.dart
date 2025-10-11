@@ -14,10 +14,12 @@ class MconAudioVideoReceiver extends MconBase {
   });
 
   @override
-  MconBaseState<MconAudioVideoReceiver> createState() => _MconAudioVideoReceiverState();
+  MconBaseState<MconAudioVideoReceiver> createState() =>
+      _MconAudioVideoReceiverState();
 }
 
-class _MconAudioVideoReceiverState extends MconBaseState<MconAudioVideoReceiver> {
+class _MconAudioVideoReceiverState
+    extends MconBaseState<MconAudioVideoReceiver> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAudioVideoReceiverPainter(

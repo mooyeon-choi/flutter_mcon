@@ -14,7 +14,8 @@ class MconCleaningServices extends MconBase {
   });
 
   @override
-  MconBaseState<MconCleaningServices> createState() => _MconCleaningServicesState();
+  MconBaseState<MconCleaningServices> createState() =>
+      _MconCleaningServicesState();
 }
 
 class _MconCleaningServicesState extends MconBaseState<MconCleaningServices> {

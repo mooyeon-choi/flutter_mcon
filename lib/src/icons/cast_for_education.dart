@@ -14,7 +14,8 @@ class MconCastForEducation extends MconBase {
   });
 
   @override
-  MconBaseState<MconCastForEducation> createState() => _MconCastForEducationState();
+  MconBaseState<MconCastForEducation> createState() =>
+      _MconCastForEducationState();
 }
 
 class _MconCastForEducationState extends MconBaseState<MconCastForEducation> {

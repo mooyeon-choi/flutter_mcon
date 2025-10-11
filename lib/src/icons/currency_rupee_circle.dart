@@ -14,10 +14,12 @@ class MconCurrencyRupeeCircle extends MconBase {
   });
 
   @override
-  MconBaseState<MconCurrencyRupeeCircle> createState() => _MconCurrencyRupeeCircleState();
+  MconBaseState<MconCurrencyRupeeCircle> createState() =>
+      _MconCurrencyRupeeCircleState();
 }
 
-class _MconCurrencyRupeeCircleState extends MconBaseState<MconCurrencyRupeeCircle> {
+class _MconCurrencyRupeeCircleState
+    extends MconBaseState<MconCurrencyRupeeCircle> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconCurrencyRupeeCirclePainter(

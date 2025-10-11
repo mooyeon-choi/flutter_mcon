@@ -14,7 +14,8 @@ class MconBatteryAndroid0 extends MconBase {
   });
 
   @override
-  MconBaseState<MconBatteryAndroid0> createState() => _MconBatteryAndroid0State();
+  MconBaseState<MconBatteryAndroid0> createState() =>
+      _MconBatteryAndroid0State();
 }
 
 class _MconBatteryAndroid0State extends MconBaseState<MconBatteryAndroid0> {

@@ -14,7 +14,8 @@ class MconCenterFocusStrong extends MconBase {
   });
 
   @override
-  MconBaseState<MconCenterFocusStrong> createState() => _MconCenterFocusStrongState();
+  MconBaseState<MconCenterFocusStrong> createState() =>
+      _MconCenterFocusStrongState();
 }
 
 class _MconCenterFocusStrongState extends MconBaseState<MconCenterFocusStrong> {

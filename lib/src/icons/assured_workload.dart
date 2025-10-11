@@ -14,7 +14,8 @@ class MconAssuredWorkload extends MconBase {
   });
 
   @override
-  MconBaseState<MconAssuredWorkload> createState() => _MconAssuredWorkloadState();
+  MconBaseState<MconAssuredWorkload> createState() =>
+      _MconAssuredWorkloadState();
 }
 
 class _MconAssuredWorkloadState extends MconBaseState<MconAssuredWorkload> {

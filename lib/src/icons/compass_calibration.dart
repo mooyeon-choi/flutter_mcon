@@ -14,10 +14,12 @@ class MconCompassCalibration extends MconBase {
   });
 
   @override
-  MconBaseState<MconCompassCalibration> createState() => _MconCompassCalibrationState();
+  MconBaseState<MconCompassCalibration> createState() =>
+      _MconCompassCalibrationState();
 }
 
-class _MconCompassCalibrationState extends MconBaseState<MconCompassCalibration> {
+class _MconCompassCalibrationState
+    extends MconBaseState<MconCompassCalibration> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconCompassCalibrationPainter(

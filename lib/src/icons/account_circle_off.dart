@@ -14,7 +14,8 @@ class MconAccountCircleOff extends MconBase {
   });
 
   @override
-  MconBaseState<MconAccountCircleOff> createState() => _MconAccountCircleOffState();
+  MconBaseState<MconAccountCircleOff> createState() =>
+      _MconAccountCircleOffState();
 }
 
 class _MconAccountCircleOffState extends MconBaseState<MconAccountCircleOff> {

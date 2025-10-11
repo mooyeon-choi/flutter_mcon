@@ -14,7 +14,8 @@ class MconAccessibilityNew extends MconBase {
   });
 
   @override
-  MconBaseState<MconAccessibilityNew> createState() => _MconAccessibilityNewState();
+  MconBaseState<MconAccessibilityNew> createState() =>
+      _MconAccessibilityNewState();
 }
 
 class _MconAccessibilityNewState extends MconBaseState<MconAccessibilityNew> {

@@ -14,7 +14,8 @@ class MconAccessibleForward extends MconBase {
   });
 
   @override
-  MconBaseState<MconAccessibleForward> createState() => _MconAccessibleForwardState();
+  MconBaseState<MconAccessibleForward> createState() =>
+      _MconAccessibleForwardState();
 }
 
 class _MconAccessibleForwardState extends MconBaseState<MconAccessibleForward> {

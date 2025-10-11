@@ -14,7 +14,8 @@ class MconAlignSelfStretch extends MconBase {
   });
 
   @override
-  MconBaseState<MconAlignSelfStretch> createState() => _MconAlignSelfStretchState();
+  MconBaseState<MconAlignSelfStretch> createState() =>
+      _MconAlignSelfStretchState();
 }
 
 class _MconAlignSelfStretchState extends MconBaseState<MconAlignSelfStretch> {

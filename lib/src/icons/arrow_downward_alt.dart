@@ -14,7 +14,8 @@ class MconArrowDownwardAlt extends MconBase {
   });
 
   @override
-  MconBaseState<MconArrowDownwardAlt> createState() => _MconArrowDownwardAltState();
+  MconBaseState<MconArrowDownwardAlt> createState() =>
+      _MconArrowDownwardAltState();
 }
 
 class _MconArrowDownwardAltState extends MconBaseState<MconArrowDownwardAlt> {

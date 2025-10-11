@@ -14,7 +14,8 @@ class MconCandlestickChart extends MconBase {
   });
 
   @override
-  MconBaseState<MconCandlestickChart> createState() => _MconCandlestickChartState();
+  MconBaseState<MconCandlestickChart> createState() =>
+      _MconCandlestickChartState();
 }
 
 class _MconCandlestickChartState extends MconBaseState<MconCandlestickChart> {

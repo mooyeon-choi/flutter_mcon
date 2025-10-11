@@ -14,10 +14,12 @@ class MconBatteryAndroidFrameBolt extends MconBase {
   });
 
   @override
-  MconBaseState<MconBatteryAndroidFrameBolt> createState() => _MconBatteryAndroidFrameBoltState();
+  MconBaseState<MconBatteryAndroidFrameBolt> createState() =>
+      _MconBatteryAndroidFrameBoltState();
 }
 
-class _MconBatteryAndroidFrameBoltState extends MconBaseState<MconBatteryAndroidFrameBolt> {
+class _MconBatteryAndroidFrameBoltState
+    extends MconBaseState<MconBatteryAndroidFrameBolt> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBatteryAndroidFrameBoltPainter(

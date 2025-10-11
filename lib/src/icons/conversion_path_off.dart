@@ -14,7 +14,8 @@ class MconConversionPathOff extends MconBase {
   });
 
   @override
-  MconBaseState<MconConversionPathOff> createState() => _MconConversionPathOffState();
+  MconBaseState<MconConversionPathOff> createState() =>
+      _MconConversionPathOffState();
 }
 
 class _MconConversionPathOffState extends MconBaseState<MconConversionPathOff> {

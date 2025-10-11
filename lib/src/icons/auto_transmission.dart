@@ -14,7 +14,8 @@ class MconAutoTransmission extends MconBase {
   });
 
   @override
-  MconBaseState<MconAutoTransmission> createState() => _MconAutoTransmissionState();
+  MconBaseState<MconAutoTransmission> createState() =>
+      _MconAutoTransmissionState();
 }
 
 class _MconAutoTransmissionState extends MconBaseState<MconAutoTransmission> {

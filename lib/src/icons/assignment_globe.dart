@@ -14,7 +14,8 @@ class MconAssignmentGlobe extends MconBase {
   });
 
   @override
-  MconBaseState<MconAssignmentGlobe> createState() => _MconAssignmentGlobeState();
+  MconBaseState<MconAssignmentGlobe> createState() =>
+      _MconAssignmentGlobeState();
 }
 
 class _MconAssignmentGlobeState extends MconBaseState<MconAssignmentGlobe> {

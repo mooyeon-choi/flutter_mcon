@@ -14,10 +14,12 @@ class MconCheckIndeterminateSmall extends MconBase {
   });
 
   @override
-  MconBaseState<MconCheckIndeterminateSmall> createState() => _MconCheckIndeterminateSmallState();
+  MconBaseState<MconCheckIndeterminateSmall> createState() =>
+      _MconCheckIndeterminateSmallState();
 }
 
-class _MconCheckIndeterminateSmallState extends MconBaseState<MconCheckIndeterminateSmall> {
+class _MconCheckIndeterminateSmallState
+    extends MconBaseState<MconCheckIndeterminateSmall> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconCheckIndeterminateSmallPainter(

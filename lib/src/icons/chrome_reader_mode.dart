@@ -14,7 +14,8 @@ class MconChromeReaderMode extends MconBase {
   });
 
   @override
-  MconBaseState<MconChromeReaderMode> createState() => _MconChromeReaderModeState();
+  MconBaseState<MconChromeReaderMode> createState() =>
+      _MconChromeReaderModeState();
 }
 
 class _MconChromeReaderModeState extends MconBaseState<MconChromeReaderMode> {

@@ -14,10 +14,12 @@ class MconAirlineSeatIndividualSuite extends MconBase {
   });
 
   @override
-  MconBaseState<MconAirlineSeatIndividualSuite> createState() => _MconAirlineSeatIndividualSuiteState();
+  MconBaseState<MconAirlineSeatIndividualSuite> createState() =>
+      _MconAirlineSeatIndividualSuiteState();
 }
 
-class _MconAirlineSeatIndividualSuiteState extends MconBaseState<MconAirlineSeatIndividualSuite> {
+class _MconAirlineSeatIndividualSuiteState
+    extends MconBaseState<MconAirlineSeatIndividualSuite> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAirlineSeatIndividualSuitePainter(

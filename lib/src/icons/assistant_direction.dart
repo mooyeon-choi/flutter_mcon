@@ -14,10 +14,12 @@ class MconAssistantDirection extends MconBase {
   });
 
   @override
-  MconBaseState<MconAssistantDirection> createState() => _MconAssistantDirectionState();
+  MconBaseState<MconAssistantDirection> createState() =>
+      _MconAssistantDirectionState();
 }
 
-class _MconAssistantDirectionState extends MconBaseState<MconAssistantDirection> {
+class _MconAssistantDirectionState
+    extends MconBaseState<MconAssistantDirection> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAssistantDirectionPainter(

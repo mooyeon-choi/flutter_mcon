@@ -14,7 +14,8 @@ class MconArrowBackIosNew extends MconBase {
   });
 
   @override
-  MconBaseState<MconArrowBackIosNew> createState() => _MconArrowBackIosNewState();
+  MconBaseState<MconArrowBackIosNew> createState() =>
+      _MconArrowBackIosNewState();
 }
 
 class _MconArrowBackIosNewState extends MconBaseState<MconArrowBackIosNew> {

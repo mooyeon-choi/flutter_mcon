@@ -14,10 +14,12 @@ class MconClosedCaptionDisabled extends MconBase {
   });
 
   @override
-  MconBaseState<MconClosedCaptionDisabled> createState() => _MconClosedCaptionDisabledState();
+  MconBaseState<MconClosedCaptionDisabled> createState() =>
+      _MconClosedCaptionDisabledState();
 }
 
-class _MconClosedCaptionDisabledState extends MconBaseState<MconClosedCaptionDisabled> {
+class _MconClosedCaptionDisabledState
+    extends MconBaseState<MconClosedCaptionDisabled> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconClosedCaptionDisabledPainter(

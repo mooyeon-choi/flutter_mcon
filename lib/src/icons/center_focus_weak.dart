@@ -14,7 +14,8 @@ class MconCenterFocusWeak extends MconBase {
   });
 
   @override
-  MconBaseState<MconCenterFocusWeak> createState() => _MconCenterFocusWeakState();
+  MconBaseState<MconCenterFocusWeak> createState() =>
+      _MconCenterFocusWeakState();
 }
 
 class _MconCenterFocusWeakState extends MconBaseState<MconCenterFocusWeak> {

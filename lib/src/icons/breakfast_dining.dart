@@ -14,7 +14,8 @@ class MconBreakfastDining extends MconBase {
   });
 
   @override
-  MconBaseState<MconBreakfastDining> createState() => _MconBreakfastDiningState();
+  MconBaseState<MconBreakfastDining> createState() =>
+      _MconBreakfastDiningState();
 }
 
 class _MconBreakfastDiningState extends MconBaseState<MconBreakfastDining> {

@@ -14,10 +14,12 @@ class MconArrowShapeUpStack2 extends MconBase {
   });
 
   @override
-  MconBaseState<MconArrowShapeUpStack2> createState() => _MconArrowShapeUpStack2State();
+  MconBaseState<MconArrowShapeUpStack2> createState() =>
+      _MconArrowShapeUpStack2State();
 }
 
-class _MconArrowShapeUpStack2State extends MconBaseState<MconArrowShapeUpStack2> {
+class _MconArrowShapeUpStack2State
+    extends MconBaseState<MconArrowShapeUpStack2> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconArrowShapeUpStack2Painter(

@@ -14,7 +14,8 @@ class MconBathPublicLarge extends MconBase {
   });
 
   @override
-  MconBaseState<MconBathPublicLarge> createState() => _MconBathPublicLargeState();
+  MconBaseState<MconBathPublicLarge> createState() =>
+      _MconBathPublicLargeState();
 }
 
 class _MconBathPublicLargeState extends MconBaseState<MconBathPublicLarge> {

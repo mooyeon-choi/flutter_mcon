@@ -14,7 +14,8 @@ class MconCreateNewFolder extends MconBase {
   });
 
   @override
-  MconBaseState<MconCreateNewFolder> createState() => _MconCreateNewFolderState();
+  MconBaseState<MconCreateNewFolder> createState() =>
+      _MconCreateNewFolderState();
 }
 
 class _MconCreateNewFolderState extends MconBaseState<MconCreateNewFolder> {

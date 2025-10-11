@@ -14,7 +14,8 @@ class MconAutoAwesomeMosaic extends MconBase {
   });
 
   @override
-  MconBaseState<MconAutoAwesomeMosaic> createState() => _MconAutoAwesomeMosaicState();
+  MconBaseState<MconAutoAwesomeMosaic> createState() =>
+      _MconAutoAwesomeMosaicState();
 }
 
 class _MconAutoAwesomeMosaicState extends MconBaseState<MconAutoAwesomeMosaic> {

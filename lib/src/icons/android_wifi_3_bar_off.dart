@@ -14,10 +14,12 @@ class MconAndroidWifi3BarOff extends MconBase {
   });
 
   @override
-  MconBaseState<MconAndroidWifi3BarOff> createState() => _MconAndroidWifi3BarOffState();
+  MconBaseState<MconAndroidWifi3BarOff> createState() =>
+      _MconAndroidWifi3BarOffState();
 }
 
-class _MconAndroidWifi3BarOffState extends MconBaseState<MconAndroidWifi3BarOff> {
+class _MconAndroidWifi3BarOffState
+    extends MconBaseState<MconAndroidWifi3BarOff> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAndroidWifi3BarOffPainter(

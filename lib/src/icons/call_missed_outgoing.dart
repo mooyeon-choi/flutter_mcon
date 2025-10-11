@@ -14,10 +14,12 @@ class MconCallMissedOutgoing extends MconBase {
   });
 
   @override
-  MconBaseState<MconCallMissedOutgoing> createState() => _MconCallMissedOutgoingState();
+  MconBaseState<MconCallMissedOutgoing> createState() =>
+      _MconCallMissedOutgoingState();
 }
 
-class _MconCallMissedOutgoingState extends MconBaseState<MconCallMissedOutgoing> {
+class _MconCallMissedOutgoingState
+    extends MconBaseState<MconCallMissedOutgoing> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconCallMissedOutgoingPainter(

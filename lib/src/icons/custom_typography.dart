@@ -14,7 +14,8 @@ class MconCustomTypography extends MconBase {
   });
 
   @override
-  MconBaseState<MconCustomTypography> createState() => _MconCustomTypographyState();
+  MconBaseState<MconCustomTypography> createState() =>
+      _MconCustomTypographyState();
 }
 
 class _MconCustomTypographyState extends MconBaseState<MconCustomTypography> {

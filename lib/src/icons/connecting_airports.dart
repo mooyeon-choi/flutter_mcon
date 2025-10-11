@@ -14,10 +14,12 @@ class MconConnectingAirports extends MconBase {
   });
 
   @override
-  MconBaseState<MconConnectingAirports> createState() => _MconConnectingAirportsState();
+  MconBaseState<MconConnectingAirports> createState() =>
+      _MconConnectingAirportsState();
 }
 
-class _MconConnectingAirportsState extends MconBaseState<MconConnectingAirports> {
+class _MconConnectingAirportsState
+    extends MconBaseState<MconConnectingAirports> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconConnectingAirportsPainter(

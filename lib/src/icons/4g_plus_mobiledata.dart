@@ -14,7 +14,8 @@ class Mcon4gPlusMobiledata extends MconBase {
   });
 
   @override
-  MconBaseState<Mcon4gPlusMobiledata> createState() => _Mcon4gPlusMobiledataState();
+  MconBaseState<Mcon4gPlusMobiledata> createState() =>
+      _Mcon4gPlusMobiledataState();
 }
 
 class _Mcon4gPlusMobiledataState extends MconBaseState<Mcon4gPlusMobiledata> {

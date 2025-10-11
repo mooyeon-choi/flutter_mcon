@@ -14,7 +14,8 @@ class MconBrandingWatermark extends MconBase {
   });
 
   @override
-  MconBaseState<MconBrandingWatermark> createState() => _MconBrandingWatermarkState();
+  MconBaseState<MconBrandingWatermark> createState() =>
+      _MconBrandingWatermarkState();
 }
 
 class _MconBrandingWatermarkState extends MconBaseState<MconBrandingWatermark> {

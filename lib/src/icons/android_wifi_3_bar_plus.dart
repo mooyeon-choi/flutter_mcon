@@ -14,10 +14,12 @@ class MconAndroidWifi3BarPlus extends MconBase {
   });
 
   @override
-  MconBaseState<MconAndroidWifi3BarPlus> createState() => _MconAndroidWifi3BarPlusState();
+  MconBaseState<MconAndroidWifi3BarPlus> createState() =>
+      _MconAndroidWifi3BarPlusState();
 }
 
-class _MconAndroidWifi3BarPlusState extends MconBaseState<MconAndroidWifi3BarPlus> {
+class _MconAndroidWifi3BarPlusState
+    extends MconBaseState<MconAndroidWifi3BarPlus> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAndroidWifi3BarPlusPainter(

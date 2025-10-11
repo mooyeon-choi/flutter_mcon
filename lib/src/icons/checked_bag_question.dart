@@ -14,10 +14,12 @@ class MconCheckedBagQuestion extends MconBase {
   });
 
   @override
-  MconBaseState<MconCheckedBagQuestion> createState() => _MconCheckedBagQuestionState();
+  MconBaseState<MconCheckedBagQuestion> createState() =>
+      _MconCheckedBagQuestionState();
 }
 
-class _MconCheckedBagQuestionState extends MconBaseState<MconCheckedBagQuestion> {
+class _MconCheckedBagQuestionState
+    extends MconBaseState<MconCheckedBagQuestion> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconCheckedBagQuestionPainter(

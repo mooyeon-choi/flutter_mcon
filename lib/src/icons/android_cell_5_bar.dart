@@ -14,7 +14,8 @@ class MconAndroidCell5Bar extends MconBase {
   });
 
   @override
-  MconBaseState<MconAndroidCell5Bar> createState() => _MconAndroidCell5BarState();
+  MconBaseState<MconAndroidCell5Bar> createState() =>
+      _MconAndroidCell5BarState();
 }
 
 class _MconAndroidCell5BarState extends MconBaseState<MconAndroidCell5Bar> {

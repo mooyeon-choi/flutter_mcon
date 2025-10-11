@@ -14,10 +14,12 @@ class MconAssignmentTurnedIn extends MconBase {
   });
 
   @override
-  MconBaseState<MconAssignmentTurnedIn> createState() => _MconAssignmentTurnedInState();
+  MconBaseState<MconAssignmentTurnedIn> createState() =>
+      _MconAssignmentTurnedInState();
 }
 
-class _MconAssignmentTurnedInState extends MconBaseState<MconAssignmentTurnedIn> {
+class _MconAssignmentTurnedInState
+    extends MconBaseState<MconAssignmentTurnedIn> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAssignmentTurnedInPainter(

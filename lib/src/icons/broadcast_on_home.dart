@@ -14,7 +14,8 @@ class MconBroadcastOnHome extends MconBase {
   });
 
   @override
-  MconBaseState<MconBroadcastOnHome> createState() => _MconBroadcastOnHomeState();
+  MconBaseState<MconBroadcastOnHome> createState() =>
+      _MconBroadcastOnHomeState();
 }
 
 class _MconBroadcastOnHomeState extends MconBaseState<MconBroadcastOnHome> {

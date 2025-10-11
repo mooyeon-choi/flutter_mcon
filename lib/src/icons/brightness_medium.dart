@@ -14,7 +14,8 @@ class MconBrightnessMedium extends MconBase {
   });
 
   @override
-  MconBaseState<MconBrightnessMedium> createState() => _MconBrightnessMediumState();
+  MconBaseState<MconBrightnessMedium> createState() =>
+      _MconBrightnessMediumState();
 }
 
 class _MconBrightnessMediumState extends MconBaseState<MconBrightnessMedium> {

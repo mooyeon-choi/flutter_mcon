@@ -14,7 +14,8 @@ class MconArrowCircleDown extends MconBase {
   });
 
   @override
-  MconBaseState<MconArrowCircleDown> createState() => _MconArrowCircleDownState();
+  MconBaseState<MconArrowCircleDown> createState() =>
+      _MconArrowCircleDownState();
 }
 
 class _MconArrowCircleDownState extends MconBaseState<MconArrowCircleDown> {

@@ -14,7 +14,8 @@ class MconClimateMiniSplit extends MconBase {
   });
 
   @override
-  MconBaseState<MconClimateMiniSplit> createState() => _MconClimateMiniSplitState();
+  MconBaseState<MconClimateMiniSplit> createState() =>
+      _MconClimateMiniSplitState();
 }
 
 class _MconClimateMiniSplitState extends MconBaseState<MconClimateMiniSplit> {

@@ -14,7 +14,8 @@ class MconAddPhotoAlternate extends MconBase {
   });
 
   @override
-  MconBaseState<MconAddPhotoAlternate> createState() => _MconAddPhotoAlternateState();
+  MconBaseState<MconAddPhotoAlternate> createState() =>
+      _MconAddPhotoAlternateState();
 }
 
 class _MconAddPhotoAlternateState extends MconBaseState<MconAddPhotoAlternate> {

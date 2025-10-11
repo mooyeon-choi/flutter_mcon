@@ -14,7 +14,8 @@ class MconBottomPanelOpen extends MconBase {
   });
 
   @override
-  MconBaseState<MconBottomPanelOpen> createState() => _MconBottomPanelOpenState();
+  MconBaseState<MconBottomPanelOpen> createState() =>
+      _MconBottomPanelOpenState();
 }
 
 class _MconBottomPanelOpenState extends MconBaseState<MconBottomPanelOpen> {

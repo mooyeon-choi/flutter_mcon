@@ -14,10 +14,12 @@ class MconAlignHorizontalRight extends MconBase {
   });
 
   @override
-  MconBaseState<MconAlignHorizontalRight> createState() => _MconAlignHorizontalRightState();
+  MconBaseState<MconAlignHorizontalRight> createState() =>
+      _MconAlignHorizontalRightState();
 }
 
-class _MconAlignHorizontalRightState extends MconBaseState<MconAlignHorizontalRight> {
+class _MconAlignHorizontalRightState
+    extends MconBaseState<MconAlignHorizontalRight> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAlignHorizontalRightPainter(

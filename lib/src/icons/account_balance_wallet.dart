@@ -14,10 +14,12 @@ class MconAccountBalanceWallet extends MconBase {
   });
 
   @override
-  MconBaseState<MconAccountBalanceWallet> createState() => _MconAccountBalanceWalletState();
+  MconBaseState<MconAccountBalanceWallet> createState() =>
+      _MconAccountBalanceWalletState();
 }
 
-class _MconAccountBalanceWalletState extends MconBaseState<MconAccountBalanceWallet> {
+class _MconAccountBalanceWalletState
+    extends MconBaseState<MconAccountBalanceWallet> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAccountBalanceWalletPainter(

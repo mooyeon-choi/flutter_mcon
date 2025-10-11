@@ -14,7 +14,8 @@ class MconBackgroundReplace extends MconBase {
   });
 
   @override
-  MconBaseState<MconBackgroundReplace> createState() => _MconBackgroundReplaceState();
+  MconBaseState<MconBackgroundReplace> createState() =>
+      _MconBackgroundReplaceState();
 }
 
 class _MconBackgroundReplaceState extends MconBaseState<MconBackgroundReplace> {

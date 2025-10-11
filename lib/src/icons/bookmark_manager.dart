@@ -14,7 +14,8 @@ class MconBookmarkManager extends MconBase {
   });
 
   @override
-  MconBaseState<MconBookmarkManager> createState() => _MconBookmarkManagerState();
+  MconBaseState<MconBookmarkManager> createState() =>
+      _MconBookmarkManagerState();
 }
 
 class _MconBookmarkManagerState extends MconBaseState<MconBookmarkManager> {

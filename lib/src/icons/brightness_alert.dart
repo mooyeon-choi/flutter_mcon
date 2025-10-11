@@ -14,7 +14,8 @@ class MconBrightnessAlert extends MconBase {
   });
 
   @override
-  MconBaseState<MconBrightnessAlert> createState() => _MconBrightnessAlertState();
+  MconBaseState<MconBrightnessAlert> createState() =>
+      _MconBrightnessAlertState();
 }
 
 class _MconBrightnessAlertState extends MconBaseState<MconBrightnessAlert> {

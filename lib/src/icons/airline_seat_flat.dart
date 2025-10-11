@@ -14,7 +14,8 @@ class MconAirlineSeatFlat extends MconBase {
   });
 
   @override
-  MconBaseState<MconAirlineSeatFlat> createState() => _MconAirlineSeatFlatState();
+  MconBaseState<MconAirlineSeatFlat> createState() =>
+      _MconAirlineSeatFlatState();
 }
 
 class _MconAirlineSeatFlatState extends MconBaseState<MconAirlineSeatFlat> {

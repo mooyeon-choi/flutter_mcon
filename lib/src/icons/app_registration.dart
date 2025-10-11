@@ -14,7 +14,8 @@ class MconAppRegistration extends MconBase {
   });
 
   @override
-  MconBaseState<MconAppRegistration> createState() => _MconAppRegistrationState();
+  MconBaseState<MconAppRegistration> createState() =>
+      _MconAppRegistrationState();
 }
 
 class _MconAppRegistrationState extends MconBaseState<MconAppRegistration> {

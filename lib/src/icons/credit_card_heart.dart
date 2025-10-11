@@ -14,7 +14,8 @@ class MconCreditCardHeart extends MconBase {
   });
 
   @override
-  MconBaseState<MconCreditCardHeart> createState() => _MconCreditCardHeartState();
+  MconBaseState<MconCreditCardHeart> createState() =>
+      _MconCreditCardHeartState();
 }
 
 class _MconCreditCardHeartState extends MconBaseState<MconCreditCardHeart> {

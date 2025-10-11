@@ -14,7 +14,8 @@ class MconComputerArrowUp extends MconBase {
   });
 
   @override
-  MconBaseState<MconComputerArrowUp> createState() => _MconComputerArrowUpState();
+  MconBaseState<MconComputerArrowUp> createState() =>
+      _MconComputerArrowUpState();
 }
 
 class _MconComputerArrowUpState extends MconBaseState<MconComputerArrowUp> {

@@ -14,10 +14,12 @@ class MconAndroidCell4BarPlus extends MconBase {
   });
 
   @override
-  MconBaseState<MconAndroidCell4BarPlus> createState() => _MconAndroidCell4BarPlusState();
+  MconBaseState<MconAndroidCell4BarPlus> createState() =>
+      _MconAndroidCell4BarPlusState();
 }
 
-class _MconAndroidCell4BarPlusState extends MconBaseState<MconAndroidCell4BarPlus> {
+class _MconAndroidCell4BarPlusState
+    extends MconBaseState<MconAndroidCell4BarPlus> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAndroidCell4BarPlusPainter(

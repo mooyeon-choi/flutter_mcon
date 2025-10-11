@@ -14,10 +14,12 @@ class MconControlPointDuplicate extends MconBase {
   });
 
   @override
-  MconBaseState<MconControlPointDuplicate> createState() => _MconControlPointDuplicateState();
+  MconBaseState<MconControlPointDuplicate> createState() =>
+      _MconControlPointDuplicateState();
 }
 
-class _MconControlPointDuplicateState extends MconBaseState<MconControlPointDuplicate> {
+class _MconControlPointDuplicateState
+    extends MconBaseState<MconControlPointDuplicate> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconControlPointDuplicatePainter(

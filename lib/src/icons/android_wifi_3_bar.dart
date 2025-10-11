@@ -14,7 +14,8 @@ class MconAndroidWifi3Bar extends MconBase {
   });
 
   @override
-  MconBaseState<MconAndroidWifi3Bar> createState() => _MconAndroidWifi3BarState();
+  MconBaseState<MconAndroidWifi3Bar> createState() =>
+      _MconAndroidWifi3BarState();
 }
 
 class _MconAndroidWifi3BarState extends MconBaseState<MconAndroidWifi3Bar> {

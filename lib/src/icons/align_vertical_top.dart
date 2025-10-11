@@ -14,7 +14,8 @@ class MconAlignVerticalTop extends MconBase {
   });
 
   @override
-  MconBaseState<MconAlignVerticalTop> createState() => _MconAlignVerticalTopState();
+  MconBaseState<MconAlignVerticalTop> createState() =>
+      _MconAlignVerticalTopState();
 }
 
 class _MconAlignVerticalTopState extends MconBaseState<MconAlignVerticalTop> {

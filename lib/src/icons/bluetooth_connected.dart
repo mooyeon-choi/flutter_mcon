@@ -14,10 +14,12 @@ class MconBluetoothConnected extends MconBase {
   });
 
   @override
-  MconBaseState<MconBluetoothConnected> createState() => _MconBluetoothConnectedState();
+  MconBaseState<MconBluetoothConnected> createState() =>
+      _MconBluetoothConnectedState();
 }
 
-class _MconBluetoothConnectedState extends MconBaseState<MconBluetoothConnected> {
+class _MconBluetoothConnectedState
+    extends MconBaseState<MconBluetoothConnected> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBluetoothConnectedPainter(

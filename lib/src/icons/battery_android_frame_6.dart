@@ -14,10 +14,12 @@ class MconBatteryAndroidFrame6 extends MconBase {
   });
 
   @override
-  MconBaseState<MconBatteryAndroidFrame6> createState() => _MconBatteryAndroidFrame6State();
+  MconBaseState<MconBatteryAndroidFrame6> createState() =>
+      _MconBatteryAndroidFrame6State();
 }
 
-class _MconBatteryAndroidFrame6State extends MconBaseState<MconBatteryAndroidFrame6> {
+class _MconBatteryAndroidFrame6State
+    extends MconBaseState<MconBatteryAndroidFrame6> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBatteryAndroidFrame6Painter(

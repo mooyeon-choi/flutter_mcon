@@ -14,7 +14,8 @@ class Mcon5gMobiledataBadge extends MconBase {
   });
 
   @override
-  MconBaseState<Mcon5gMobiledataBadge> createState() => _Mcon5gMobiledataBadgeState();
+  MconBaseState<Mcon5gMobiledataBadge> createState() =>
+      _Mcon5gMobiledataBadgeState();
 }
 
 class _Mcon5gMobiledataBadgeState extends MconBaseState<Mcon5gMobiledataBadge> {

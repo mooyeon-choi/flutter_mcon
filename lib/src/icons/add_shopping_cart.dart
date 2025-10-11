@@ -14,7 +14,8 @@ class MconAddShoppingCart extends MconBase {
   });
 
   @override
-  MconBaseState<MconAddShoppingCart> createState() => _MconAddShoppingCartState();
+  MconBaseState<MconAddShoppingCart> createState() =>
+      _MconAddShoppingCartState();
 }
 
 class _MconAddShoppingCartState extends MconBaseState<MconAddShoppingCart> {

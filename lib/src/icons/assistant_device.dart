@@ -14,7 +14,8 @@ class MconAssistantDevice extends MconBase {
   });
 
   @override
-  MconBaseState<MconAssistantDevice> createState() => _MconAssistantDeviceState();
+  MconBaseState<MconAssistantDevice> createState() =>
+      _MconAssistantDeviceState();
 }
 
 class _MconAssistantDeviceState extends MconBaseState<MconAssistantDevice> {

@@ -14,7 +14,8 @@ class MconAlignItemsStretch extends MconBase {
   });
 
   @override
-  MconBaseState<MconAlignItemsStretch> createState() => _MconAlignItemsStretchState();
+  MconBaseState<MconAlignItemsStretch> createState() =>
+      _MconAlignItemsStretchState();
 }
 
 class _MconAlignItemsStretchState extends MconBaseState<MconAlignItemsStretch> {

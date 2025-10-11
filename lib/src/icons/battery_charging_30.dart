@@ -14,7 +14,8 @@ class MconBatteryCharging30 extends MconBase {
   });
 
   @override
-  MconBaseState<MconBatteryCharging30> createState() => _MconBatteryCharging30State();
+  MconBaseState<MconBatteryCharging30> createState() =>
+      _MconBatteryCharging30State();
 }
 
 class _MconBatteryCharging30State extends MconBaseState<MconBatteryCharging30> {

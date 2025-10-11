@@ -14,10 +14,12 @@ class MconConnectWithoutContact extends MconBase {
   });
 
   @override
-  MconBaseState<MconConnectWithoutContact> createState() => _MconConnectWithoutContactState();
+  MconBaseState<MconConnectWithoutContact> createState() =>
+      _MconConnectWithoutContactState();
 }
 
-class _MconConnectWithoutContactState extends MconBaseState<MconConnectWithoutContact> {
+class _MconConnectWithoutContactState
+    extends MconBaseState<MconConnectWithoutContact> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconConnectWithoutContactPainter(

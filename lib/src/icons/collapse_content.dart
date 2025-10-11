@@ -14,7 +14,8 @@ class MconCollapseContent extends MconBase {
   });
 
   @override
-  MconBaseState<MconCollapseContent> createState() => _MconCollapseContentState();
+  MconBaseState<MconCollapseContent> createState() =>
+      _MconCollapseContentState();
 }
 
 class _MconCollapseContentState extends MconBaseState<MconCollapseContent> {

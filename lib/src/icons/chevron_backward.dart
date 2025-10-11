@@ -14,7 +14,8 @@ class MconChevronBackward extends MconBase {
   });
 
   @override
-  MconBaseState<MconChevronBackward> createState() => _MconChevronBackwardState();
+  MconBaseState<MconChevronBackward> createState() =>
+      _MconChevronBackwardState();
 }
 
 class _MconChevronBackwardState extends MconBaseState<MconChevronBackward> {

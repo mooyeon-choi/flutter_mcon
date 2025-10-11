@@ -14,10 +14,12 @@ class MconBluetoothSearching extends MconBase {
   });
 
   @override
-  MconBaseState<MconBluetoothSearching> createState() => _MconBluetoothSearchingState();
+  MconBaseState<MconBluetoothSearching> createState() =>
+      _MconBluetoothSearchingState();
 }
 
-class _MconBluetoothSearchingState extends MconBaseState<MconBluetoothSearching> {
+class _MconBluetoothSearchingState
+    extends MconBaseState<MconBluetoothSearching> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBluetoothSearchingPainter(

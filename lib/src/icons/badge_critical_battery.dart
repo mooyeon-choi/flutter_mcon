@@ -14,10 +14,12 @@ class MconBadgeCriticalBattery extends MconBase {
   });
 
   @override
-  MconBaseState<MconBadgeCriticalBattery> createState() => _MconBadgeCriticalBatteryState();
+  MconBaseState<MconBadgeCriticalBattery> createState() =>
+      _MconBadgeCriticalBatteryState();
 }
 
-class _MconBadgeCriticalBatteryState extends MconBaseState<MconBadgeCriticalBattery> {
+class _MconBadgeCriticalBatteryState
+    extends MconBaseState<MconBadgeCriticalBattery> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBadgeCriticalBatteryPainter(

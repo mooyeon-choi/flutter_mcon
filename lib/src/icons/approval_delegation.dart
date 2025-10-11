@@ -14,10 +14,12 @@ class MconApprovalDelegation extends MconBase {
   });
 
   @override
-  MconBaseState<MconApprovalDelegation> createState() => _MconApprovalDelegationState();
+  MconBaseState<MconApprovalDelegation> createState() =>
+      _MconApprovalDelegationState();
 }
 
-class _MconApprovalDelegationState extends MconBaseState<MconApprovalDelegation> {
+class _MconApprovalDelegationState
+    extends MconBaseState<MconApprovalDelegation> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconApprovalDelegationPainter(

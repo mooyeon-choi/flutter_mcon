@@ -14,10 +14,12 @@ class MconBatteryAndroidAlert extends MconBase {
   });
 
   @override
-  MconBaseState<MconBatteryAndroidAlert> createState() => _MconBatteryAndroidAlertState();
+  MconBaseState<MconBatteryAndroidAlert> createState() =>
+      _MconBatteryAndroidAlertState();
 }
 
-class _MconBatteryAndroidAlertState extends MconBaseState<MconBatteryAndroidAlert> {
+class _MconBatteryAndroidAlertState
+    extends MconBaseState<MconBatteryAndroidAlert> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBatteryAndroidAlertPainter(

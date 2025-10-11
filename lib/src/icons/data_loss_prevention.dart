@@ -14,10 +14,12 @@ class MconDataLossPrevention extends MconBase {
   });
 
   @override
-  MconBaseState<MconDataLossPrevention> createState() => _MconDataLossPreventionState();
+  MconBaseState<MconDataLossPrevention> createState() =>
+      _MconDataLossPreventionState();
 }
 
-class _MconDataLossPreventionState extends MconBaseState<MconDataLossPrevention> {
+class _MconDataLossPreventionState
+    extends MconBaseState<MconDataLossPrevention> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconDataLossPreventionPainter(

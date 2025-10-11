@@ -14,7 +14,8 @@ class MconAdaptiveAudioMic extends MconBase {
   });
 
   @override
-  MconBaseState<MconAdaptiveAudioMic> createState() => _MconAdaptiveAudioMicState();
+  MconBaseState<MconAdaptiveAudioMic> createState() =>
+      _MconAdaptiveAudioMicState();
 }
 
 class _MconAdaptiveAudioMicState extends MconBaseState<MconAdaptiveAudioMic> {

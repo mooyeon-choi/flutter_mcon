@@ -14,10 +14,12 @@ class MconAdminPanelSettings extends MconBase {
   });
 
   @override
-  MconBaseState<MconAdminPanelSettings> createState() => _MconAdminPanelSettingsState();
+  MconBaseState<MconAdminPanelSettings> createState() =>
+      _MconAdminPanelSettingsState();
 }
 
-class _MconAdminPanelSettingsState extends MconBaseState<MconAdminPanelSettings> {
+class _MconAdminPanelSettingsState
+    extends MconBaseState<MconAdminPanelSettings> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAdminPanelSettingsPainter(

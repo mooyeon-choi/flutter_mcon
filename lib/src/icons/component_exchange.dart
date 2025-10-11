@@ -14,7 +14,8 @@ class MconComponentExchange extends MconBase {
   });
 
   @override
-  MconBaseState<MconComponentExchange> createState() => _MconComponentExchangeState();
+  MconBaseState<MconComponentExchange> createState() =>
+      _MconComponentExchangeState();
 }
 
 class _MconComponentExchangeState extends MconBaseState<MconComponentExchange> {

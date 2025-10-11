@@ -14,7 +14,8 @@ class MconBacklightHighOff extends MconBase {
   });
 
   @override
-  MconBaseState<MconBacklightHighOff> createState() => _MconBacklightHighOffState();
+  MconBaseState<MconBacklightHighOff> createState() =>
+      _MconBacklightHighOffState();
 }
 
 class _MconBacklightHighOffState extends MconBaseState<MconBacklightHighOff> {

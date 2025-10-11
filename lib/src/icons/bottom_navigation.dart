@@ -14,7 +14,8 @@ class MconBottomNavigation extends MconBase {
   });
 
   @override
-  MconBaseState<MconBottomNavigation> createState() => _MconBottomNavigationState();
+  MconBaseState<MconBottomNavigation> createState() =>
+      _MconBottomNavigationState();
 }
 
 class _MconBottomNavigationState extends MconBaseState<MconBottomNavigation> {

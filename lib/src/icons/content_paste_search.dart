@@ -14,10 +14,12 @@ class MconContentPasteSearch extends MconBase {
   });
 
   @override
-  MconBaseState<MconContentPasteSearch> createState() => _MconContentPasteSearchState();
+  MconBaseState<MconContentPasteSearch> createState() =>
+      _MconContentPasteSearchState();
 }
 
-class _MconContentPasteSearchState extends MconBaseState<MconContentPasteSearch> {
+class _MconContentPasteSearchState
+    extends MconBaseState<MconContentPasteSearch> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconContentPasteSearchPainter(

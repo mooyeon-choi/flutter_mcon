@@ -14,10 +14,12 @@ class MconCollectionsBookmark extends MconBase {
   });
 
   @override
-  MconBaseState<MconCollectionsBookmark> createState() => _MconCollectionsBookmarkState();
+  MconBaseState<MconCollectionsBookmark> createState() =>
+      _MconCollectionsBookmarkState();
 }
 
-class _MconCollectionsBookmarkState extends MconBaseState<MconCollectionsBookmark> {
+class _MconCollectionsBookmarkState
+    extends MconBaseState<MconCollectionsBookmark> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconCollectionsBookmarkPainter(

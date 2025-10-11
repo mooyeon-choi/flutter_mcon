@@ -14,7 +14,8 @@ class MconBusinessMessages extends MconBase {
   });
 
   @override
-  MconBaseState<MconBusinessMessages> createState() => _MconBusinessMessagesState();
+  MconBaseState<MconBusinessMessages> createState() =>
+      _MconBusinessMessagesState();
 }
 
 class _MconBusinessMessagesState extends MconBaseState<MconBusinessMessages> {

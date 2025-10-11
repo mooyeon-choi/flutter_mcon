@@ -14,7 +14,8 @@ class MconDataExploration extends MconBase {
   });
 
   @override
-  MconBaseState<MconDataExploration> createState() => _MconDataExplorationState();
+  MconBaseState<MconDataExploration> createState() =>
+      _MconDataExplorationState();
 }
 
 class _MconDataExplorationState extends MconBaseState<MconDataExploration> {

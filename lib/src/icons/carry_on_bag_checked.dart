@@ -14,7 +14,8 @@ class MconCarryOnBagChecked extends MconBase {
   });
 
   @override
-  MconBaseState<MconCarryOnBagChecked> createState() => _MconCarryOnBagCheckedState();
+  MconBaseState<MconCarryOnBagChecked> createState() =>
+      _MconCarryOnBagCheckedState();
 }
 
 class _MconCarryOnBagCheckedState extends MconBaseState<MconCarryOnBagChecked> {

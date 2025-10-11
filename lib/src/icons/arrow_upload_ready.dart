@@ -14,7 +14,8 @@ class MconArrowUploadReady extends MconBase {
   });
 
   @override
-  MconBaseState<MconArrowUploadReady> createState() => _MconArrowUploadReadyState();
+  MconBaseState<MconArrowUploadReady> createState() =>
+      _MconArrowUploadReadyState();
 }
 
 class _MconArrowUploadReadyState extends MconBaseState<MconArrowUploadReady> {

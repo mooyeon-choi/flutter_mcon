@@ -14,10 +14,12 @@ class MconAlignVerticalCenter extends MconBase {
   });
 
   @override
-  MconBaseState<MconAlignVerticalCenter> createState() => _MconAlignVerticalCenterState();
+  MconBaseState<MconAlignVerticalCenter> createState() =>
+      _MconAlignVerticalCenterState();
 }
 
-class _MconAlignVerticalCenterState extends MconBaseState<MconAlignVerticalCenter> {
+class _MconAlignVerticalCenterState
+    extends MconBaseState<MconAlignVerticalCenter> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAlignVerticalCenterPainter(

@@ -14,10 +14,12 @@ class MconBackgroundDotSmall extends MconBase {
   });
 
   @override
-  MconBaseState<MconBackgroundDotSmall> createState() => _MconBackgroundDotSmallState();
+  MconBaseState<MconBackgroundDotSmall> createState() =>
+      _MconBackgroundDotSmallState();
 }
 
-class _MconBackgroundDotSmallState extends MconBaseState<MconBackgroundDotSmall> {
+class _MconBackgroundDotSmallState
+    extends MconBaseState<MconBackgroundDotSmall> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBackgroundDotSmallPainter(

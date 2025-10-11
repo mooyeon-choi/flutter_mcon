@@ -14,10 +14,12 @@ class MconBooksMoviesAndMusic extends MconBase {
   });
 
   @override
-  MconBaseState<MconBooksMoviesAndMusic> createState() => _MconBooksMoviesAndMusicState();
+  MconBaseState<MconBooksMoviesAndMusic> createState() =>
+      _MconBooksMoviesAndMusicState();
 }
 
-class _MconBooksMoviesAndMusicState extends MconBaseState<MconBooksMoviesAndMusic> {
+class _MconBooksMoviesAndMusicState
+    extends MconBaseState<MconBooksMoviesAndMusic> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBooksMoviesAndMusicPainter(

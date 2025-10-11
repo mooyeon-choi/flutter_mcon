@@ -14,7 +14,8 @@ class MconAutoAwesomeMotion extends MconBase {
   });
 
   @override
-  MconBaseState<MconAutoAwesomeMotion> createState() => _MconAutoAwesomeMotionState();
+  MconBaseState<MconAutoAwesomeMotion> createState() =>
+      _MconAutoAwesomeMotionState();
 }
 
 class _MconAutoAwesomeMotionState extends MconBaseState<MconAutoAwesomeMotion> {

@@ -14,7 +14,8 @@ class MconBottomRightClick extends MconBase {
   });
 
   @override
-  MconBaseState<MconBottomRightClick> createState() => _MconBottomRightClickState();
+  MconBaseState<MconBottomRightClick> createState() =>
+      _MconBottomRightClickState();
 }
 
 class _MconBottomRightClickState extends MconBaseState<MconBottomRightClick> {

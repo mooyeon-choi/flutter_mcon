@@ -14,7 +14,8 @@ class MconBreakingNewsAlt1 extends MconBase {
   });
 
   @override
-  MconBaseState<MconBreakingNewsAlt1> createState() => _MconBreakingNewsAlt1State();
+  MconBaseState<MconBreakingNewsAlt1> createState() =>
+      _MconBreakingNewsAlt1State();
 }
 
 class _MconBreakingNewsAlt1State extends MconBaseState<MconBreakingNewsAlt1> {

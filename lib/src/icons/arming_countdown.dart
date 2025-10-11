@@ -14,7 +14,8 @@ class MconArmingCountdown extends MconBase {
   });
 
   @override
-  MconBaseState<MconArmingCountdown> createState() => _MconArmingCountdownState();
+  MconBaseState<MconArmingCountdown> createState() =>
+      _MconArmingCountdownState();
 }
 
 class _MconArmingCountdownState extends MconBaseState<MconArmingCountdown> {

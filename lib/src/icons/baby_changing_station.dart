@@ -14,10 +14,12 @@ class MconBabyChangingStation extends MconBase {
   });
 
   @override
-  MconBaseState<MconBabyChangingStation> createState() => _MconBabyChangingStationState();
+  MconBaseState<MconBabyChangingStation> createState() =>
+      _MconBabyChangingStationState();
 }
 
-class _MconBabyChangingStationState extends MconBaseState<MconBabyChangingStation> {
+class _MconBabyChangingStationState
+    extends MconBaseState<MconBabyChangingStation> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBabyChangingStationPainter(

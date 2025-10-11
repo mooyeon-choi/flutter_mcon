@@ -14,7 +14,8 @@ class MconContactsProduct extends MconBase {
   });
 
   @override
-  MconBaseState<MconContactsProduct> createState() => _MconContactsProductState();
+  MconBaseState<MconContactsProduct> createState() =>
+      _MconContactsProductState();
 }
 
 class _MconContactsProductState extends MconBaseState<MconContactsProduct> {

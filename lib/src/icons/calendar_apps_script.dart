@@ -14,10 +14,12 @@ class MconCalendarAppsScript extends MconBase {
   });
 
   @override
-  MconBaseState<MconCalendarAppsScript> createState() => _MconCalendarAppsScriptState();
+  MconBaseState<MconCalendarAppsScript> createState() =>
+      _MconCalendarAppsScriptState();
 }
 
-class _MconCalendarAppsScriptState extends MconBaseState<MconCalendarAppsScript> {
+class _MconCalendarAppsScriptState
+    extends MconBaseState<MconCalendarAppsScript> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconCalendarAppsScriptPainter(

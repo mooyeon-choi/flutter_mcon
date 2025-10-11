@@ -14,7 +14,8 @@ class MconCreditCardClock extends MconBase {
   });
 
   @override
-  MconBaseState<MconCreditCardClock> createState() => _MconCreditCardClockState();
+  MconBaseState<MconCreditCardClock> createState() =>
+      _MconCreditCardClockState();
 }
 
 class _MconCreditCardClockState extends MconBaseState<MconCreditCardClock> {

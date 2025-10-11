@@ -14,7 +14,8 @@ class MconCarFanRecirculate extends MconBase {
   });
 
   @override
-  MconBaseState<MconCarFanRecirculate> createState() => _MconCarFanRecirculateState();
+  MconBaseState<MconCarFanRecirculate> createState() =>
+      _MconCarFanRecirculateState();
 }
 
 class _MconCarFanRecirculateState extends MconBaseState<MconCarFanRecirculate> {

@@ -14,10 +14,12 @@ class MconAlignJustifyFlexStart extends MconBase {
   });
 
   @override
-  MconBaseState<MconAlignJustifyFlexStart> createState() => _MconAlignJustifyFlexStartState();
+  MconBaseState<MconAlignJustifyFlexStart> createState() =>
+      _MconAlignJustifyFlexStartState();
 }
 
-class _MconAlignJustifyFlexStartState extends MconBaseState<MconAlignJustifyFlexStart> {
+class _MconAlignJustifyFlexStartState
+    extends MconBaseState<MconAlignJustifyFlexStart> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconAlignJustifyFlexStartPainter(

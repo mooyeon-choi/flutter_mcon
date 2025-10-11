@@ -14,10 +14,12 @@ class MconBatteryChargingFull extends MconBase {
   });
 
   @override
-  MconBaseState<MconBatteryChargingFull> createState() => _MconBatteryChargingFullState();
+  MconBaseState<MconBatteryChargingFull> createState() =>
+      _MconBatteryChargingFullState();
 }
 
-class _MconBatteryChargingFullState extends MconBaseState<MconBatteryChargingFull> {
+class _MconBatteryChargingFullState
+    extends MconBaseState<MconBatteryChargingFull> {
   @override
   CustomPainter createPainter(Animation<double> animation) {
     return _MconBatteryChargingFullPainter(
