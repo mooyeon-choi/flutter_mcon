@@ -11,6 +11,7 @@ Transform your UI with smooth, elegant icon animations that bring your app to li
 ## ✨ Features
 
 - 🎨 **Fully Customizable** - Size, color, duration, and animation curves
+- 🔢 **3,741 Icons** - Complete Material Symbols collection
 - 🎬 **24 Motion Types** - Fade, Scale, Rotate, Flip, Slide, Bounce, Pulse, Shake, and more
 - 🚀 **Smooth Animations** - Built with Flutter's powerful animation framework
 - 📦 **Clean Architecture** - Maintainable and extensible codebase
@@ -75,29 +76,17 @@ MconDelete(
 
 ## Available Icons
 
-### Material Icons (20 icons)
+### Material Icons (3,741 icons)
 
-All icons from Google's Material Icons collection:
-- **MconAdd** - Plus/Add icon
-- **MconArrowBack** - Back arrow
-- **MconArrowForward** - Forward arrow
-- **MconCall** - Phone/Call icon
-- **MconChat** - Chat/Message icon
-- **MconClose** - Close/X icon
-- **MconDelete** - Delete/Trash icon
-- **MconDoneOutline** - Checkmark outline
-- **MconEdit** - Edit/Pencil icon
-- **MconExpandContent** - Expand icon
-- **MconFavorite** - Heart/Favorite icon
-- **MconHome** - Home icon
-- **MconMail** - Email/Mail icon
-- **MconMenu** - Menu/Hamburger icon
-- **MconNotifications** - Bell/Notifications icon
-- **MconPerson** - Person/User icon
-- **MconRefresh** - Refresh/Reload icon
-- **MconSearch** - Search/Magnifying glass icon
-- **MconSettings** - Settings/Gear icon
-- **MconStar** - Star icon
+Complete collection from Google's Material Icons:
+- All 3,741 icons from Material Symbols
+- Consistent naming: `Mcon{IconName}` (e.g., `MconSearch`, `MconHome`, `MconSettings`)
+- Full Unicode coverage for Material Symbols
+- Each icon supports all 24 animation types
+
+Popular icons include: `MconAdd`, `MconSearch`, `MconHome`, `MconSettings`, `MconFavorite`, `MconNotifications`, `MconDelete`, `MconEdit`, `MconMenu`, `MconClose`, and many more.
+
+**Browse all icons** in the [interactive documentation](https://mooyeon.com/flutter_mcon/) with search and filtering.
 
 ## Animation Types
 
@@ -276,11 +265,6 @@ The project follows a simple, clean architecture:
 # Install dependencies
 flutter pub get
 
-# Run example app
-cd example
-flutter pub get
-flutter run
-
 # Run tests
 flutter test
 
@@ -352,11 +336,10 @@ class _MconYourIconPainter extends MconPainter {
 flutter_mcon/
 ├── lib/
 │   ├── src/
-│   │   ├── core/           # MconBase, MconPainter
-│   │   └── icons/          # All Material Icons
+│   │   ├── core/           # MconBase, MconPainter, animation types
+│   │   └── icons/          # All 3,741 Material Icons
 │   └── flutter_mcon.dart   # Public API
 ├── docs/                   # Flutter Web docs site
-├── example/                # Example app
 └── test/                   # Unit & widget tests
 ```
 
@@ -404,9 +387,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Links
 
 - [Documentation](docs/)
-- [Example App](example/)
 - [Architecture Guide](ARCHITECTURE.md)
-- [Issue Tracker](https://github.com/yourusername/flutter_mcon/issues)
+- [Issue Tracker](https://github.com/mooyeon-choi/flutter_mcon/issues)
 
 ## Credits
 
@@ -419,7 +401,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 The documentation site is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
-**Live Demo:** https://yourusername.github.io/flutter_mcon/
+**Live Demo:** https://mooyeon.com/flutter_mcon/
 
 #### Setup GitHub Pages
 
